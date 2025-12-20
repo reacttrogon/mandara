@@ -4,13 +4,13 @@ export default function ServicesSection() {
   const services = [
     {
       number: '01',
-      icon: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=400&fit=crop',
+      icon: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&h=400&fit=crop',
       title: 'Diet Plans',
       description: 'Personalized pregnancy diet plans designed to support maternal health, fetal growth, and overall well-being throughout every trimester.'
     },
     {
       number: '02',
-      icon: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400&h=400&fit=crop',
+      icon: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=400&fit=crop',
       title: 'Nutrition',
       description: 'Expert nutritional guidance focusing on essential vitamins, minerals, and balanced meals to ensure a healthy pregnancy journey.'
     },

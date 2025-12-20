@@ -50,7 +50,7 @@ export default function GallerySection() {
                 <img 
                   src={image} 
                   alt={`Gallery ${index + 1}`}
-                  className="w-full h-96 md:h-[500px] object-cover"
+                  className="w-full h-[500px] md:h-[600px] lg:h-[700px] object-cover"
                 />
               </div>
             ))}

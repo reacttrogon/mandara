@@ -2,13 +2,38 @@
 
 export default function WhatWeOfferSection() {
   const offerings = [
-    { title: 'Personalized care', icon: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=400&fit=crop', position: 'left' },
-    { title: '24/7 newborn support', icon: 'https://images.unsplash.com/photo-1515488042361-ee00e0d4a8d0?w=400&h=400&fit=crop', position: 'left' },
-    { title: 'Therapeutic treatments', icon: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=400&fit=crop', position: 'left' },
-    { title: 'Holistic nutrition', icon: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=400&h=400&fit=crop', position: 'right' },
-    { title: 'Private luxury accommodations', icon: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=400&fit=crop', position: 'right' },
-    { title: 'Emotional and mental wellness', icon: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=400&fit=crop', position: 'right' }
-  ]
+    {
+      title: "Personalized care",
+      icon: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=400&h=400&fit=crop&q=80",
+      position: "left",
+    },
+    {
+      title: "24/7 newborn support",
+      icon: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=80",
+      position: "left",
+    },
+    {
+      title: "Therapeutic treatments",
+      icon: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&h=400&fit=crop&q=80",
+      position: "left",
+    },
+    {
+      title: "Holistic nutrition",
+      icon: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=400&fit=crop&q=80",
+      position: "right",
+    },
+    {
+      title: "Private luxury accommodations",
+      icon: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=400&fit=crop&q=80",
+      position: "right",
+    },
+    {
+      title: "Emotional and mental wellness",
+      icon: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=400&fit=crop&q=80",
+      position: "right",
+    },
+  ];
+  
 
   return (
     <section id="amenities" className="py-16 md:py-24 bg-primary/5">
@@ -25,7 +50,7 @@ export default function WhatWeOfferSection() {
                 <div className="flex-1 text-right">
                   <h4 className="text-lg font-semibold text-dark">{item.title}</h4>
                 </div>
-                <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden flex-shrink-0">
+                <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden flex-shrink-0">
                   <img 
                     src={item.icon} 
                     alt={item.title} 
@@ -43,14 +68,14 @@ export default function WhatWeOfferSection() {
             <img 
               src="/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM (1).jpeg" 
               alt="What We Offer"
-              className="w-full rounded-lg shadow-lg"
+              className="w-full h-96 md:h-[500px] object-cover rounded-lg shadow-lg"
             />
           </div>
           
           <div className="w-full md:w-1/3 space-y-6">
             {offerings.filter((_, i) => i >= 3).map((item, index) => (
               <div key={index} className="flex items-center gap-4">
-                <div className="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden flex-shrink-0">
+                <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden flex-shrink-0">
                   <img 
                     src={item.icon} 
                     alt={item.title} 

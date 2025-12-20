@@ -1,9 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+  const [isDragging, setIsDragging] = useState(false)
+  const sliderRef = useRef(null)
   
   const slides = [
     {
@@ -26,16 +30,87 @@ export default function HeroSlider() {
     }
   ]
 
+  // Minimum swipe distance (in px)
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe) {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }
+    if (isRightSwipe) {
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+    }
+  }
+
+  // Mouse drag handlers
+  const onMouseDown = (e) => {
+    setIsDragging(true)
+    setTouchStart(e.clientX)
+  }
+
+  const onMouseMove = (e) => {
+    if (!isDragging) return
+    setTouchEnd(e.clientX)
+  }
+
+  const onMouseUp = () => {
+    if (!isDragging) return
+    
+    if (touchStart && touchEnd) {
+      const distance = touchStart - touchEnd
+      const isLeftSwipe = distance > minSwipeDistance
+      const isRightSwipe = distance < -minSwipeDistance
+
+      if (isLeftSwipe) {
+        setCurrentSlide((prev) => (prev + 1) % slides.length)
+      }
+      if (isRightSwipe) {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+      }
+    }
+    
+    setIsDragging(false)
+    setTouchStart(null)
+    setTouchEnd(null)
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
+      if (!isDragging) {
+        setCurrentSlide((prev) => (prev + 1) % slides.length)
+      }
     }, 5000)
     return () => clearInterval(interval)
-  }, [slides.length])
+  }, [slides.length, isDragging])
 
   return (
     <section id="home" className="relative min-h-screen">
-      <div className="relative h-screen overflow-hidden">
+      <div 
+        ref={sliderRef}
+        className="relative h-screen overflow-hidden cursor-grab active:cursor-grabbing"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseUp}
+      >
         {slides.map((slide, index) => (
           <div
             key={index}

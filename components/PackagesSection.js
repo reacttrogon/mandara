@@ -35,7 +35,7 @@ export default function PackagesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-80 md:h-96 overflow-hidden">
                 <img 
                   src={pkg.image} 
                   alt={pkg.title}

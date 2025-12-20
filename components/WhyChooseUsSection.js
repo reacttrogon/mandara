@@ -11,11 +11,11 @@ export default function WhyChooseUsSection() {
       title: '24/7 newborn care with real-time camera access'
     },
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM.jpeg',
+      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg',
       title: 'Smart luxury rooms with baby & mother care zones'
     },
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg',
+      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM.jpeg',
       title: 'Modern and Traditional spa and wellness suites'
     },
     {
@@ -23,11 +23,11 @@ export default function WhyChooseUsSection() {
       title: 'Personalized recovery plans with daily guidance'
     },
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM.jpeg',
+      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg',
       title: 'Tech-enabled app for total control & support'
     },
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg',
+      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM.jpeg',
       title: 'Mother-baby memories curated beautifully'
     },
     {
@@ -58,7 +58,7 @@ export default function WhyChooseUsSection() {
                 <img 
                   src={reason.image} 
                   alt={reason.title}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <h3 className="text-lg font-serif text-dark group-hover:text-primary transition-colors">

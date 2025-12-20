@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -124,16 +125,48 @@ export default function HeroSlider() {
             }}
           >
             <div className="relative z-10 h-full flex items-center justify-center">
-              <div className="text-center text-white px-4 max-w-4xl">
-                <span className="block text-sm md:text-base mb-4 opacity-90">{slide.subtitle}</span>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif mb-6 leading-tight whitespace-pre-line">
+              <motion.div 
+                className="text-center text-white px-4 max-w-4xl"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <motion.span 
+                  className="block text-sm md:text-base mb-4 opacity-90"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 0.9, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.15 }}
+                >
+                  {slide.subtitle}
+                </motion.span>
+                <motion.h1 
+                  className="text-4xl md:text-6xl lg:text-7xl font-serif mb-6 leading-tight whitespace-pre-line"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
                   {slide.title}
-                </h1>
-                <p className="text-lg md:text-xl mb-8 opacity-90">{slide.description}</p>
-                <a href="tel:+919999999999" className="inline-block px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                </motion.h1>
+                <motion.p 
+                  className="text-lg md:text-xl mb-8 opacity-90"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 0.9, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.25 }}
+                >
+                  {slide.description}
+                </motion.p>
+                <motion.a 
+                  href="tel:+919999999999" 
+                  className="inline-block px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.3 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   CALL NOW
-                </a>
-              </div>
+                </motion.a>
+              </motion.div>
             </div>
           </div>
         ))}

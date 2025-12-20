@@ -1,5 +1,7 @@
 'use client'
 
+import { motion } from 'framer-motion'
+
 export default function WhyChooseUsSection() {
   const reasons = [
     {
@@ -53,18 +55,32 @@ export default function WhyChooseUsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((reason, index) => (
-            <div key={index} className="group">
-              <div className="overflow-hidden rounded-lg mb-4">
+            <motion.div 
+              key={index} 
+              className="group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <motion.div 
+                className="overflow-hidden rounded-lg mb-4"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img 
                   src={reason.image} 
                   alt={reason.title}
-                  className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-80 md:h-96 object-cover"
                 />
-              </div>
-              <h3 className="text-lg font-serif text-dark group-hover:text-primary transition-colors">
+              </motion.div>
+              <motion.h3 
+                className="text-lg font-serif text-dark group-hover:text-primary transition-colors"
+                whileHover={{ x: 5 }}
+              >
                 <a href="#">{reason.title}</a>
-              </h3>
-            </div>
+              </motion.h3>
+            </motion.div>
           ))}
         </div>
       </div>

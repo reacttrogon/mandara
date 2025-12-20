@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white py-16">
+    <footer className="bg-[#508066] text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="mb-8 flex justify-center">
@@ -50,9 +50,9 @@ export default function Footer() {
               <input 
                 type="email" 
                 placeholder="Your mail address"
-                className="flex-1 px-4 py-2 rounded text-dark focus:outline-none focus:ring-2 focus:ring-primary"
+                className="flex-1 px-4 py-2 rounded text-dark focus:outline-none focus:ring-2 focus:ring-[#19341A]"
               />
-              <button className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
+              <button className="px-6 py-2 bg-[#19341A] text-white rounded hover:bg-[#19341A]/90 transition-colors">
                 <i className="fas fa-paper-plane"></i>
               </button>
             </div>
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/70">©️ Mandara 2024 | All Rights Reserved</p>
+          <p className="text-white/70">©️ Mandara 2025 | All Rights Reserved</p>
           <ul className="flex gap-6">
             <li><a href="#" className="text-white/70 hover:text-white transition-colors">Terms & Condition</a></li>
             <li><a href="#" className="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>

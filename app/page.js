@@ -19,7 +19,7 @@ import BackToTop from '../components/BackToTop'
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-0">
       <FontAwesome />
       <Header />
       <HeroSlider />

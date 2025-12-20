@@ -12,12 +12,6 @@ export default function HeroSlider() {
   const slides = [
     {
       subtitle: "Mandara – India's First Holistic Wellness Retreat for Women",
-      title: "Where Care\n Meets Culture\n Healing Meets Home",
-      description: "Mandara Wellness Clinic is a premier postnatal care facility where medical excellence meets luxury hospitality.",
-      image: "WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg"
-    },
-    {
-      subtitle: "Mandara – India's First Holistic Wellness Retreat for Women",
       title: "Redefining Postnatal Care with Compassion & Class",
       description: "Where New Beginnings Are Gently Nurtured",
       image: "WhatsApp Image 2025-12-20 at 12.47.21 PM (1).jpeg"
@@ -27,6 +21,12 @@ export default function HeroSlider() {
       title: "Where New Beginnings Are Gently Nurtured",
       description: "World-Class Postnatal Care Blending Medical Excellence with Luxury Comfort",
       image: "WhatsApp Image 2025-12-20 at 12.47.21 PM.jpeg"
+    },
+    {
+      subtitle: "Mandara – India's First Holistic Wellness Retreat for Women",
+      title: "Where Care\n Meets Culture\n Healing Meets Home",
+      description: "Mandara Wellness Clinic is a premier postnatal care facility where medical excellence meets luxury hospitality.",
+      image: "WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg"
     }
   ]
 

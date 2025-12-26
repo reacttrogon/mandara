@@ -32,3 +32,36 @@ export const items = [
   { icon: "/assets/marque/care.png", text: "Spa & Wellness" },
   { icon: "/assets/marque/maternity.png", text: "Resort-Style Stay" },
 ];
+
+export const offerings = [
+    {
+      title: "Personalized care",
+      icon: "/assets/offerings/handshakee.png",
+      position: "left",
+    },
+    {
+      title: "24/7 newborn support",
+      icon: "/assets/offerings/24-hours.png",
+      position: "left",
+    },
+    {
+      title: "Therapeutic treatments",
+      icon: "/assets/offerings/physical-therapy.png",
+      position: "left",
+    },
+    {
+      title: "Holistic nutrition",
+      icon: "/assets/offerings/healthy-food.png",
+      position: "right",
+    },
+    {
+      title: "Private luxury accommodations",
+      icon: "/assets/offerings/house (3).png",
+      position: "right",
+    },
+    {
+      title: "Emotional and mental wellness",
+      icon: "/assets/offerings/empathy.png",
+      position: "right",
+    },
+  ];

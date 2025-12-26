@@ -3,19 +3,19 @@
 export default function PackagesSection() {
   const packages = [
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg',
+      image: '/assets/images/pack-1.png',
       duration: '7 Days',
       title: 'Blossom',
       description: 'Ideal for mothers needing short recovery & rest'
     },
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM (1).jpeg',
+      image: '/assets/images/pack-2.png',
       duration: '14 Days',
       title: 'Harmony',
       description: 'Ideal for Extended recovery with wellness and nutrition focus'
     },
     {
-      image: '/assets/images/WhatsApp Image 2025-12-20 at 12.47.21 PM.jpeg',
+      image: '/assets/images/pack-5.png',
       duration: '21 Days',
       title: 'Nirvana',
       description: 'Ideal for Full postnatal transformation, rest, therapy & reconnection'
@@ -31,13 +31,13 @@ export default function PackagesSection() {
             Thoughtfully Designed Postnatal Care Plans
           </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
               <div className="relative h-80 md:h-96 overflow-hidden">
-                <img 
-                  src={pkg.image} 
+                <img
+                  src={pkg.image}
                   alt={pkg.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

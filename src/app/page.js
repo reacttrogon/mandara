@@ -3,7 +3,7 @@
 import FontAwesome from './_components/FontAwesome'
 import Header from './_components/Header'
 import HeroSlider from './_components/HeroSlider'
-import AboutSection from './_components/AboutMandara'
+import AboutMandara from './_components/AboutMandara'
 import ServicesSection from './_components/ServicesSection'
 import MarqueeSection from './_components/MarqueeSection'
 import WhatWeOfferSection from './_components/WhatWeOfferSection'
@@ -23,7 +23,7 @@ export default function Home() {
       <FontAwesome />
       <Header />
       <HeroSlider />
-      <AboutSection />
+      <AboutMandara />
       <ServicesSection />
       <MarqueeSection />
       <WhatWeOfferSection />

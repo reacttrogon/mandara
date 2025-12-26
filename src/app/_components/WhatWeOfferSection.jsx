@@ -4,7 +4,7 @@ import {offerings} from "../_utils/data"
 export default function WhatWeOfferSection() {
 
   return (
-    <section id="amenities" className="py-16 md:py-24 bg-primary/5">
+    <section id="amenities" className="py-16 md:py-24 bg-[#F7F1EF]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-sm uppercase tracking-wider text-primary mb-4 inline-block">WHAT WE OFFER</span>

@@ -1,13 +1,7 @@
 'use client'
+import {items} from "../_utils/data";
 
 export default function MarqueeSection() {
-  const items = [
-    { icon: "/assets/images/mother.png", text: "Womens wellness" },
-    { icon: "/assets/images/love.png", text: "Personalized Postnatal Recovery" },
-    { icon: "/assets/images/care.png", text: "Spa & Wellness" },
-    { icon: "/assets/images/maternity.png", text: "Resort-Style Stay" }
-  ]
-
   return (
     <section className="py-8 bg-primary overflow-hidden">
       <div className="marquee-inner flex animate-scroll">

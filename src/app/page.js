@@ -4,8 +4,8 @@ import FontAwesome from './_components/FontAwesome'
 import Header from './_components/Header'
 import HeroSlider from './_components/HeroSlider'
 import AboutMandara from './_components/AboutMandara'
-import ServicesSection from './_components/ServicesSection'
-import MarqueeSection from './_components/MarqueeSection'
+import Services from './_components/Services'
+import MarqueeSection from './_components/MarqueeSection.jsx'
 import WhatWeOfferSection from './_components/WhatWeOfferSection'
 import WhyChooseUsSection from './_components/WhyChooseUsSection'
 import PackagesSection from './_components/PackagesSection'
@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <HeroSlider />
       <AboutMandara />
-      <ServicesSection />
+      <Services />
       <MarqueeSection />
       <WhatWeOfferSection />
       <WhyChooseUsSection />

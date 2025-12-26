@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Phone } from "lucide-react";
 
-export default function AboutSection() {
+export default function AboutMandara() {
   return (
     <section id="about" className="py-16 md:py-24 bg-[#F7F1EF]">
       <div className="container mx-auto px-4">

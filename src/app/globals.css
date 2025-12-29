@@ -64,3 +64,13 @@ html {
   background: #508066;
   color: #ffffff;
 }
+
+.hide-scrollbar {
+  @supports (scrollbar-width: none) {
+    scrollbar-width: none;
+  }
+  @supports (-webkit-appearance: none) {
+    -webkit-appearance: none;
+  }
+}
+

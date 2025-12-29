@@ -123,3 +123,12 @@ export const packages = [
       "Ideal for Full postnatal transformation, rest, therapy & reconnection",
   },
 ];
+
+export const galleries = [
+  "/assets/gallery/about.jpeg",
+  "/assets/gallery/banner-2.jpeg",
+  "/assets/gallery/banner-3.jpeg",
+  "/assets/gallery/abouttt.png",
+  "/assets/gallery/modern.png",
+  "/assets/gallery/bedroom.png",
+];

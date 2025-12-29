@@ -7,8 +7,8 @@ import AboutMandara from './_components/AboutMandara'
 import Services from './_components/Services'
 import MarqueeSection from './_components/MarqueeSection.jsx'
 import WhatWeOfferSection from './_components/WhatWeOfferSection.jsx'
-import WhyChooseUsSection from './_components/WhyChooseUsSection'
-import PackagesSection from './_components/PackagesSection'
+import WhyChooseUsSection from './_components/WhyChooseUsSection.jsx'
+import Packages from './_components/Packages.jsx'
 import GallerySection from './_components/GallerySection'
 import FAQSection from './_components/FAQSection'
 import AmenitiesSection from './_components/AmenitiesSection'
@@ -28,7 +28,7 @@ export default function Home() {
       <MarqueeSection />
       <WhatWeOfferSection />
       <WhyChooseUsSection />
-      <PackagesSection />
+      <Packages />
       <GallerySection />
       <FAQSection />
       <AmenitiesSection />

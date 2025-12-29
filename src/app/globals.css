@@ -2,29 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global defaults */
 @layer base {
-  * {
-    @apply antialiased;
-  }
-  
   body {
-    @apply bg-white text-gray-800;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    @apply bg-white text-gray-800 font-sans;
     line-height: 1.6;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-weight: 400;
-    letter-spacing: 0.02em;
+    @apply font-sans;
+    font-weight: 400; /* optional, adjust as you like */
+    letter-spacing: 0.01em;
     line-height: 1.3;
   }
 }
 
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
+/* Marquee animation */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -38,6 +36,7 @@ html {
   animation: scroll 15s linear infinite;
 }
 
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -55,6 +54,7 @@ html {
   background: #3d614f;
 }
 
+/* Text selection */
 ::selection {
   background: #508066;
   color: #ffffff;

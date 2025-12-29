@@ -37,7 +37,7 @@ export default function Header() {
               <img
                 src="/assets/images/logo.png"
                 alt="Mandara Logo"
-                className="h-[50px] logo-img"
+                className="h-[50px] logo-img fill-primary"
               />
             </a>
           </div>

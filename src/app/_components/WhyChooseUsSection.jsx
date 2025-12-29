@@ -1,43 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import {reasons} from "../_utils/data"
 
 export default function WhyChooseUsSection() {
-  const reasons = [
-    {
-      image: '/assets/images/app.png',
-      title: 'Tech-enabled app for total control & support'
-    },
-    {
-      image: '/assets/images/abut-2.png',
-      title: 'Modern and Traditional spa and wellness suites'
-    },
-    {
-      image: '/assets/images/tri.webp',
-      title: 'Culturally rooted, modern postpartum care'
-    },
-    {
-      image: '/assets/images/baby-sleep.png',
-      title: '24/7 newborn care with real-time camera access'
-    },
-    {
-      image: '/assets/images/bedroom.png',
-      title: 'Smart luxury rooms with baby & mother care zones'
-    },
-    {
-      image: '/assets/images/wellness.png',
-      title: 'Personalized recovery plans with daily guidance'
-    },
-    {
-      image: '/assets/images/Screenshot 2025-12-23 at 5.01.06 PM.png',
-      title: 'Mother-baby memories curated beautifully'
-    },
-    {
-      image: '/assets/images/eat.webp',
-      title: 'Gourmet healing meals & snacks'
-    }
-  ]
-
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -53,7 +19,7 @@ export default function WhyChooseUsSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason, index) => (
             <motion.div
               key={index}
@@ -71,7 +37,7 @@ export default function WhyChooseUsSection() {
                 <img
                   src={reason.image}
                   alt={reason.title}
-                  className="w-full h-80 md:h-96 object-cover"
+                  className="w-full h-60 md:h-60 object-cover"
                 />
               </motion.div>
               <motion.h3

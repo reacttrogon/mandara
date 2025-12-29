@@ -1,14 +1,16 @@
-import './globals.css'
+import "./globals.css";
+import { DM_Sans } from "next/font/google";
 
-export const metadata = {
-  title: 'Mandara Wellness Clinic',
-  description: 'Mandara Wellness Clinic - Beauty Spa, Barber Shop & Cosmetic Surgery Html Template',
-}
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "700"],
+});
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={dmSans.variable}>
+      <body>{children}</body>
     </html>
-  )
+  );
 }

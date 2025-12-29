@@ -1,5 +1,5 @@
-'use client'
-
+"use client";
+import { Facebook, Youtube, Instagram } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-[#22362C] text-white">
@@ -17,7 +17,8 @@ export default function Footer() {
                 />
               </div>
               <p className="text-white/70">
-                G1003, NH 66, Kozhikode Bypass<br />
+                G1003, NH 66, Kozhikode Bypass
+                <br />
                 Calicut, Kerala
               </p>
             </div>
@@ -26,12 +27,18 @@ export default function Footer() {
             <div className="md:ml-12">
               <h3 className="text-xl font-semibold mb-6">Contact us</h3>
               <p className="text-white/70 mb-2">
-                <a href="tel:+917654389716" className="hover:text-white transition-colors">
-                  +917654389716
+                <a
+                  href="tel:+917654389716"
+                  className="hover:text-white transition-colors"
+                >
+                  +91 7654389716
                 </a>
               </p>
               <p className="text-white/70">
-                <a href="mailto:wellness@mandara.com" className="hover:text-white transition-colors">
+                <a
+                  href="mailto:wellness@mandara.com"
+                  className="hover:text-white transition-colors"
+                >
                   wellness@mandara.com
                 </a>
               </p>
@@ -41,7 +48,8 @@ export default function Footer() {
             <div>
               <h3 className="text-xl font-semibold mb-6">Follow Us</h3>
               <p className="text-white/70 mb-6">
-                Stay connected with Mandara Wellness Clinic through our social platforms
+                Stay connected with Mandara Wellness Clinic through our social
+                platforms
               </p>
               <div className="flex gap-4">
                 <a
@@ -49,14 +57,14 @@ export default function Footer() {
                   className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary transition-colors"
                   aria-label="Instagram"
                 >
-                  <i className="fab fa-instagram"></i>
+                  <Instagram />
                 </a>
                 <a
                   href="#"
                   className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary transition-colors"
                   aria-label="Facebook"
                 >
-                  <i className="fab fa-facebook-f"></i>
+                  <Facebook />
                 </a>
                 <a
                   href="#"
@@ -70,7 +78,7 @@ export default function Footer() {
                   className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-primary transition-colors"
                   aria-label="YouTube"
                 >
-                  <i className="fab fa-youtube"></i>
+                  <Youtube />
                 </a>
               </div>
             </div>
@@ -83,17 +91,34 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
-              <a href="#" className="text-white/70 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">Terms and Conditions</a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">Refund Policy</a>
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                Terms and Conditions
+              </a>
+              <a
+                href="#"
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                Refund Policy
+              </a>
             </div>
             <p className="text-white/70 text-center lg:text-right">
-              Copyright 2025 by <a href="#" className="hover:text-white transition-colors">Mandara Wellness Center</a>
+              Copyright 2025 by{" "}
+              <a href="#" className="hover:text-white transition-colors">
+                Mandara Wellness Center
+              </a>
             </p>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

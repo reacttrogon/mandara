@@ -155,3 +155,22 @@ export const faqs = [
       "Lorem ipsum is simply dummy text of the printing and typesetting industry sapien fermen drana inthe miss molestie non tempor fermen the varius vestibulum drana.",
   },
 ];
+
+export const audience = [
+  {
+    image: "/assets/mandara/mother.webp",
+    title: "A new mother seeking premium postnatal recovery",
+  },
+  {
+    image: "/assets/mandara/pregnant.webp",
+    title: "An expecting mother preparing for childbirth",
+  },
+  {
+    image: "/assets/mandara/women.webp",
+    title: "A woman in need of focused rest and hormonal balance",
+  },
+  {
+    image: "/assets/mandara/coup.png",
+    title: "A couple seeking peaceful, supported bonding time",
+  },
+];

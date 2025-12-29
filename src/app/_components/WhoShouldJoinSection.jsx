@@ -1,33 +1,16 @@
 'use client'
+import {audience} from "../_utils/data";
 
 export default function WhoShouldJoinSection() {
-    const audience = [
-        {
-            image: "/assets/images/mother.webp",
-            title: "A new mother seeking premium postnatal recovery"
-        },
-        {
-            image: "/assets/images/pregnant.webp",
-            title: "An expecting mother preparing for childbirth"
-        },
-        {
-            image: "/assets/images/women.webp",
-            title: "A woman in need of focused rest and hormonal balance"
-        },
-        {
-            image: "/assets/images/coup.png",
-            title: "A couple seeking peaceful, supported bonding time"
-        }
-    ]
 
     return (
         <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark">
-                        Is Mandara for You?
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark uppercase ">
+                        Is Mandara for You ?
                     </h2>
-                    <p className="text-dark/70 text-lg">Absolutely if you're:</p>
+                    <p className="text-primary text-md uppercase">Absolutely if you're</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -48,11 +31,11 @@ export default function WhoShouldJoinSection() {
 
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                                 <img
-                                    src="/assets/images/favicon.png"
+                                    src="/assets/mandara/favicon.png"
                                     alt="icon"
-                                    className="w-8 h-8 mb-3 opacity-80"
+                                    className="w-8 h-8 mb-3 opacity-80 mx-auto"
                                 />
-                                <h4 className="text-lg font-semibold leading-tight">
+                                <h4 className="text-lg  leading-tight line-clamp-2">
                                     {item.title}
                                 </h4>
                             </div>

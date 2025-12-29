@@ -1,6 +1,5 @@
 "use client";
 
-import FontAwesome from "./_components/FontAwesome";
 import Header from "./_components/Header";
 import HeroSlider from "./_components/HeroSlider";
 import AboutMandara from "./_components/AboutMandara";
@@ -12,15 +11,13 @@ import Packages from "./_components/Packages.jsx";
 import GallerySection from "./_components/GallerySection.jsx";
 import FAQSection from "./_components/FAQSection.jsx";
 import AmenitiesSection from "./_components/AmenitiesSection";
-import VideoSection from "./_components/VideoSection";
-import WhoShouldJoinSection from "./_components/WhoShouldJoinSection";
-import Footer from "./_components/Footer";
+import WhoShouldJoinSection from "./_components/WhoShouldJoinSection.jsx";
+import Footer from "./_components/Footer.jsx";
 import WhatsAppFloat from "./_components/WhatsAppFloat";
 
 export default function Home() {
   return (
     <main className="pt-0">
-      <FontAwesome />
       <Header />
       <HeroSlider />
       <AboutMandara />
@@ -32,7 +29,6 @@ export default function Home() {
       <GallerySection />
       <FAQSection />
       <AmenitiesSection />
-      <VideoSection />
       <WhoShouldJoinSection />
       <Footer />
       <WhatsAppFloat />

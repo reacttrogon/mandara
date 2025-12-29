@@ -10,7 +10,7 @@ import WhatWeOfferSection from "./_components/WhatWeOfferSection.jsx";
 import WhyChooseUsSection from "./_components/WhyChooseUsSection.jsx";
 import Packages from "./_components/Packages.jsx";
 import GallerySection from "./_components/GallerySection.jsx";
-import FAQSection from "./_components/FAQSection";
+import FAQSection from "./_components/FAQSection.jsx";
 import AmenitiesSection from "./_components/AmenitiesSection";
 import VideoSection from "./_components/VideoSection";
 import WhoShouldJoinSection from "./_components/WhoShouldJoinSection";

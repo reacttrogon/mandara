@@ -132,3 +132,26 @@ export const galleries = [
   "/assets/gallery/modern.png",
   "/assets/gallery/bedroom.png",
 ];
+
+export const faqs = [
+  {
+    question: "Do you have any discount code?",
+    answer:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry sapien fermen drana inthe miss molestie non tempor fermen the varius vestibulum drana.",
+  },
+  {
+    question: "How can I get in touch with my appointment?",
+    answer:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry sapien fermen drana inthe miss molestie non tempor fermen the varius vestibulum drana.",
+  },
+  {
+    question: "Can I cancel my reservation?",
+    answer:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry sapien fermen drana inthe miss molestie non tempor fermen the varius vestibulum drana.",
+  },
+  {
+    question: "Do you have Ayurvedic spa?",
+    answer:
+      "Lorem ipsum is simply dummy text of the printing and typesetting industry sapien fermen drana inthe miss molestie non tempor fermen the varius vestibulum drana.",
+  },
+];

@@ -13,7 +13,6 @@ import FAQSection from "./_components/FAQSection.jsx";
 import AmenitiesSection from "./_components/AmenitiesSection";
 import WhoShouldJoinSection from "./_components/WhoShouldJoinSection.jsx";
 import Footer from "./_components/Footer.jsx";
-import WhatsAppFloat from "./_components/WhatsAppFloat";
 
 export default function Home() {
   return (
@@ -22,7 +21,8 @@ export default function Home() {
       <HeroSlider />
       <AboutMandara />
       <Services />
-      <MarqueeSection />
+      {/*Hided because of client requirement*/}
+      {/* <MarqueeSection /> */}
       <WhatWeOfferSection />
       <WhyChooseUsSection />
       <Packages />
@@ -31,7 +31,6 @@ export default function Home() {
       <AmenitiesSection />
       <WhoShouldJoinSection />
       <Footer />
-      <WhatsAppFloat />
     </main>
   );
 }

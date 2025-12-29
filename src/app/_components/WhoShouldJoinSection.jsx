@@ -4,7 +4,7 @@ import {audience} from "../_utils/data";
 export default function WhoShouldJoinSection() {
 
     return (
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-16 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark uppercase ">

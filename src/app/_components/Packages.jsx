@@ -1,54 +1,75 @@
 "use client";
+
+import { motion } from "framer-motion";
+import { Check, ArrowRight } from "lucide-react";
 import { packages } from "../_utils/data";
 
 export default function PackagesSection() {
   return (
-    <section className="py-16 md:py-24 bg-off-white">
+    <section className="py-24 bg-stone-900 text-stone-100 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <span className="text-sm uppercase tracking-wider text-primary mb-4 inline-block">
-            Our Packages
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark  ">
-            Thoughtfully Designed <br />
-            Postnatal Care Plans
-          </h2>
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-xs font-bold tracking-[0.25em] text-stone-400 uppercase block mb-4"
+          >
+            Postnatal Recovery
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 text-white"
+          >
+            Curated Wellness <br /> <span className="text-stone-500 italic">Journeys</span>
+          </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="group relative flex flex-col h-full bg-stone-800/50 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-600 transition-colors duration-500"
             >
-              <div
-                className="relative h-80 md:h-96 overflow-hidden flex items-center justify-center text-center "
-                style={{
-                  backgroundImage: `url(${pkg.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  opacity: 1,
-                }}
-              >
-                <div className="absolute inset-0 bg-black/40 "></div>
-                <div className="p-6 relative">
-                  <ul className="mb-4 text-sm text-gray-100 flex justify-center">
-                    <li className="flex items-center gap-2">
-                      <span className="uppercase">Duration - {pkg.duration}</span>
-                    </li>
-                  </ul>
-                  <h3 className="text-3xl font-serif mb-4 text-gray-100">
-                    {pkg.title}
-                  </h3>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-gray-100 border border-white px-4 py-1 hover:text-primary/80 hover:bg-white transition-colors font-semibold rounded-sm"
-                  >
-                    View Details <i className="fas fa-arrow-up-right"></i>
-                  </a>
+              {/* Image Header */}
+              <div className="h-64 relative overflow-hidden">
+                <div className="absolute inset-0 bg-stone-900/20 z-10 group-hover:bg-transparent transition-colors duration-500" />
+                <img
+                  src={pkg.image}
+                  alt={pkg.title}
+                  className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute bottom-4 left-4 z-20">
+                  <span className="inline-block px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-900 text-xs font-bold uppercase tracking-wider rounded-full">
+                    {pkg.duration}
+                  </span>
                 </div>
               </div>
-            </div>
+
+              {/* Content */}
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-3xl font-serif mb-2 text-white">
+                  {pkg.title}
+                </h3>
+                <p className="text-stone-400 text-sm mb-8 leading-relaxed">
+                  {pkg.description}
+                </p>
+
+                <div className="mt-auto border-t border-stone-800 pt-6">
+                  <button className="w-full flex items-center justify-between text-sm font-medium uppercase tracking-wider text-stone-300 group-hover:text-white transition-colors">
+                    <span>View Inclusions</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

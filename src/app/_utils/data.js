@@ -174,3 +174,21 @@ export const audience = [
     title: "A couple seeking peaceful, supported bonding time",
   },
 ];
+
+export const slides = [
+  {
+    subtitle: "India's First Holistic Wellness Retreat",
+    title: "Luxury Postnatal Care",
+    image: "/assets/images/image1.jpeg",
+  },
+  {
+    subtitle: "Where Compassion Meets Class",
+    title: "Redefining Recovery",
+    image: "/assets/images/image2.jpeg",
+  },
+  {
+    subtitle: "Your Sanctuary of Peace",
+    title: "The Perfect Base",
+    image: "/assets/images/image3.jpeg",
+  },
+];

@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "./_components/Header";
-import HeroSlider from "./_components/HeroSlider";
+import HeroSlider from "./_components/HeroSlider.jsx";
 import AboutMandara from "./_components/AboutMandara";
 import Services from "./_components/Services";
 import MarqueeSection from "./_components/MarqueeSection.jsx";

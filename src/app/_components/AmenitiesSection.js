@@ -1,72 +1,74 @@
-'use client'
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function AmenitiesSection() {
     const amenities = [
         {
             icon: "fa-bell-concierge",
-            title: "Hospitality & Concierge Team",
-            description: "Dedicated professionals ensuring personalized comfort."
+            title: "Concierge Team",
+            description: "24/7 dedicated support"
         },
         {
             icon: "fa-leaf-heart",
-            title: "Ayurvedic & Modern Therapists",
-            description: "A blend of traditional healing and modern therapy."
+            title: "Expert Therapy",
+            description: "Ayurvedic & Modern"
         },
         {
             icon: "fa-spa",
-            title: "Yoga & Pilates Coaches",
-            description: "Expert-guided sessions focused on postnatal strength."
+            title: "Yoga & Pilates",
+            description: "Restorative Movement"
         },
         {
             icon: "fa-user-gear",
-            title: "Wellness & Operations Heads",
-            description: "On-site leadership ensuring quality standards."
+            title: "Wellness Heads",
+            description: "On-site Leadership"
         },
         {
             icon: "fa-stethoscope",
-            title: "Gynecologist & Pediatric Support",
-            description: "Access to trusted medical professionals for mother and baby."
+            title: "Medical Experts",
+            description: "Doctors & Pediatricians"
         }
-    ]
+    ];
 
     return (
-        <section className="py-16 md:py-24 bg-[#f5f1ed]">
+        <section className="py-24 bg-white">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-start gap-12">
-                    {/* LEFT CONTENT */}
-                    <div className="w-full lg:w-4/12">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark">
+                <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+                    <div className="max-w-2xl">
+                        <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
                             A Premium Ecosystem of Care
                         </h2>
-                        <p className="text-dark/70 mb-6 leading-relaxed">
-                            At Mandara, we integrate medical expertise, holistic wellness.
+                        <p className="text-stone-500 text-lg">
+                            We integrate medical expertise with holistic wellness, ensuring every detail is looked after.
                         </p>
-                        <a href="#" className="inline-block px-8 py-3 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
-                            All Amenities
+                    </div>
+                    <div>
+                        <a href="#" className="px-8 py-4 border border-stone-200 rounded-full text-stone-900 hover:bg-stone-50 transition-colors uppercase text-sm font-bold tracking-widest">
+                            View All Features
                         </a>
                     </div>
+                </div>
 
-                    {/* RIGHT GRID */}
-                    <div className="w-full lg:w-8/12">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {amenities.map((amenity, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-                                >
-                                    <div className="icon mb-4">
-                                        <i className={`fa-thin ${amenity.icon} text-4xl text-primary`}></i>
-                                    </div>
-                                    <h5 className="text-lg font-serif mb-3 text-dark">{amenity.title}</h5>
-                                    <p className="text-dark/70 text-sm leading-relaxed">
-                                        {amenity.description}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-stone-100 border border-stone-100 overflow-hidden rounded-2xl">
+                    {amenities.map((amenity, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="bg-white p-8 md:p-12 flex flex-col items-center text-center group hover:bg-stone-50 transition-colors"
+                        >
+                            <div className="w-16 h-16 mb-6 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:text-stone-800 group-hover:scale-110 transition-all duration-300">
+                                <i className={`fa-thin ${amenity.icon} text-3xl`}></i>
+                            </div>
+                            <h3 className="font-serif text-lg text-stone-900 mb-2">{amenity.title}</h3>
+                            <p className="text-sm text-stone-500">{amenity.description}</p>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
-    )
+    );
 }

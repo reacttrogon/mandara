@@ -25,7 +25,7 @@ export default function ContactUs() {
         <h2 className="text-xl md:text-5xl font-serif">BOOK NOW </h2>
       <form
         onSubmit={handleSubmit}
-        className="bg-white w-full max-w-2xl p-8"
+        className="bg-white w-full max-w-2xl py-8"
       >
 
         {/* Full Name */}

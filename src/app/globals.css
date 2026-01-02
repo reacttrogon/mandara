@@ -5,15 +5,15 @@
 /* Global defaults */
 @layer base {
   body {
-    @apply bg-white text-gray-800 font-sans;
+    @apply bg-white text-dark font-sans antialiased;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans;
-    font-weight: 400; /* optional, adjust as you like */
-    letter-spacing: 0.01em;
-    line-height: 1.3;
+    @apply font-serif;
+    font-weight: 400; 
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 }
 
@@ -38,31 +38,31 @@ html {
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #508066;
-  border-radius: 4px;
+  background: #c5a059; /* Gold */
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d614f;
+  background: #eaddcf; /* Sand */
 }
 
 /* Text selection */
 ::selection {
-  background: #508066;
-  color: #ffffff;
+  background: #c5a059;
+  color: #1a1a1a;
 }
 
 ::-moz-selection {
-  background: #508066;
-  color: #ffffff;
+  background: #c5a059;
+  color: #1a1a1a;
 }
 
 .hide-scrollbar {

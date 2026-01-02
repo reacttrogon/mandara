@@ -32,25 +32,28 @@ export default function AmenitiesSection() {
     ];
 
     return (
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+        <section className="py-24 bg-cream">
+            <div className="container mx-auto px-6 md:px-12">
+                <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
                     <div className="max-w-2xl">
-                        <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
+                        <span className="text-xs font-bold tracking-[0.2em] text-gold uppercase block mb-4">
+                            Premium Facilities
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-serif text-dark mb-6">
                             A Premium Ecosystem of Care
                         </h2>
-                        <p className="text-stone-500 text-lg">
+                        <p className="text-dark/60 text-lg leading-relaxed font-sans">
                             We integrate medical expertise with holistic wellness, ensuring every detail is looked after.
                         </p>
                     </div>
                     <div>
-                        <a href="#" className="px-8 py-4 border border-stone-200 rounded-full text-stone-900 hover:bg-stone-50 transition-colors uppercase text-sm font-bold tracking-widest">
+                        <a href="#" className="inline-block px-8 py-4 border border-dark/20 rounded-full text-dark hover:bg-dark hover:text-white transition-all duration-300 uppercase text-xs font-bold tracking-widest">
                             View All Features
                         </a>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-stone-100 border border-stone-100 overflow-hidden rounded-2xl">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-dark/10 border border-dark/10 overflow-hidden rounded-none">
                     {amenities.map((amenity, index) => (
                         <motion.div
                             key={index}
@@ -58,13 +61,13 @@ export default function AmenitiesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white p-8 md:p-12 flex flex-col items-center text-center group hover:bg-stone-50 transition-colors"
+                            className="bg-white p-8 md:p-12 flex flex-col items-center text-center group hover:bg-gold/10 transition-colors duration-500"
                         >
-                            <div className="w-16 h-16 mb-6 rounded-full bg-stone-100 flex items-center justify-center text-stone-400 group-hover:text-stone-800 group-hover:scale-110 transition-all duration-300">
+                            <div className="w-16 h-16 mb-6 rounded-full bg-cream flex items-center justify-center text-dark/40 group-hover:text-gold group-hover:scale-110 transition-all duration-500">
                                 <i className={`fa-thin ${amenity.icon} text-3xl`}></i>
                             </div>
-                            <h3 className="font-serif text-lg text-stone-900 mb-2">{amenity.title}</h3>
-                            <p className="text-sm text-stone-500">{amenity.description}</p>
+                            <h3 className="font-serif text-lg text-dark mb-2">{amenity.title}</h3>
+                            <p className="text-sm text-dark/60 font-sans">{amenity.description}</p>
                         </motion.div>
                     ))}
                 </div>

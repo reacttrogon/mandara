@@ -13,7 +13,7 @@ module.exports = {
         "off-white": "#f9f7f2", // More subtle cream
         cream: "#f4f1ea", // For sections
         gold: "#c5a059",
-        dark: "#101814", // Deep rich green-black for luxury feel
+        dark: "#051512", // Deep rich green-black for luxury feel
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)", "sans-serif"],

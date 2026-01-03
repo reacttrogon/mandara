@@ -5,90 +5,77 @@ import { offerings } from "../_utils/data";
 
 export default function WhatWeOfferSection() {
   return (
-    <section className="py-12 md:py-24 bg-cream overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 md:mb-20">
-          <span className="text-sm uppercase tracking-widest text-[#BFA095] mb-4 inline-block font-semibold">
+    <section className="py-14 md:py-24 bg-cream">
+      <div className="container mx-auto px-4 md:px-10">
+
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-[#BFA095] font-semibold block mb-2.5">
             Holistic Experience
           </span>
-          <h2 className="font-serif text-dark">
+
+          {/* Heading — slightly increased */}
+          <h2 className="font-serif text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">
             Mandara Amenities
           </h2>
+
+          <p className="text-dark/60 mt-3 text-[14px] md:text-[15px]">
+            Where wellness, comfort, and heartfelt care come together.
+          </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto">
-          {/* Center Image */}
-          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] z-0">
-            <div className="relative w-full h-full">
-              <div className="absolute inset-0 border border-[#DBC1B6]/30 rounded-full animate-[spin_60s_linear_infinite]" />
-              <div className="absolute inset-4 border border-[#DBC1B6]/30 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
-              <img
+        {/* Content */}
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+          {/* Left — Image */}
+          <div className="relative">
+            <div className="relative w-full max-w-md mx-auto">
+              <div className="absolute -inset-6 bg-[#D8C5BA]/20 blur-2xl rounded-full" />
+
+              <motion.img
                 src="/assets/images/what-we-offer.webp"
-                alt="Center"
-                className="absolute inset-8 w-[calc(100%-64px)] h-[calc(100%-64px)] object-cover rounded-full shadow-2xl"
+                alt="Mandara"
+                initial={{ opacity: 0, scale: 1.05 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="relative rounded-3xl shadow-2xl object-cover w-full h-[400px]"
               />
             </div>
           </div>
 
-          {/* Mobile Image */}
-          <div className="lg:hidden mb-12 flex justify-center">
-            <img
-              src="/assets/images/what-we-offer.webp"
-              alt="Center"
-              className="w-64 h-64 object-cover rounded-full shadow-lg"
-            />
+          {/* Right — Amenities */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {offerings.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-[#E9DDD7]"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#F5EBE6] flex items-center justify-center mb-4">
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-7 h-7 object-contain"
+                  />
+                </div>
+
+                <h3 className="font-serif text-[18px] md:text-[20px] text-[#4A403A] mb-1.5">
+                  {item.title}
+                </h3>
+
+                <p className="text-[13.5px] md:text-[14.5px] text-[#6E635C] leading-relaxed">
+                  {item.description || "Experience refined wellness designed for your comfort and peace of mind."}
+                </p>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Grid Layout that floats around center on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 relative z-10">
-            {/* Lefter Col */}
-            <div className="space-y-12 lg:space-y-24 flex flex-col justify-center">
-              {offerings.slice(0, 3).map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-6 lg:flex-row-reverse text-left lg:text-right group"
-                >
-                  <div className="flex-1">
-                    <h3 className="font-serif text-xl text-[#4A403A] group-hover:text-[#A67C52] transition-colors">{item.title}</h3>
-                  </div>
-                  <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center p-3 group-hover:scale-110 transition-transform duration-300">
-                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Middle Col (Spacer for Desktop) */}
-            <div className="hidden lg:block" />
-
-            {/* Righter Col */}
-            <div className="space-y-12 lg:space-y-24 flex flex-col justify-center">
-              {offerings.slice(3, 6).map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-6 text-left group"
-                >
-                  <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center p-3 group-hover:scale-110 transition-transform duration-300">
-                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-xl text-[#4A403A] group-hover:text-[#A67C52] transition-colors">{item.title}</h3>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
   );
 }
-

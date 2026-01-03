@@ -13,20 +13,23 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = `transition-colors ${isScrolled
+  const navClass = `transition-colors ${
+    isScrolled
       ? "text-dark hover:text-primary"
-      : "text-white hover:text-off-white"
-    }`;
+      : "text-white hover:text-primary"
+  }`;
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-4">
         <div
-          className={`flex items-center justify-between ${!isMenuOpen ? "py-4" : "py-0"
-            } `}
+          className={`flex items-center justify-between ${
+            !isMenuOpen ? "py-4" : "py-0"
+          } `}
         >
           {/* Desktop Logo */}
           <a href="/" className="hidden md:block">
@@ -45,10 +48,11 @@ export default function Header() {
           {!isMenuOpen && (
             <a href="/" className="md:hidden">
               <img
-                src={`${isScrolled
+                src={`${
+                  isScrolled
                     ? "/assets/images/scroll-logo.png"
                     : "/assets/images/logo_transp_w.png"
-                  }`}
+                }`}
                 alt="Mandara Logo"
                 className="h-9 md:h-12 pl-4 transition-all duration-300"
               />
@@ -56,7 +60,7 @@ export default function Header() {
           )}
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-8 ">
             <li>
               <a href="#home" className={navClass}>
                 Home
@@ -84,22 +88,20 @@ export default function Header() {
             </li>
           </ul>
 
-          {/* Desktop CTA */}
-          <a
-            href="/booking-system"
-            className="hidden md:inline-flex items-center gap-2 px-7 py-2.5 rounded-full bg-primary text-white font-medium hover:-translate-y-0.5 hover:shadow-lg  transition-all duration-300"
+          <button
+            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary animate transition-all duration-200 ${
+              isScrolled ? "hover:border hover:border-primary" : ""
+            }`}
           >
-            <span className="flex items-center gap-2">
-              <CalendarCheck className="w-5 h-5" />
-              <span className="font-medium">Book Now</span>
-            </span>
-          </a>
+            Book your stay
+          </button>
 
           {/* Mobile Menu Button */}
           {!isMenuOpen && (
             <button
-              className={`md:hidden p-2 rounded ${isScrolled ? "text-dark" : "text-white"
-                }`}
+              className={`md:hidden p-2 rounded ${
+                isScrolled ? "text-dark" : "text-white"
+              }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -140,14 +142,14 @@ export default function Header() {
             Contact Us
           </a>
 
-          <a
-            href="/booking-system"
-            className="inline-flex items-center gap-2 px-6 py-2 rounded bg-primary text-white"
+          <button
+            className={` rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary animate transition-all duration-200 hover:border hover:border-primary${
+              isScrolled ? "hover:border hover:border-primary" : ""
+            }`}
             onClick={() => setIsMenuOpen(false)}
           >
-            <CalendarCheck />
-            Book Now
-          </a>
+            Book your stay
+          </button>
         </div>
       )}
     </nav>

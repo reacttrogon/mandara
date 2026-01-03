@@ -1,4 +1,5 @@
 'use client'
+import { Check } from 'lucide-react'
 
 export default function PricingSection() {
   const pricingPlans = [
@@ -27,19 +28,19 @@ export default function PricingSection() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-8 items-end">
           <div className="w-full md:w-1/3">
-            <img 
-              src="/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg" 
+            <img
+              src="/assets/images/WhatsApp Image 2025-12-20 at 12.47.20 PM.jpeg"
               alt="Pricing"
               className="w-full rounded-lg shadow-lg"
             />
           </div>
-          
+
           <div className="w-full md:w-2/3">
             <div className="mb-12">
               <span className="text-sm uppercase tracking-wider text-primary mb-4 inline-block">Our Pricing</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark">Postnatal Care Packages</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
@@ -50,7 +51,7 @@ export default function PricingSection() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <i className="fas fa-check text-primary mt-1"></i>
+                        <Check className="w-5 h-5 text-primary mt-1" />
                         <span className="text-dark/70">{feature}</span>
                       </li>
                     ))}

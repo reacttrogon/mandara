@@ -4,7 +4,9 @@ import { Facebook, Youtube, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white/80 pt-12 pb-6 md:pt-24 md:pb-12 border-t border-white/10">
+    <footer className="text-white/80 pt-12 pb-6 md:pt-24 md:pb-12 border-t border-white/10"
+      style={{ backgroundColor: "#051512" }}
+    >
       <div className="container mx-auto px-4 md:px-12">
         <div className="flex flex-col lg:flex-row justify-between gap-10 md:gap-16 lg:gap-32 pb-12 md:pb-20 border-b border-white/10">
 
@@ -21,7 +23,6 @@ export default function Footer() {
               A sanctuary for new beginnings, where luxury meets holistic postnatal care. Reconnect with yourself in our serene haven.
             </p>
             <div className="flex gap-4">
-              {/* Socials - Refined */}
               <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-dark transition-all duration-300">
                 <Instagram className="w-4 h-4" />
               </a>

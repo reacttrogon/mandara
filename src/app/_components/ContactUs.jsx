@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Phone, Mail } from "lucide-react";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -41,32 +42,13 @@ export default function ContactUs() {
                 <h3 className="font-serif text-4xl leading-tight mb-4">Start your journey today</h3>
                 <p className="text-white/80 font-sans text-lg">Experience ultimate postnatal care and rejuvenation.</p>
               </div>
-              <div className="space-y-6">
-                <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                    <span className="text-xl">📞</span>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-white/60 mb-1">Call Us</p>
-                    <p className="text-lg font-serif">+91 765 438 9716</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                    <span className="text-xl">✉️</span>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-white/60 mb-1">Email Us</p>
-                    <p className="text-lg font-serif">wellness@mandara.com</p>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
 
           {/* Form Side */}
           <div className="lg:w-7/12 p-10 md:p-16 lg:p-20 bg-cream">
-            <h2 className="text-4xl font-serif text-dark mb-3">Book Your Sanctuary</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark mb-3">Book Your Sanctuary</h2>
             <p className="text-dark/60 mb-10 font-sans">Fill in your details and our team will curate your experience.</p>
 
             <form onSubmit={handleSubmit} className="space-y-8">
@@ -146,7 +128,7 @@ export default function ContactUs() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full md:w-auto px-12 py-4 bg-dark text-white font-bold uppercase tracking-widest text-xs hover:bg-gold transition-colors duration-500 shadow-lg"
+                  className="w-full md:w-auto px-12 py-4 bg-primary text-white font-bold uppercase tracking-widest text-xs hover:bg-primary/90 transition-colors duration-500 shadow-lg"
                 >
                   Confirm Request
                 </motion.button>

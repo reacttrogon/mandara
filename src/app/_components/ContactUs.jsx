@@ -22,8 +22,8 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-sand overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="contact" className="py-12 md:py-24 bg-cream overflow-hidden">
+      <div className="container mx-auto px-4 md:px-12">
         <div className="max-w-7xl mx-auto bg-white shadow-2xl overflow-hidden flex flex-col lg:flex-row">
           {/* Image Side - Fully Immersive */}
           <div className="lg:w-5/12 relative min-h-[500px] lg:min-h-full">

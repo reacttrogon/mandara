@@ -32,14 +32,14 @@ export default function AmenitiesSection() {
     ];
 
     return (
-        <section className="py-24 bg-cream">
-            <div className="container mx-auto px-6 md:px-12">
+        <section className="py-12 md:py-24 bg-cream">
+            <div className="container mx-auto px-4 md:px-12">
                 <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
                     <div className="max-w-2xl">
                         <span className="text-xs font-bold tracking-[0.2em] text-gold uppercase block mb-4">
                             Premium Facilities
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-serif text-dark mb-6">
+                        <h2 className="font-serif text-dark mb-6">
                             A Premium Ecosystem of Care
                         </h2>
                         <p className="text-dark/60 text-lg leading-relaxed font-sans">

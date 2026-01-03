@@ -6,9 +6,9 @@ import { reasons } from "../_utils/data";
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-32 bg-sand overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+    <section className="py-12 md:py-24 bg-cream overflow-hidden">
+      <div className="container mx-auto px-4 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20 gap-8">
           <div className="max-w-xl">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -23,7 +23,7 @@ export default function WhyChooseUsSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark leading-none"
+              className="font-serif text-dark leading-none"
             >
               Why discerning <br />mothers choose us
             </motion.h2>
@@ -54,9 +54,9 @@ export default function WhyChooseUsSection() {
                 <img
                   src={reason.image}
                   alt={reason.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-dark/60 group-hover:bg-dark/20 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-transparent transition-colors duration-500" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <h3 className={`font-serif text-white mb-3 leading-tight ${isLarge ? "text-4xl" : "text-2xl"}`}>

@@ -5,17 +5,17 @@ import { audience } from "../_utils/data";
 
 export default function WhoShouldJoinSection() {
     return (
-        <section className="py-24 bg-dark text-white relative overflow-hidden">
+        <section className="py-12 md:py-24 bg-dark text-white relative overflow-hidden">
             {/* Background texture or subtle gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-dark via-stone-900 to-dark opacity-80 z-0" />
+            <div className="absolute inset-0 bg-gradient-to-b from-dark via-black/20 to-dark opacity-80 z-0" />
 
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="container mx-auto px-4 md:px-12 relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-6">
                     <div className="max-w-xl">
                         <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase block mb-4">
                             Exclusive Retreats
                         </span>
-                        <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
+                        <h2 className="font-serif text-white leading-tight">
                             Who is Mandara for?
                         </h2>
                     </div>
@@ -34,7 +34,7 @@ export default function WhoShouldJoinSection() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 opacity-100"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent transition-opacity duration-500" />
 

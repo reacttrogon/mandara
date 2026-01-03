@@ -3,8 +3,8 @@ import { Phone } from "lucide-react";
 
 export default function AboutMandara() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-[#F7F1EF]">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-12 md:py-24 bg-cream">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-5/12 order-2 md:order-1">
             <div className="mb-4">
@@ -12,7 +12,7 @@ export default function AboutMandara() {
                 About Mandara
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark">
+            <h2 className="font-serif mb-6 text-dark">
               A Sanctuary for New Mothers
             </h2>
             <p className="text-dark/80 mb-4">

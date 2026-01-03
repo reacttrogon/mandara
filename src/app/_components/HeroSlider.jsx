@@ -18,7 +18,7 @@ export default function HeroSlider() {
   return (
     <section
       id="home"
-      className="relative h-screen w-full overflow-hidden bg-stone-900"
+      className="relative h-screen w-full overflow-hidden bg-dark"
     >
       <AnimatePresence mode="wait">
         <motion.div
@@ -34,7 +34,7 @@ export default function HeroSlider() {
             style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           />
           <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
         </motion.div>
       </AnimatePresence>
 
@@ -48,7 +48,7 @@ export default function HeroSlider() {
           <span className="inline-block mb-6 text-sm md:text-base font-bold tracking-[0.2em] text-white/90 uppercase border-b border-white/30 pb-2">
             {slides[currentSlide].subtitle}
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-tight drop-shadow-lg">
+          <h1 className="font-serif text-white mb-8 leading-tight drop-shadow-lg">
             {slides[currentSlide].title}
           </h1>
           <a
@@ -69,9 +69,8 @@ export default function HeroSlider() {
             className={`group relative h-12 w-2 flex flex-col items-center justify-end overflow-hidden focus:outline-none`}
           >
             <div
-              className={`w-0.5 h-8 bg-white/30 transition-all duration-500 rounded-full ${
-                index === currentSlide ? "h-12 bg-white" : ""
-              }`}
+              className={`w-0.5 h-8 bg-white/30 transition-all duration-500 rounded-full ${index === currentSlide ? "h-12 bg-white" : ""
+                }`}
             />
           </button>
         ))}

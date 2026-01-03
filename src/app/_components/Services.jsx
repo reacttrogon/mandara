@@ -17,13 +17,13 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-24 bg-cream overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="mb-16 md:mb-24 text-center md:text-left">
+    <section className="py-12 md:py-24 bg-cream overflow-hidden">
+      <div className="container mx-auto px-4 md:px-12">
+        <div className="mb-12 md:mb-24 text-center md:text-left">
           <span className="text-xs font-bold tracking-[0.2em] text-gold uppercase block mb-4">
             Holistic Care
           </span>
-          <h2 className="text-4xl md:text-6xl font-serif text-dark">
+          <h2 className="font-serif text-dark">
             Wellness Services
           </h2>
         </div>
@@ -47,8 +47,8 @@ export default function Services() {
                   </span>
                   <ArrowUpRight
                     className={`w-6 h-6 transition-transform duration-500 ${activeService === index
-                        ? "text-gold rotate-45"
-                        : "text-dark/40 group-hover:text-dark"
+                      ? "text-gold rotate-45"
+                      : "text-dark/40 group-hover:text-dark"
                       }`}
                   />
                 </div>

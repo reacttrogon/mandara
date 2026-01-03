@@ -5,13 +5,13 @@ import { offerings } from "../_utils/data";
 
 export default function WhatWeOfferSection() {
   return (
-    <section className="py-24 bg-[#F7F1EF] overflow-hidden">
+    <section className="py-12 md:py-24 bg-cream overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <span className="text-sm uppercase tracking-widest text-[#BFA095] mb-4 inline-block font-semibold">
             Holistic Experience
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#4A403A]">
+          <h2 className="font-serif text-dark">
             Mandara Amenities
           </h2>
         </div>

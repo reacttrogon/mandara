@@ -4,9 +4,9 @@ import { Facebook, Youtube, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white/80 pt-24 pb-12 border-t border-white/10">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-32 pb-20 border-b border-white/10">
+    <footer className="bg-dark text-white/80 pt-12 pb-6 md:pt-24 md:pb-12 border-t border-white/10">
+      <div className="container mx-auto px-4 md:px-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-10 md:gap-16 lg:gap-32 pb-12 md:pb-20 border-b border-white/10">
 
           {/* Brand Column */}
           <div className="max-w-sm">

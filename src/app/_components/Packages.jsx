@@ -6,8 +6,8 @@ import { packages } from "../_utils/data";
 
 export default function PackagesSection() {
   return (
-    <section className="py-24 bg-dark text-white overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-12 md:py-24 bg-dark text-white overflow-hidden">
+      <div className="container mx-auto px-4 md:px-12">
         <div className="text-center mb-20 max-w-3xl mx-auto">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export default function PackagesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-serif mb-8 text-white leading-tight"
+            className="font-serif mb-8 text-white leading-tight"
           >
             Curated Wellness <br /> <span className="text-white/20 italic">Journeys</span>
           </motion.h2>
@@ -37,15 +37,15 @@ export default function PackagesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="group relative flex flex-col h-full bg-stone-900 border border-white/10 overflow-hidden hover:border-gold/50 transition-colors duration-500"
+              className="group relative flex flex-col h-full bg-white/5 border border-white/10 overflow-hidden hover:border-gold/50 transition-colors duration-500"
             >
               {/* Image Header */}
               <div className="h-80 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent z-10" />
                 <img
                   src={pkg.image}
                   alt={pkg.title}
-                  className="absolute inset-0 w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000 ease-out grayscale group-hover:grayscale-0"
+                  className="absolute inset-0 w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute top-6 right-6 z-20">
                   <span className="inline-flex items-center gap-1 px-4 py-2 bg-gold text-dark text-[10px] font-bold uppercase tracking-widest ">
@@ -58,9 +58,9 @@ export default function PackagesSection() {
               {/* Content */}
               <div className="p-10 flex flex-col flex-grow relative z-20 -mt-10">
                 {/* Card Bg Fill for content */}
-                <div className="absolute inset-0 bg-stone-900 clip-path-slant-top transform -skew-y-3 origin-top-left z-[-1]" />
+                <div className="absolute inset-0 bg-dark clip-path-slant-top transform -skew-y-3 origin-top-left z-[-1]" />
 
-                <h3 className="text-3xl font-serif mb-4 text-white group-hover:text-gold transition-colors duration-300">
+                <h3 className="font-serif mb-4 text-white group-hover:text-gold transition-colors duration-300">
                   {pkg.title}
                 </h3>
                 <div className="w-12 h-[2px] bg-white/20 mb-6" />

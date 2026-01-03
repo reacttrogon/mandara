@@ -15,8 +15,8 @@ export default function GallerySection() {
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-dark">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <div className="absolute top-10 left-10 z-10 p-5 mix-blend-difference text-white">
-          <h2 className="text-5xl md:text-7xl font-serif text-white/90 mb-4">
+        <div className="absolute top-10 left-4 md:left-10 z-10 p-5 mix-blend-difference text-white">
+          <h2 className="font-serif text-white/90 mb-4">
             Visual<br />Journey
           </h2>
           <p className="text-sm uppercase tracking-widest text-white/70 max-w-xs">
@@ -24,7 +24,7 @@ export default function GallerySection() {
           </p>
         </div>
 
-        <motion.div style={{ x }} className="flex gap-10 px-20">
+        <motion.div style={{ x }} className="flex gap-10 px-4 md:px-20">
           {galleries.map((image, index) => (
             <div
               key={index}

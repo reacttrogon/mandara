@@ -13,23 +13,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = `transition-colors ${
-    isScrolled
+  const navClass = `transition-colors ${isScrolled
       ? "text-dark hover:text-primary"
       : "text-white hover:text-off-white"
-  }`;
+    }`;
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4">
         <div
-          className={`flex items-center justify-between ${
-            !isMenuOpen ? "py-4" : "py-0"
-          } `}
+          className={`flex items-center justify-between ${!isMenuOpen ? "py-4" : "py-0"
+            } `}
         >
           {/* Desktop Logo */}
           <a href="/" className="hidden md:block">
@@ -40,7 +37,7 @@ export default function Header() {
                   : "/assets/images/logo_transp_w.png"
               }
               alt="Mandara Logo"
-              className="h-14"
+              className="h-10 md:h-14 lg:h-16 transition-all duration-300"
             />
           </a>
 
@@ -48,13 +45,12 @@ export default function Header() {
           {!isMenuOpen && (
             <a href="/" className="md:hidden">
               <img
-                src={`${
-                  isScrolled
+                src={`${isScrolled
                     ? "/assets/images/scroll-logo.png"
                     : "/assets/images/logo_transp_w.png"
-                }`}
+                  }`}
                 alt="Mandara Logo"
-                className="h-[45px] pl-4"
+                className="h-9 md:h-12 pl-4 transition-all duration-300"
               />
             </a>
           )}
@@ -102,9 +98,8 @@ export default function Header() {
           {/* Mobile Menu Button */}
           {!isMenuOpen && (
             <button
-              className={`md:hidden p-2 rounded ${
-                isScrolled ? "text-dark" : "text-white"
-              }`}
+              className={`md:hidden p-2 rounded ${isScrolled ? "text-dark" : "text-white"
+                }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (

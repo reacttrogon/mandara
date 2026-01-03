@@ -9,8 +9,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#508066",
-        "off-white": "#fef3c7",
-        dark: "#1a1a1a",
+        secondary: "#c5a059", // Gold
+        "off-white": "#f9f7f2", // More subtle cream
+        cream: "#f4f1ea", // For sections
+        gold: "#c5a059",
+        dark: "#101814", // Deep rich green-black for luxury feel
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)", "sans-serif"],

@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import { packages } from "../_utils/data";
 
-export default function PackagesSection() {
+export default function Packages() {
   return (
-    <section className="py-10 md:py-16 bg-dark text-white">
+    <section id="packages" className="py-10 md:py-16 bg-dark text-white">
       <div className="container mx-auto px-4 md:px-10">
 
         {/* Header */}

@@ -10,7 +10,7 @@ export default function GallerySection() {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-84%"]);
 
   return (
     <section className="bg-dark text-white">

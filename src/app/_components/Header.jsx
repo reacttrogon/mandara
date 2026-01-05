@@ -77,12 +77,12 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="/packages" className={navClass}>
+              <a href="#packages" className={navClass}>
                 Packages
               </a>
             </li>
             <li>
-              <a href="/contact" className={navClass}>
+              <a href="#contact" className={navClass}>
                 Contact Us
               </a>
             </li>

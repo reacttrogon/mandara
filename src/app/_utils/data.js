@@ -179,16 +179,16 @@ export const slides = [
   {
     subtitle: "India's First Holistic Wellness Retreat",
     title: "Luxury Postnatal Care",
-    image: "/assets/images/image1.jpeg",
+    image: "/assets/images/image1.webp",
   },
   {
     subtitle: "Where Compassion Meets Class",
     title: "Redefining Recovery",
-    image: "/assets/images/image2.jpeg",
+    image: "/assets/images/image2.webp",
   },
   {
     subtitle: "Your Sanctuary of Peace",
     title: "The Perfect Base",
-    image: "/assets/images/image3.jpeg",
+    image: "/assets/images/image3.webp",
   },
 ];

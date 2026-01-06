@@ -1,20 +1,30 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { galleries } from "../_utils/data";
 
 export default function GallerySection() {
+  const [isWide, setIsWide] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth > 720) {
+      setIsWide(true);
+    }
+  }, []);
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-84%"]);
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isWide ? ["0%", "-50%"] : ["0%", "-85%"]
+  );
 
   return (
     <section className="bg-dark text-white">
-
       {/* Heading */}
       <div className="container mx-auto px-4 md:px-10 py-12 md:py-20">
         <span className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-white/60 font-semibold block mb-2.5">
@@ -33,7 +43,6 @@ export default function GallerySection() {
       {/* ---------- Horizontal Scroll Section ---------- */}
       <section ref={targetRef} className="relative h-[250vh]">
         <div className="sticky top-[80px] md:top-[96px] flex h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] items-center overflow-hidden">
-
           {/* Gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
 

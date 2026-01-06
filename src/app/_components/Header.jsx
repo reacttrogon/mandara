@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CalendarCheck, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,38 +30,46 @@ export default function Header() {
         <div
           className={`flex items-center justify-between ${
             !isMenuOpen ? "py-4" : "py-0"
-          } `}
+          }`}
         >
           {/* Desktop Logo */}
           <a href="/" className="hidden md:block">
-            <img
+            <Image
               src={
                 isScrolled
                   ? "/assets/images/scroll-logo.png"
                   : "/assets/images/logo_transp_w.png"
               }
               alt="Mandara Logo"
+              width={150}
+              height={54}
+              loading="eager"
+              priority="true"
               className="h-10 md:h-14 lg:h-16 transition-all duration-300"
             />
           </a>
 
-          {/* Mobile Logo — hidden when menu is open */}
+          {/* Mobile Logo */}
           {!isMenuOpen && (
             <a href="/" className="md:hidden">
-              <img
-                src={`${
+              <Image
+                src={
                   isScrolled
                     ? "/assets/images/scroll-logo.png"
                     : "/assets/images/logo_transp_w.png"
-                }`}
+                }
                 alt="Mandara Logo"
+                width={96}
+                height={58}
+                loading="eager"
+                priority="true"
                 className="h-9 md:h-12 pl-4 transition-all duration-300"
               />
             </a>
           )}
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 ">
+          <ul className="hidden md:flex items-center gap-8">
             <li>
               <a href="#home" className={navClass}>
                 Home
@@ -88,8 +97,9 @@ export default function Header() {
             </li>
           </ul>
 
+          {/* Button */}
           <button
-            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary animate transition-all duration-200 ${
+            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${
               isScrolled ? "hover:border hover:border-primary" : ""
             }`}
           >
@@ -102,21 +112,15 @@ export default function Header() {
               className={`md:hidden p-2 rounded ${
                 isScrolled ? "text-dark" : "text-white"
               }`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => setIsMenuOpen(true)}
             >
-              {isMenuOpen ? (
-                <X className="text-black" />
-              ) : (
-                <Menu
-                  className={`${isScrolled ? "text-black" : "text-white"}`}
-                />
-              )}
+              <Menu className={`${isScrolled ? "text-black" : "text-white"}`} />
             </button>
           )}
         </div>
       </div>
 
-      {/* MOBILE OPEN MENU */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark">
           <button
@@ -135,17 +139,15 @@ export default function Header() {
           <a href="#amenities" onClick={() => setIsMenuOpen(false)}>
             Amenities
           </a>
-          <a href="/packages" onClick={() => setIsMenuOpen(false)}>
+          <a href="#packages" onClick={() => setIsMenuOpen(false)}>
             Packages
           </a>
-          <a href="/contact" onClick={() => setIsMenuOpen(false)}>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             Contact Us
           </a>
 
           <button
-            className={` rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary animate transition-all duration-200 hover:border hover:border-primary${
-              isScrolled ? "hover:border hover:border-primary" : ""
-            }`}
+            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay

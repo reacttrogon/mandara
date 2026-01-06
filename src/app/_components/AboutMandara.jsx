@@ -49,6 +49,7 @@ export default function AboutMandara() {
               className="w-full rounded-lg shadow-lg"
               width={400}
               height={300}
+              loading="lazy"
             />
           </div>
         </div>

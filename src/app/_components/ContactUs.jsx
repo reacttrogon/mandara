@@ -29,8 +29,9 @@ export default function ContactUs() {
           {/* Image Side - Fully Immersive */}
           <div className="lg:w-5/12 relative min-h-[500px] lg:min-h-full">
             <img
-              src="/assets/images/image3.jpeg"
+              src="/assets/gallery/booking.png"
               alt="Luxury Room"
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-dark/40" />
@@ -39,21 +40,30 @@ export default function ContactUs() {
                 <span className="text-xs font-bold tracking-[0.2em] text-white/80 uppercase block mb-4">
                   Get in Touch
                 </span>
-                <h3 className="font-serif text-4xl leading-tight mb-4">Start your journey today</h3>
-                <p className="text-white/80 font-sans text-lg">Experience ultimate postnatal care and rejuvenation.</p>
+                <h3 className="font-serif text-4xl leading-tight mb-4">
+                  Start your journey today
+                </h3>
+                <p className="text-white/80 font-sans text-lg">
+                  Experience ultimate postnatal care and rejuvenation.
+                </p>
               </div>
-
             </div>
           </div>
 
           {/* Form Side */}
           <div className="lg:w-7/12 p-10 md:p-16 lg:p-20 bg-cream">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark mb-3">Book Your Sanctuary</h2>
-            <p className="text-dark/60 mb-10 font-sans">Fill in your details and our team will curate your experience.</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark mb-3">
+              Book Your Sanctuary
+            </h2>
+            <p className="text-dark/60 mb-10 font-sans">
+              Fill in your details and our team will curate your experience.
+            </p>
 
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-dark/50">Full Name</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-dark/50">
+                  Full Name
+                </label>
                 <input
                   name="name"
                   type="text"
@@ -67,7 +77,9 @@ export default function ContactUs() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-dark/50">Phone</label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-dark/50">
+                    Phone
+                  </label>
                   <input
                     name="phone"
                     type="tel"
@@ -79,7 +91,9 @@ export default function ContactUs() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-dark/50">Arrival Date</label>
+                  <label className="text-xs font-bold uppercase tracking-widest text-dark/50">
+                    Arrival Date
+                  </label>
                   <input
                     name="date"
                     type="date"
@@ -92,7 +106,9 @@ export default function ContactUs() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-dark/50">Inquiry Type</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-dark/50">
+                  Inquiry Type
+                </label>
                 <div className="relative">
                   <select
                     name="status"
@@ -111,7 +127,9 @@ export default function ContactUs() {
               </div>
 
               <div className="space-y-2 pt-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-dark/50">Message / Requests</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-dark/50">
+                  Message / Requests
+                </label>
                 <textarea
                   name="address"
                   rows="2"

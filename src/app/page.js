@@ -14,6 +14,7 @@ import AmenitiesSection from "./_components/AmenitiesSection";
 import WhoShouldJoinSection from "./_components/WhoShouldJoinSection.jsx";
 import ContactUs from "./_components/ContactUs.jsx";
 import Footer from "./_components/Footer.jsx";
+import MandaraManifesto from "./_components/MandaraManifesto.jsx";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Header />
       <HeroSlider />
       <AboutMandara />
+      <MandaraManifesto />
       <Services />
       {/*Hided because of client requirement*/}
       {/* <MarqueeSection /> */}

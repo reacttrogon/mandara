@@ -37,8 +37,8 @@ export default function Header() {
             <Image
               src={
                 isScrolled
-                  ? "/assets/images/scroll-logo.png"
-                  : "/assets/images/logo_transp_w.png"
+                  ? "/assets/images/logo_green.png"
+                  : "/assets/images/logo_updated.png"
               }
               alt="Mandara Logo"
               width={150}
@@ -55,7 +55,7 @@ export default function Header() {
               <Image
                 src={
                   isScrolled
-                    ? "/assets/images/scroll-logo.png"
+                    ? "/assets/images/logo_green.png"
                     : "/assets/images/logo_transp_w.png"
                 }
                 alt="Mandara Logo"

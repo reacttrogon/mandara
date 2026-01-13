@@ -37,7 +37,7 @@ export default function AboutMandara() {
                 className="inline-flex items-center gap-2 text-dark hover:text-primary transition-colors"
               >
                 <Phone className="text-primary w-5" />
-                +1 234 567 8910
+                  +91 765 438 9716
               </a>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Facebook, Youtube, Instagram } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -50,7 +51,7 @@ export default function Footer() {
                     wellness@mandara.com
                   </a>
                 </li>
-                <li className="pt-4 leading-relaxed opacity-60">
+                <li className="pt-4 leading-relaxed ">
                   G1003, NH 66, Kozhikode Bypass<br />
                   Calicut, Kerala
                 </li>
@@ -70,9 +71,8 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-serif text-2xl mb-8">Legal</h4>
               <ul className="space-y-4 font-sans text-sm tracking-wide text-white/70">
-                <li><a href="#" className="hover:text-gold transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-gold transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-gold transition-colors">Refund Policy</a></li>
+                <li><Link href="/terms-and-condition" className="hover:text-gold transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms-and-condition" className="hover:text-gold transition-colors">Terms and Conditions</Link></li>
               </ul>
             </div>
           </div>

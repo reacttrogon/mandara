@@ -12,7 +12,7 @@ export default function AboutMandara() {
                 About Mandara
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark uppercase">
               A Sanctuary for New Mothers
             </h2>
             <p className="text-dark/80 mb-4">

@@ -98,13 +98,14 @@ export default function Header() {
           </ul>
 
           {/* Button */}
-          <button
+          <a
+            href="/booking"
             className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${
               isScrolled ? "hover:border hover:border-primary" : ""
             }`}
           >
             Book your stay
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           {!isMenuOpen && (
@@ -146,12 +147,13 @@ export default function Header() {
             Contact Us
           </a>
 
-          <button
+          <a
+            href="/booking"
             className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay
-          </button>
+          </a>
         </div>
       )}
     </nav>

@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-xs uppercase tracking-widest text-white/40 font-sans">
-          <p>&copy; 2025 Mandara Wellness Center. All rights reserved.</p>
+          <p>&copy; 2026 Mandara Wellness Center. All rights reserved.</p>
           <div className="flex gap-8">
       
           </div>

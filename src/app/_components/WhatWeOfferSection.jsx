@@ -29,17 +29,17 @@ export default function WhatWeOfferSection() {
 
           {/* Left — Image */}
           <div className="relative">
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-2xl mx-auto">
               <div className="absolute -inset-6 bg-[#D8C5BA]/20 blur-2xl rounded-full" />
 
               <motion.img
-                src="/assets/images/what-we-offer.webp"
+                src="/assets/images/bath.png"
                 alt="Mandara"
                 initial={{ opacity: 0, scale: 1.05 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="relative rounded-3xl shadow-2xl object-cover w-full h-[400px]"
+                className="relative rounded-3xl shadow-2xl object-cover w-full h-[500px] md:h-[600px]"
               />
             </div>
           </div>
@@ -53,23 +53,34 @@ export default function WhatWeOfferSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-[#E9DDD7]"
+                style={{
+                  backgroundImage: `url(${item?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+                className="group relative rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-[#E9DDD7] overflow-hidden min-h-[200px] flex flex-col justify-end"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#F5EBE6] flex items-center justify-center mb-4">
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="w-7 h-7 object-contain"
-                  />
+                {/* Initial subtle blur overlay */}
+                <div className="absolute inset-0 bg-black/10 " />
+                
+                {/* Dark Overlay for text readability - appears on hover with smooth animation */}
+                <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out" />
+                
+                {/* Content Container - positioned at bottom */}
+                <div className="relative z-10 flex flex-col">
+                  {/* Description - initially hidden, slides up on hover */}
+                  <div className="transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out mb-3">
+                    <p className="text-[13.5px] md:text-[14.5px] text-white/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                      {item?.description}
+                    </p>
+                  </div>
+
+                  {/* Heading - Always visible at bottom */}
+                  <h3 className="font-serif text-[18px] md:text-[20px] text-white">
+                    {item?.title}
+                  </h3>
                 </div>
-
-                <h3 className="font-serif text-[18px] md:text-[20px] text-[#4A403A] mb-1.5">
-                  {item.title}
-                </h3>
-
-                <p className="text-[13.5px] md:text-[14.5px] text-[#6E635C] leading-relaxed">
-                  {item.description || "Experience refined wellness designed for your comfort and peace of mind."}
-                </p>
               </motion.div>
             ))}
           </div>

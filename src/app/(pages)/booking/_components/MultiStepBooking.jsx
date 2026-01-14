@@ -52,11 +52,12 @@ const MultiStepBooking = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => handlePackageSelect(pkg)}
-                  className={`bg-white border-2 rounded-lg overflow-hidden flex flex-col cursor-pointer transition-all duration-300 ${
+                  className={`border-2 rounded-lg overflow-hidden flex flex-col cursor-pointer transition-all duration-300 ${
                     selectedPackage?.title === pkg.title
-                      ? "border-primary shadow-xl scale-105"
-                      : "border-dark/10 hover:border-primary/40"
+                      ? "border-gold"
+                      : "border-white/10 hover:border-primary/40"
                   }`}
+                  style={{ backgroundColor: "#051512" }}
                 >
                   {/* Image */}
                   <div className="relative h-64">
@@ -72,15 +73,15 @@ const MultiStepBooking = () => {
 
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="font-serif text-[20px] md:text-[22px] mb-2 text-dark">
+                    <h3 className="font-serif text-[20px] md:text-[22px] mb-2 text-white">
                       {pkg.title}
                     </h3>
 
-                    <p className="text-dark/70 text-[14px] leading-relaxed mb-6 font-sans">
+                    <p className="text-white/70 text-[14px] leading-relaxed mb-6 font-sans">
                       {pkg.description}
                     </p>
 
-                    <ul className="space-y-2 text-[14px] text-dark/70 font-sans">
+                    <ul className="space-y-2 text-[14px] text-white/70 font-sans">
                       <li className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-primary" />
                         Doctor Consultation
@@ -100,7 +101,7 @@ const MultiStepBooking = () => {
               <button
                 onClick={handleNext}
                 disabled={!selectedPackage}
-                className={`px-8 py-3 rounded-full font-sans text-xs font-bold tracking-widest transition-all duration-300 flex items-center gap-2 ${
+                className={`px-8 py-4 rounded-full font-sans text-xs font-bold tracking-widest transition-all duration-300 flex items-center gap-2 ${
                   selectedPackage
                     ? "bg-primary text-white hover:bg-primary/90 shadow-lg"
                     : "bg-dark/20 text-dark/40 cursor-not-allowed"

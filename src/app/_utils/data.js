@@ -35,33 +35,45 @@ export const items = [
 
 export const offerings = [
   {
-    title: "Personalized care",
+    title: "Personalized Care",
+    description: "Tailored care plans for your unique postnatal needs.",
     icon: "/assets/offerings/handshakee.png",
+    image: "/assets/amenities/dummy.png",
     position: "left",
   },
   {
-    title: "24/7 newborn support",
+    title: "24/7 Newborn Support",
+    description: "Round-the-clock expert assistance for your newborn.",
     icon: "/assets/offerings/24-hours.png",
+    image: "/assets/amenities/dummy.png",
     position: "left",
   },
   {
-    title: "Therapeutic treatments",
+    title: "Therapeutic Treatments",
+    description: "Specialized therapies for healing and recovery.",
     icon: "/assets/offerings/physical-therapy.png",
+    image: "/assets/amenities/dummy.png",
     position: "left",
   },
   {
-    title: "Holistic nutrition",
+    title: "Holistic Nutrition",
+    description: "Nourishing meals to support postpartum recovery.",
     icon: "/assets/offerings/healthy-food.png",
+    image: "/assets/amenities/dummy.png",
     position: "right",
   },
   {
-    title: "Private luxury accommodations",
+    title: "Private Luxury Accommodations",
+    description: "Elegant suites for comfort and tranquility.",
     icon: "/assets/offerings/house (3).png",
+    image: "/assets/amenities/dummy.png",
     position: "right",
   },
   {
-    title: "Emotional and mental wellness",
+    title: "Emotional & Mental Wellness",
+    description: "Compassionate support for mental well-being.",
     icon: "/assets/offerings/empathy.png",
+    image: "/assets/amenities/dummy.png",
     position: "right",
   },
 ];

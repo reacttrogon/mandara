@@ -5,23 +5,37 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { galleries } from "../_utils/data";
 
 export default function GallerySection() {
-  const [isWide, setIsWide] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth > 720) {
-      setIsWide(true);
-    }
-  }, []);
-
+  const [scrollDistance, setScrollDistance] = useState(0);
   const targetRef = useRef(null);
+  const containerRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const calculateScrollDistance = () => {
+      if (!containerRef.current || !contentRef.current) return;
+      
+      const containerWidth = containerRef.current.offsetWidth;
+      const contentWidth = contentRef.current.scrollWidth;
+      const distance = contentWidth - containerWidth;
+      
+      setScrollDistance(Math.max(0, distance + 40));
+    };
+
+    // Calculate after a short delay to ensure DOM is ready
+    const timeoutId = setTimeout(calculateScrollDistance, 100);
+    window.addEventListener("resize", calculateScrollDistance);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("resize", calculateScrollDistance);
+    };
+  }, [galleries.length]);
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isWide ? ["0%", "-50%"] : ["0%", "-85%"]
-  );
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollDistance]);
 
   return (
     <section className="bg-dark text-white">
@@ -42,12 +56,16 @@ export default function GallerySection() {
 
       {/* ---------- Horizontal Scroll Section ---------- */}
       <section ref={targetRef} className="relative h-[250vh]">
-        <div className="sticky top-[80px] md:top-[96px] flex h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] items-center overflow-hidden">
+        <div 
+          ref={containerRef}
+          className="sticky top-[80px] md:top-[96px] flex h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] items-center overflow-hidden"
+        >
           {/* Gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
 
           {/* Scrolling Row */}
           <motion.div
+            ref={contentRef}
             style={{ x }}
             className="flex gap-8 md:gap-12 px-6 md:px-20"
           >

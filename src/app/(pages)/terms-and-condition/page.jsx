@@ -1,5 +1,5 @@
 "use client";
-import { termsAndConditions } from "../_utils/data";
+import { termsAndConditions } from "../../_utils/data";
 
 const TermsAndConditions = () => {
   return (

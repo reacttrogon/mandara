@@ -10,7 +10,7 @@ import WhyChooseUsSection from "./_components/WhyChooseUsSection.jsx";
 import Packages from "./_components/Packages.jsx";
 import GallerySection from "./_components/GallerySection.jsx";
 import FAQSection from "./_components/FAQSection.jsx";
-import AmenitiesSection from "./_components/AmenitiesSection";
+import AmenitiesSection from "./_components/AmenitiesSection.jsx";
 import WhoShouldJoinSection from "./_components/WhoShouldJoinSection.jsx";
 import ContactUs from "./_components/ContactUs.jsx";
 import Footer from "./_components/Footer.jsx";

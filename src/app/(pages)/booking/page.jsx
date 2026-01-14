@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Header from "../_components/Header.jsx";
-import ContactUs from "../_components/ContactUs.jsx";
-import Footer from "../_components/Footer.jsx";
+import Header from "../../_components/Header.jsx";
+import ContactUs from "../../_components/ContactUs.jsx";
+import Footer from "../../_components/Footer.jsx";
 
 export default function BookingPage() {
   return (

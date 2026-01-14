@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -26,32 +27,20 @@ export default function ContactUs() {
         <div className="max-w-7xl mx-auto bg-white shadow-2xl overflow-hidden flex flex-col lg:flex-row rounded-lg">
           {/* Image Side - Fully Immersive */}
           <div className="lg:w-5/12 relative min-h-[500px] lg:min-h-full">
-            <img
+            <Image
               src="/assets/gallery/booking.png"
               alt="Luxury Room"
               loading="lazy"
+              width={500}
+              height={600}
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-dark/40" />
-            <div className="absolute inset-0 p-12 flex flex-col justify-between text-white z-10">
-              <div>
-                <span className="text-sm uppercase tracking-wider text-white/80 mb-4 inline-block font-sans">
-                  Get in Touch
-                </span>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-white uppercase">
-                  Start your journey today
-                </h3>
-                <p className="text-white/80 font-sans text-lg leading-relaxed">
-                  Experience ultimate postnatal care and rejuvenation.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Form Side */}
           <div className="lg:w-7/12 p-10 md:p-16 lg:p-20 bg-cream">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 font-light uppercase">
-              GET IN TOUCH
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 font-light uppercase tracking-wider">
+              Start your journey today
             </h2>
             <p className="text-dark/80 mb-10 font-sans leading-relaxed">
               Fill in your details and our team will curate your experience.
@@ -87,10 +76,10 @@ export default function ContactUs() {
                     className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all placeholder-dark/40 font-sans text-base"
                     required
                   />
-                </div>{" "}
+                </div>
                 <div className="space-y-3">
                   <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
-                    Inquiry Type
+                    Enquiry Type
                   </label>
                   <div className="relative">
                     <select
@@ -99,7 +88,7 @@ export default function ContactUs() {
                       onChange={handleChange}
                       className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all text-dark font-sans text-base appearance-none cursor-pointer"
                     >
-                      <option>General Inquiry</option>
+                      <option>General Enquiry</option>
                       <option>Booking Request</option>
                       <option>Other</option>
                     </select>

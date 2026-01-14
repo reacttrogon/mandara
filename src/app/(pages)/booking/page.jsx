@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Header from "../../_components/Header.jsx";
-import ContactUs from "../../_components/ContactUs.jsx";
 import Footer from "../../_components/Footer.jsx";
+import MultiStepBooking from "./_components/MultiStepBooking.jsx";
 
 export default function BookingPage() {
   return (
@@ -23,10 +23,10 @@ export default function BookingPage() {
 
       </section>
 
-      {/* Contact Us Section */}
-      <ContactUs />
+      {/* Multi-step Booking Section */}
+      <MultiStepBooking/>
 
-
+ 
       {/* Footer */}
       <Footer />
     </main>

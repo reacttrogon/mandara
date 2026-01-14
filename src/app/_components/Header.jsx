@@ -14,7 +14,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = `transition-colors ${
+  const navClass = `font-sans transition-colors ${
     isScrolled
       ? "text-dark hover:text-primary"
       : "text-white hover:text-primary"
@@ -100,7 +100,7 @@ export default function Header() {
           {/* Button */}
           <a
             href="/booking"
-            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${
+            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 font-sans ${
               isScrolled ? "hover:border hover:border-primary" : ""
             }`}
           >
@@ -123,7 +123,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark">
+        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark font-sans">
           <button
             className="self-end p-2 rounded bg-white"
             onClick={() => setIsMenuOpen(false)}
@@ -131,25 +131,25 @@ export default function Header() {
             <X className="text-black" />
           </button>
 
-          <a href="#home" onClick={() => setIsMenuOpen(false)}>
+          <a href="#home" onClick={() => setIsMenuOpen(false)} className="font-sans">
             Home
           </a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+          <a href="#about" onClick={() => setIsMenuOpen(false)} className="font-sans">
             About
           </a>
-          <a href="#amenities" onClick={() => setIsMenuOpen(false)}>
+          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className="font-sans">
             Amenities
           </a>
-          <a href="#packages" onClick={() => setIsMenuOpen(false)}>
+          <a href="#packages" onClick={() => setIsMenuOpen(false)} className="font-sans">
             Packages
           </a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="font-sans">
             Contact Us
           </a>
 
           <a
             href="/booking"
-            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary"
+            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-sans"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay

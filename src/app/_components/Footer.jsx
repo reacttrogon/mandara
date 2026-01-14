@@ -64,7 +64,21 @@ export default function Footer() {
                 <li><a href="#about" className="hover:text-gold transition-colors">About Us</a></li>
                 <li><a href="#packages" className="hover:text-gold transition-colors">Packages</a></li>
                 <li><a href="#amenities" className="hover:text-gold transition-colors">Amenities</a></li>
-                <li><a href="#gallery" className="hover:text-gold transition-colors">Gallery</a></li>
+                <li>
+                  <a 
+                    href="#gallery" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const gallerySection = document.getElementById('gallery');
+                      if (gallerySection) {
+                        gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }}
+                    className="hover:text-gold transition-colors"
+                  >
+                    Gallery
+                  </a>
+                </li>
               </ul>
             </div>
 

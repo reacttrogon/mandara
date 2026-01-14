@@ -71,22 +71,22 @@ export default function Header() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8">
             <li>
-              <a href="#home" className={navClass}>
+              <a href="/#home" className={navClass}>
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className={navClass}>
+              <a href="/#about" className={navClass}>
                 About
               </a>
             </li>
             <li>
-              <a href="#amenities" className={navClass}>
+              <a href="/#amenities" className={navClass}>
                 Amenities
               </a>
             </li>
             <li>
-              <a href="#packages" className={navClass}>
+              <a href="/#packages" className={navClass}>
                 Packages
               </a>
             </li>

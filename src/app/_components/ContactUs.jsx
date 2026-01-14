@@ -2,14 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail } from "lucide-react";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
     name: "",
     phone: "",
     status: "General Inquiry",
-    date: "",
     address: "",
   });
 
@@ -52,13 +50,8 @@ export default function ContactUs() {
 
           {/* Form Side */}
           <div className="lg:w-7/12 p-10 md:p-16 lg:p-20 bg-cream">
-            <div className="mb-6">
-              <span className="text-sm uppercase tracking-wider text-primary mb-2 inline-block font-sans">
-                Book Now
-              </span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark uppercase">
-              Book Your Sanctuary
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 font-light uppercase">
+              GET IN TOUCH
             </h2>
             <p className="text-dark/80 mb-10 font-sans leading-relaxed">
               Fill in your details and our team will curate your experience.
@@ -94,39 +87,25 @@ export default function ContactUs() {
                     className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all placeholder-dark/40 font-sans text-base"
                     required
                   />
-                </div>
+                </div>{" "}
                 <div className="space-y-3">
                   <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
-                    Arrival Date
+                    Inquiry Type
                   </label>
-                  <input
-                    name="date"
-                    type="date"
-                    value={form.date}
-                    onChange={handleChange}
-                    className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all text-dark font-sans text-base"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
-                  Inquiry Type
-                </label>
-                <div className="relative">
-                  <select
-                    name="status"
-                    value={form.status}
-                    onChange={handleChange}
-                    className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all text-dark font-sans text-base appearance-none cursor-pointer"
-                  >
-                    <option>General Inquiry</option>
-                    <option>Booking Request</option>
-                    <option>Schedule a Tour</option>
-                  </select>
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-dark/40">
-                    ▼
+                  <div className="relative">
+                    <select
+                      name="status"
+                      value={form.status}
+                      onChange={handleChange}
+                      className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all text-dark font-sans text-base appearance-none cursor-pointer"
+                    >
+                      <option>General Inquiry</option>
+                      <option>Booking Request</option>
+                      <option>Other</option>
+                    </select>
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-dark/40">
+                      ▼
+                    </div>
                   </div>
                 </div>
               </div>

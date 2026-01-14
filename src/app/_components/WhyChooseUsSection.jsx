@@ -9,7 +9,7 @@ export default function WhyChooseUsSection() {
       <div className="container mx-auto px-4 md:px-12">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between  mb-12 md:mb-16 gap-8">
           <div className="max-w-xl">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

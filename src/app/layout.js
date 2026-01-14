@@ -39,7 +39,7 @@ export const metaData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html lang="en" className={`${dmSans.variable} bg-[#051512]`}>
       <body>{children}</body>
     </html>
   );

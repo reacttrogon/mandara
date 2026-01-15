@@ -17,7 +17,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
     defaultValues: {
       is_delivered: 1,
       cottage_package_id: selectedPackage.id,
-      date_to: "2025-10-16",
+      date_to: "",
     },
   });
   const deliveryStatus = watch("is_delivered");

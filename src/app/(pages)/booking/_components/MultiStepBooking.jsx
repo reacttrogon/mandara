@@ -1,14 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
-import { packages } from "../../../_utils/data";
 import BookingForm from "./BookingForm.jsx";
+import { getPackages } from "../../../_api/packages/getPackages.js";
+import PackageCardShimmer from "../_ui/PackageCardShimmer.jsx";
 
 const MultiStepBooking = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch data on mount
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await getPackages();
+        setPackages(response);
+        setLoading(false);
+      } catch (e) {
+        console.error("Error fetching packages:", e);
+      }
+    };
+    fetchData();
+  }, []);
 
   const handlePackageSelect = (pkg) => {
     setSelectedPackage(pkg);
@@ -23,7 +41,6 @@ const MultiStepBooking = () => {
   const handleBack = () => {
     setCurrentStep(1);
   };
-
 
   return (
     <>
@@ -43,67 +60,95 @@ const MultiStepBooking = () => {
               </p>
             </div>
 
-            {/* Package Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-10">
-              {packages.map((pkg, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 25 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  onClick={() => handlePackageSelect(pkg)}
-                  className={`border-2 rounded-lg overflow-hidden flex flex-col cursor-pointer transition-all duration-300 ${
-                    selectedPackage?.title === pkg.title
-                      ? "border-gold"
-                      : "border-white/10 hover:border-primary/40"
-                  }`}
-                  style={{ backgroundColor: "#051512" }}
-                >
-                  {/* Image */}
-                  <div className="relative h-64">
-                    <img
-                      src={pkg.image}
-                      alt={pkg.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <span className="absolute top-4 right-4 px-3 py-1 text-[10px] uppercase font-bold bg-gold text-dark tracking-widest">
-                      {pkg.duration}
-                    </span>
-                  </div>
+            {/* Package Cards Grid */}
+            {loading ? (
+              <PackageCardShimmer />
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-10">
+                {packages.map((pkg, index) => {
+                  const isSelected = selectedPackage?.title === pkg.title;
 
-                  {/* Content */}
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="font-serif text-[20px] md:text-[22px] mb-2 text-white">
-                      {pkg.title}
-                    </h3>
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 25 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      onClick={() => handlePackageSelect(pkg)}
+                      className={`
+                      relative rounded-xl overflow-hidden flex flex-col cursor-pointer transition-all duration-300
+                      border-[3px] 
+                      ${
+                        isSelected
+                          ? "border-[#D4AF37] scale-[1.02] z-10"
+                          : " hover:-translate-y-2 "
+                      }
+                    `}
+                      style={{ backgroundColor: "#051512" }}
+                    >
+                      {/* Image Area */}
+                      <div className="relative h-64 overflow-hidden">
+                        <img
+                          src={pkg?.images}
+                          alt={pkg?.title}
+                          className={`w-full h-full object-cover transition-transform duration-700 ${
+                            isSelected ? "scale-105" : "hover:scale-110"
+                          }`}
+                        />
+                        <span className="absolute top-4 right-4 px-3 py-1 text-[10px] uppercase font-bold bg-[#D4AF37] text-dark tracking-widest shadow-md">
+                          {pkg?.duration_days} DAYS
+                        </span>
+                      </div>
 
-                    <p className="text-white/70 text-[14px] leading-relaxed mb-6 font-sans">
-                      {pkg.description}
-                    </p>
+                      {/* Content Area */}
+                      <div className="p-6 flex flex-col flex-grow">
+                        <h3
+                          className={`font-serif text-[20px] md:text-[22px] mb-2 transition-colors duration-300 ${
+                            isSelected ? "text-[#D4AF37]" : "text-white"
+                          }`}
+                        >
+                          {pkg?.title}
+                        </h3>
 
-                    <ul className="space-y-2 text-[14px] text-white/70 font-sans">
-                      <li className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-primary" />
-                        Doctor Consultation
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Check className="w-4 h-4 text-primary" />
-                        Ayurvedic Treatments
-                      </li>
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                        <p className="text-white/70 text-[14px] leading-relaxed mb-6 font-sans">
+                          {pkg?.description}
+                        </p>
 
-            {/* Navigation */}
+                        <div className="mt-auto">
+                          <ul className="space-y-3 text-[14px] text-white/70 font-sans">
+                            {pkg.includes?.map((item, i) => (
+                              <li key={i} className="flex items-start gap-3">
+                                <Check
+                                  className={`w-4 h-4 mt-0.5 flex-shrink-0 transition-colors duration-300 ${
+                                    isSelected
+                                      ? "text-[#D4AF37]"
+                                      : "text-white/40"
+                                  }`}
+                                />
+                                <span
+                                  className={isSelected ? "text-white/90" : ""}
+                                >
+                                  {item}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Navigation Button */}
             <div className="flex justify-center gap-4 max-w-6xl mx-auto">
               <button
                 onClick={handleNext}
                 disabled={!selectedPackage}
-                className={`px-8 py-4 rounded-full font-sans text-xs font-bold tracking-widest transition-all duration-300 flex items-center gap-2 ${
+                className={`px-8 py-5 rounded-full font-sans text-xs md:text-md font-bold tracking-widest transition-all duration-300 flex items-center gap-2 ${
                   selectedPackage
-                    ? "bg-primary text-white hover:bg-primary/90 shadow-lg"
+                    ? "bg-primary text-white hover:bg-primary/90 shadow-lg scale-105"
                     : "bg-dark/20 text-dark/40 cursor-not-allowed"
                 }`}
               >
@@ -116,11 +161,13 @@ const MultiStepBooking = () => {
       )}
 
       {currentStep === 2 && (
-        <BookingForm selectedPackage={selectedPackage} onChangePackage={handleBack} />
+        <BookingForm
+          selectedPackage={selectedPackage}
+          onChangePackage={handleBack}
+        />
       )}
     </>
   );
 };
 
 export default MultiStepBooking;
-

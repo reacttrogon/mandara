@@ -92,7 +92,6 @@ export default function HeroSlider() {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-8 right-8 z-20 hidden md:flex items-center gap-2 text-white/50 text-xs uppercase tracking-widest"
       >
-        <span>Scroll</span>
         <motion.div animate={{ y: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
           <ChevronDown className="w-4 h-4" />
         </motion.div>

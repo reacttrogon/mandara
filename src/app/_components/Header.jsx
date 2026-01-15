@@ -16,8 +16,8 @@ export default function Header() {
 
   const navClass = `font-sans transition-colors ${
     isScrolled
-      ? "text-dark hover:text-primary"
-      : "text-white hover:text-primary"
+      ? "text-dark hover:text-primary font-medium"
+      : "text-white hover:text-primary font-medium"
   }`;
 
   return (
@@ -131,25 +131,25 @@ export default function Header() {
             <X className="text-black" />
           </button>
 
-          <a href="#home" onClick={() => setIsMenuOpen(false)} className="font-sans">
+          <a href="#home" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
             Home
           </a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)} className="font-sans">
+          <a href="#about" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
             About
           </a>
-          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className="font-sans">
+          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
             Amenities
-          </a>
-          <a href="#packages" onClick={() => setIsMenuOpen(false)} className="font-sans">
+          </a> font-medium
+          <a href="#packages" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
             Packages
           </a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="font-sans">
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
             Contact Us
           </a>
 
           <a
             href="/booking"
-            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-sans"
+            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-sans font-medium"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay

@@ -33,7 +33,7 @@ export default function AboutMandara() {
             </a>
             <div className="phone mt-4">
               <a
-                href="tel:+12345678910"
+                href="tel:+917654389716"
                 className="inline-flex items-center gap-2 text-dark hover:text-primary transition-colors"
               >
                 <Phone className="text-primary w-5" />

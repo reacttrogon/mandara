@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { reasons } from "../_utils/data";
 
@@ -22,16 +23,9 @@ export default function WhyChooseUsSection() {
           </div>
         </div>
 
-        {/* 
-            BENTO GRID: 
-            With 6 images, we make index 0 and index 5 "Wide" (col-span-2).
-            Total units: 2 (Wide) + 1 + 1 + 1 + 1 + 2 (Wide) = 8 units.
-            In a 4-column grid, this creates 2 perfectly full rows.
-        */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 auto-rows-[280px] md:auto-rows-[320px]">
           
           {reasons.slice(0, 6).map((reason, index) => {
-            // Pattern: First and Last images are wide for a balanced "S" shape
             const isWide = index === 0 || index === 5;
 
             return (
@@ -46,9 +40,11 @@ export default function WhyChooseUsSection() {
               >
                 {/* Image Component */}
                 <div className="absolute inset-0 w-full h-full">
-                  <img
-                    src={reason.image}
-                    alt={reason.title}
+                  <Image
+                    src={reason?.image}
+                    alt={reason?.title}
+                    fill
+                    loading="lazy"
                     className="w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-110"
                   />
                   {/* Dark Gradient Overlay */}
@@ -62,15 +58,12 @@ export default function WhyChooseUsSection() {
                       className={` text-white leading-tight transition-all
                       ${isWide ? "text-2xl md:text-3xl" : "text-lg md:text-xl"}`}
                     >
-                      {reason.title}
+                      {reason?.title}
                     </h3>
-
-                    {/* Animated Line */}
-                    {/* <div className="h-[1px] w-full bg-white/40 my-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" /> */}
 
                     {/* Description */}
                     <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 line-clamp-2 mt-2">
-                      {reason.description || "Experience the finest holistic care tailored specifically for your motherhood journey."}
+                      {reason?.description}
                     </p>
                   </div>
                 </div>

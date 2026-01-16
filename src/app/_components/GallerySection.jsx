@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { galleries } from "../_utils/data";
@@ -13,11 +14,11 @@ export default function GallerySection() {
   useEffect(() => {
     const calculateScrollDistance = () => {
       if (!containerRef.current || !contentRef.current) return;
-      
+
       const containerWidth = containerRef.current.offsetWidth;
       const contentWidth = contentRef.current.scrollWidth;
       const distance = contentWidth - containerWidth;
-      
+
       setScrollDistance(Math.max(0, distance + 40));
     };
 
@@ -56,7 +57,7 @@ export default function GallerySection() {
 
       {/* ---------- Horizontal Scroll Section ---------- */}
       <section ref={targetRef} className="relative h-[250vh]">
-        <div 
+        <div
           ref={containerRef}
           className="sticky top-[80px] md:top-[96px] flex h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] items-center overflow-hidden"
         >
@@ -69,14 +70,17 @@ export default function GallerySection() {
             style={{ x }}
             className="flex gap-8 md:gap-12 px-6 md:px-20"
           >
-            {galleries.map((image, index) => (
+            {galleries?.map((image, index) => (
               <div
                 key={index}
                 className="group relative h-[60vh] md:h-[78vh] w-[42vh] md:w-[60vh] shrink-0 overflow-hidden rounded-3xl"
               >
-                <img
+                <Image
                   src={image}
-                  alt={`Gallery image ${index + 1}`}
+                  loading="lazy"
+                  fill
+                  alt={image}
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 

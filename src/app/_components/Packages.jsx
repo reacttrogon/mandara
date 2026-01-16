@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
@@ -48,9 +49,11 @@ export default function Packages() {
             >
               {/* Image */}
               <div className="relative h-64">
-                <img
+                <Image
                   src={pkg?.images}
                   alt={pkg?.title}
+                  loading="lazy"
+                  fill
                   className="w-full h-full object-cover"
                 />
 

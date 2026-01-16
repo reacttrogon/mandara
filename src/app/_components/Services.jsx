@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -8,16 +9,11 @@ import { services, galleries } from "../_utils/data";
 export default function Services() {
   const [activeService, setActiveService] = useState(0);
 
-  const serviceImages = [
-    galleries[0],
-    galleries[4],
-    galleries[2],
-  ];
+  const serviceImages = [galleries[0], galleries[4], galleries[2]];
 
   return (
     <section className="py-8 md:py-16 bg-cream overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-
         {/* Header */}
         <div className="mb-8 md:mb-12 text-center md:text-left">
           <span className="text-[11px] md:text-[12px] font-bold tracking-[0.2em] text-gold uppercase block mb-2.5">
@@ -31,14 +27,17 @@ export default function Services() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
-
           {/* Services List */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 className={`group relative py-6 cursor-pointer transition-all duration-500 
-                ${activeService === index ? "opacity-100" : "opacity-70 hover:opacity-100"}`}
+                ${
+                  activeService === index
+                    ? "opacity-100"
+                    : "opacity-70 hover:opacity-100"
+                }`}
                 onMouseEnter={() => setActiveService(index)}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -52,7 +51,11 @@ export default function Services() {
 
                   <ArrowUpRight
                     className={`w-6 h-6 md:w-7 md:h-7 transition-transform duration-500 
-                    ${activeService === index ? "text-gold rotate-45" : "text-dark/40 group-hover:text-dark"}`}
+                    ${
+                      activeService === index
+                        ? "text-gold rotate-45"
+                        : "text-dark/40 group-hover:text-dark"
+                    }`}
                   />
                 </div>
 
@@ -79,23 +82,28 @@ export default function Services() {
                 </motion.div>
               </motion.div>
             ))}
-
           </div>
 
           {/* Image Preview */}
           <div className="hidden lg:block w-full lg:w-1/2 relative h-[520px]">
             <div className="sticky top-16 w-full h-full overflow-hidden shadow-2xl">
               <AnimatePresence mode="popLayout">
-                <motion.img
+                <motion.div
                   key={activeService}
-                  src={serviceImages[activeService]}
-                  alt="Service Preview"
-                  initial={{ opacity: 0, scale: 1.05 }}
+                  initial={{ opacity: 0.8, scale: 1.05 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                  transition={{ duration: 0.8 }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <Image
+                    src={serviceImages[activeService]}
+                    alt="Service Preview"
+                    fill
+                    className="object-cover  "
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
+                  />
+                </motion.div>
               </AnimatePresence>
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -125,10 +133,8 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { audience } from "../_utils/data";
 
@@ -37,9 +38,11 @@ export default function WhoShouldJoinSection() {
             >
 
               {/* Image */}
-              <img
-                src={item.image}
-                alt={item.title}
+              <Image
+                src={item?.image}
+                alt={item?.title}
+                fill
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
               />
 
@@ -55,7 +58,7 @@ export default function WhoShouldJoinSection() {
 
                   <div className="mb-4">
                     <h3 className="text-2xl  leading-snug mb-1">
-                      {item.title}
+                      {item?.title}
                     </h3>
 
                     <div className="h-[2px] w-0 bg-gold group-hover:w-12 transition-all duration-500" />

@@ -252,3 +252,41 @@ export const termsAndConditions = {
     "I acknowledge that this consent is binding throughout my stay at Mandara.",
   ],
 };
+
+export const aboutMandara = {
+  label: "About Mandara",
+  heading: "A Sanctuary for New Mothers",
+  image: "/assets/images/couple-abt.webp",
+  lead: "Where new beginnings are nurtured with world-class care, comfort, and compassion.",
+  description:
+    "Mandara Wellness Clinic is a premier postnatal care facility where medical excellence meets luxury hospitality. We provide new mothers and their babies with an unparalleled experience of comfort, care, and holistic recovery.",
+  buttonText: "More About Mandara",
+};
+
+export const amenities = [
+  {
+    image: "/assets/gallery/about.jpeg",
+    title: "Concierge Team",
+    description: "24/7 dedicated support",
+  },
+  {
+    image: "/assets/gallery/banner-2.jpeg",
+    title: "Expert Therapy",
+    description: "Ayurvedic & Modern",
+  },
+  {
+    image: "/assets/gallery/banner-3.jpeg",
+    title: "Yoga & Pilates",
+    description: "Restorative Movement",
+  },
+  {
+    image: "/assets/gallery/abouttt.png",
+    title: "Wellness Heads",
+    description: "On-site Leadership",
+  },
+  {
+    image: "/assets/gallery/modern.png",
+    title: "Medical Experts",
+    description: "Doctors & Pediatricians",
+  },
+];

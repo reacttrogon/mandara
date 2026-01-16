@@ -15,7 +15,7 @@ export default function WhyChooseUsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-serif text-[#1A1A1A] leading-tight text-3xl md:text-4xl lg:text-5xl"
+              className=" text-[#1A1A1A] leading-tight text-3xl md:text-4xl lg:text-5xl"
             >
               Why discerning <br /> mothers choose us
             </motion.h2>
@@ -59,17 +59,17 @@ export default function WhyChooseUsSection() {
                 <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                     <h3
-                      className={`font-serif text-white leading-tight transition-all
+                      className={` text-white leading-tight transition-all
                       ${isWide ? "text-2xl md:text-3xl" : "text-lg md:text-xl"}`}
                     >
                       {reason.title}
                     </h3>
 
                     {/* Animated Line */}
-                    <div className="h-[1px] w-full bg-white/40 my-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                    {/* <div className="h-[1px] w-full bg-white/40 my-3 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" /> */}
 
                     {/* Description */}
-                    <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 line-clamp-2">
+                    <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 line-clamp-2 mt-2">
                       {reason.description || "Experience the finest holistic care tailored specifically for your motherhood journey."}
                     </p>
                   </div>

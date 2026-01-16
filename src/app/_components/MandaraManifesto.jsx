@@ -73,7 +73,7 @@ const MandaraManifesto = () => {
         </p>
 
         {/* Heading reduced from 5xl to 4xl */}
-        <h2 data-animate className="mb-10 font-serif text-2xl leading-snug md:text-4xl">
+        <h2 data-animate className="mb-10  text-2xl leading-snug md:text-4xl">
           Healing does not announce itself.
         </h2>
 
@@ -91,7 +91,7 @@ const MandaraManifesto = () => {
           {/* Hindi text reduced from 4xl to 3xl */}
           <p
             data-animate
-            className="my-10 font-serif text-2xl tracking-wide text-[#d8cfae] md:text-3xl"
+            className="my-10  text-2xl tracking-wide text-[#d8cfae] md:text-3xl"
           >
             सा विश्वायुः सा विश्वकर्मा सा विश्वधायाः
           </p>
@@ -117,10 +117,10 @@ const MandaraManifesto = () => {
 
         {/* Footer text reduced accordingly */}
         <div className="mt-16 space-y-3">
-          <p data-animate className="font-serif text-lg md:text-xl">
+          <p data-animate className=" text-lg md:text-xl">
             Mandara is not a pause in life.
           </p>
-          <p data-animate className="font-serif text-xl text-[#cbbf9a] md:text-2xl">
+          <p data-animate className=" text-xl text-[#cbbf9a] md:text-2xl">
             It is the ground from which life moves forward again.
           </p>
         </div>

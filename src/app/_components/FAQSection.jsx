@@ -22,17 +22,17 @@ export default function FAQSection() {
             <div className="sticky top-24 space-y-8">
 
               {/* Label */}
-              <span className="text-xs font-bold tracking-[0.2em] text-gold uppercase block">
+              <span className="text-xs font-medium tracking-[0.2em] text-gold uppercase block">
                 Common Questions
               </span>
 
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl  text-dark leading-tight">
                 Everything you need to know
               </h2>
 
               {/* Description */}
-              <p className="text-dark/60 text-lg leading-relaxed font-sans max-w-md">
+              <p className="text-dark/60 text-lg leading-relaxed  max-w-md">
                 Understanding your stay with us is the first step to peace of mind.
                 Here are answers to our most frequent inquiries.
               </p>
@@ -68,7 +68,7 @@ export default function FAQSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
-                  className={`border-b border-dark/10 ${activeIndex === index ? "pb-8" : "pb-6"
+                  className={`  ${activeIndex === index ? "pb-8" : "pb-6"
                     }`}
                 >
 
@@ -78,7 +78,7 @@ export default function FAQSection() {
                     onClick={() => toggleAccordion(index)}
                   >
                     <span
-                      className={`text-xl font-serif pr-8 transition-colors duration-300 ${activeIndex === index
+                      className={`text-xl  pr-8 transition-colors duration-300 ${activeIndex === index
                         ? "text-gold"
                         : "text-dark group-hover:text-gold/80"
                         }`}
@@ -105,7 +105,7 @@ export default function FAQSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <p className="text-dark/70 leading-relaxed max-w-2xl pt-4 font-sans">
+                        <p className="text-dark/70 leading-relaxed max-w-2xl pt-4 ">
                           {faq.answer}
                         </p>
                       </motion.div>

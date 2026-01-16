@@ -9,7 +9,7 @@ export default function Footer() {
       style={{ backgroundColor: "#051512" }}
     >
       <div className="container mx-auto px-4 md:px-12">
-        <div className="flex flex-col lg:flex-row justify-between gap-10 md:gap-16 lg:gap-32 pb-12 md:pb-20 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row justify-between gap-10 md:gap-16 lg:gap-32  md:pb-5 border-b border-white/10">
 
           {/* Brand Column */}
           <div className="max-w-sm">
@@ -20,7 +20,7 @@ export default function Footer() {
                 className="h-24 w-auto opacity-100"
               />
             </a>
-            <p className="text-lg text-white/60 mb-10 leading-relaxed font-sans font-light">
+            <p className="text-md text-white/60 mb-10 leading-relaxed  font-light">
               A sanctuary for new beginnings, where luxury meets holistic postnatal care. Reconnect with yourself in our serene haven.
             </p>
             <div className="flex gap-4">
@@ -34,13 +34,14 @@ export default function Footer() {
                 <Youtube className="w-4 h-4" />
               </a>
             </div>
+            
           </div>
 
           {/* Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 w-full lg:w-auto">
             <div>
-              <h4 className="text-white font-serif text-2xl mb-8">Contact</h4>
-              <ul className="space-y-4 font-sans text-sm tracking-wide text-white/70">
+              <h4 className="text-white  text-2xl mb-8">Contact</h4>
+              <ul className="space-y-4  text-sm tracking-wide text-white/70">
                 <li>
                   <a href="tel:+917654389716" className="hover:text-gold transition-colors block">
                     +91 765 438 9716
@@ -59,8 +60,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-white font-serif text-2xl mb-8">Explore</h4>
-              <ul className="space-y-4 font-sans text-sm tracking-wide text-white/70">
+              <h4 className="text-white  text-2xl mb-8">Explore</h4>
+              <ul className="space-y-4  text-sm tracking-wide text-white/70">
                 <li><a href="#about" className="hover:text-gold transition-colors">About Us</a></li>
                 <li><a href="#packages" className="hover:text-gold transition-colors">Packages</a></li>
                 <li><a href="#amenities" className="hover:text-gold transition-colors">Amenities</a></li>
@@ -83,8 +84,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-white font-serif text-2xl mb-8">Legal</h4>
-              <ul className="space-y-4 font-sans text-sm tracking-wide text-white/70">
+              <h4 className="text-white  text-2xl mb-8">Legal</h4>
+              <ul className="space-y-4  text-sm tracking-wide text-white/70">
                 <li><Link href="/terms-and-condition" className="hover:text-gold transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms-and-condition" className="hover:text-gold transition-colors">Terms and Conditions</Link></li>
               </ul>
@@ -93,9 +94,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-xs uppercase tracking-widest text-white/40 font-sans">
+        <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-6 text-xs uppercase tracking-widest text-white/40 ">
           <p>&copy; 2026 Mandara Wellness Center. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex gap-4">
       
           </div>
         </div>

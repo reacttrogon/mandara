@@ -12,7 +12,7 @@ export default function AboutMandara() {
                 About Mandara
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-dark uppercase">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl  mb-6 text-dark ">
               A Sanctuary for New Mothers
             </h2>
             <p className="text-dark/80 mb-4">
@@ -27,19 +27,10 @@ export default function AboutMandara() {
             </p>
             <a
               href="#about"
-              className="inline-block px-8 py-3 bg-primary text-white rounded hover:bg-primary/90 transition-colors mb-4"
+              className="inline-block px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors mb-4 whitespace-nowrap"
             >
               More About Mandara
             </a>
-            <div className="phone mt-4">
-              <a
-                href="tel:+917654389716"
-                className="inline-flex items-center gap-2 text-dark hover:text-primary transition-colors"
-              >
-                <Phone className="text-primary w-5" />
-                  +91 765 438 9716
-              </a>
-            </div>
           </div>
 
           <div className="w-full md:w-7/12 order-1 md:order-2">

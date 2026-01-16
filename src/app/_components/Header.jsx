@@ -14,10 +14,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = `font-sans transition-colors ${
+  const navClass = ` transition-colors ${
     isScrolled
-      ? "text-dark hover:text-primary font-medium"
-      : "text-white hover:text-primary font-medium"
+      ? "text-dark hover:text-primary font-medium whitespace-nowrap"
+      : "text-white hover:text-primary font-medium whitespace-nowrap"
   }`;
 
   return (
@@ -100,7 +100,7 @@ export default function Header() {
           {/* Button */}
           <a
             href="/booking"
-            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 font-sans ${
+            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200  ${
               isScrolled ? "hover:border hover:border-primary" : ""
             }`}
           >
@@ -123,7 +123,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark font-sans">
+        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark ">
           <button
             className="self-end p-2 rounded bg-white"
             onClick={() => setIsMenuOpen(false)}
@@ -131,25 +131,25 @@ export default function Header() {
             <X className="text-black" />
           </button>
 
-          <a href="#home" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
+          <a href="#home" onClick={() => setIsMenuOpen(false)} className=" font-medium">
             Home
           </a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
+          <a href="#about" onClick={() => setIsMenuOpen(false)} className=" font-medium">
             About
           </a>
-          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
+          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className=" font-medium">
             Amenities
-          </a> font-medium
-          <a href="#packages" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
+          </a> 
+          <a href="#packages" onClick={() => setIsMenuOpen(false)} className=" font-medium">
             Packages
           </a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="font-sans font-medium">
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className=" font-medium">
             Contact Us
           </a>
 
           <a
             href="/booking"
-            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-sans font-medium"
+            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary  font-medium"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay

@@ -52,10 +52,10 @@ const MultiStepBooking = () => {
               <span className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-primary font-semibold block mb-2.5">
                 Postnatal Recovery
               </span>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-dark leading-tight mb-4">
+              <h1 className=" text-3xl md:text-4xl lg:text-5xl text-dark leading-tight mb-4">
                 Select Your Wellness Journey
               </h1>
-              <p className="text-dark/70 font-sans max-w-2xl mx-auto leading-relaxed">
+              <p className="text-dark/70  max-w-2xl mx-auto leading-relaxed">
                 Choose the package that best suits your recovery needs
               </p>
             </div>
@@ -103,19 +103,19 @@ const MultiStepBooking = () => {
                       {/* Content Area */}
                       <div className="p-6 flex flex-col flex-grow">
                         <h3
-                          className={`font-serif text-[20px] md:text-[22px] mb-2 transition-colors duration-300 ${
+                          className={` text-[20px] md:text-[22px] mb-2 transition-colors duration-300 ${
                             isSelected ? "text-[#D4AF37]" : "text-white"
                           }`}
                         >
                           {pkg?.title}
                         </h3>
 
-                        <p className="text-white/70 text-[14px] leading-relaxed mb-6 font-sans">
+                        <p className="text-white/70 text-[14px] leading-relaxed mb-6 ">
                           {pkg?.description}
                         </p>
 
                         <div className="mt-auto">
-                          <ul className="space-y-3 text-[14px] text-white/70 font-sans">
+                          <ul className="space-y-3 text-[14px] text-white/70 ">
                             {pkg.includes?.map((item, i) => (
                               <li key={i} className="flex items-start gap-3">
                                 <Check
@@ -146,14 +146,14 @@ const MultiStepBooking = () => {
               <button
                 onClick={handleNext}
                 disabled={!selectedPackage}
-                className={`px-8 py-5 rounded-full font-sans text-xs md:text-md font-bold tracking-widest transition-all duration-300 flex items-center gap-2 ${
+                className={`px-6 py-3 rounded-full  text-md md:text-md font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedPackage
                     ? "bg-primary text-white hover:bg-primary/90 shadow-lg scale-105"
                     : "bg-dark/20 text-dark/40 cursor-not-allowed"
                 }`}
               >
                 Continue to Booking
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>

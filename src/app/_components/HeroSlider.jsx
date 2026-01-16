@@ -53,17 +53,17 @@ export default function HeroSlider() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="inline-block mb-6 text-sm md:text-base font-bold tracking-[0.2em] text-white/90 uppercase border-b border-white/30 pb-2">
+          <span className="inline-block mb-6 text-sm md:text-base font-medium tracking-[0.2em] text-white/90 uppercase border-b border-white/30 pb-2">
             {slides[currentSlide].subtitle}
           </span>
 
-          <h1 className="font-serif text-white mb-8 leading-tight drop-shadow-lg">
+          <h1 className=" text-white mb-8 leading-tight drop-shadow-lg">
             {slides[currentSlide].title}
           </h1>
 
           <a
             href="#about"
-            className="inline-block px-10 py-4 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full text-white font-bold tracking-widest uppercase hover:bg-white hover:text-stone-900 transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-10 py-4 bg-white/10 backdrop-blur-sm  rounded-full text-white font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
           >
             Discover More
           </a>

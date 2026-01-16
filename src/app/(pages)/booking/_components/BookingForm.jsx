@@ -33,10 +33,10 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 max-w-4xl">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-10">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans text-dark mb-3 font-light">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl  text-dark mb-3 font-light">
             Reserve Your Sanctuary
           </h1>
-          <p className="text-dark/80 font-sans max-w-2xl mx-auto leading-relaxed">
+          <p className="text-dark/80  max-w-2xl mx-auto leading-relaxed">
             Share the details of your journey so we may thoughtfully prepare
             your postnatal suite with the appropriate clinical care and
             hospitality comforts.
@@ -53,7 +53,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <Package className="w-5 h-5 text-primary" />
                   </div>
-                  <h2 className="text-lg md:text-xl font-sans text-dark font-light">
+                  <h2 className="text-lg md:text-xl  text-dark font-light">
                     Selected Package
                   </h2>
                 </div>
@@ -69,20 +69,20 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-4 mb-2">
-                      <h3 className="font-sans text-xl md:text-2xl text-dark">
+                      <h3 className=" text-xl md:text-2xl text-dark">
                         {selectedPackage?.title}
                       </h3>
                       <span className="px-3 py-1 text-[10px] uppercase font-bold bg-gold text-dark whitespace-nowrap">
                         {selectedPackage?.duration_days} DAYS
                       </span>
                     </div>
-                    <p className="text-dark/70 text-sm font-sans leading-relaxed mb-3">
+                    <p className="text-dark/70 text-sm  leading-relaxed mb-3">
                       {selectedPackage?.description}
                     </p>
                     {onChangePackage && (
                       <button
                         onClick={onChangePackage}
-                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-sans text-sm font-medium"
+                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors  text-sm font-medium"
                       >
                         <ArrowLeft className="w-4 h-4" />
                         Change Package
@@ -99,17 +99,17 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <Baby className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-lg md:text-xl font-sans text-dark font-light">
+                <h2 className="text-lg md:text-xl  text-dark font-light">
                   Baby Information
                 </h2>
               </div>
-              <p className="text-dark/70 text-base font-sans mb-4 ml-[52px]">
+              <p className="text-dark/70 text-base  mb-4 ml-[52px]">
                 Tell us about your little one
               </p>
 
               <div className="space-y-4">
                 <div>
-                  <label className="text-md font-medium text-dark/60  block font-sans mb-2">
+                  <label className="text-md font-medium text-dark/60  block  mb-2">
                     Have you delivered your baby?
                   </label>
                   <div className="grid grid-cols-2 gap-2">
@@ -118,7 +118,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       onClick={() => {
                         setValue("is_delivered", 1);
                       }}
-                      className={`py-2.5 px-4 rounded-full font-sans text-md text-center font-bold ${
+                      className={`py-2.5 px-4 rounded-full  text-md text-center font-bold ${
                         deliveryStatus === 1
                           ? "bg-primary text-white border-2 border-primary"
                           : "bg-white text-dark/60 border border-dark/10"
@@ -131,7 +131,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       onClick={() => {
                         setValue("is_delivered", 0);
                       }}
-                      className={`py-2.5 px-4 rounded-full font-sans text-md text-center  font-bold ${
+                      className={`py-2.5 px-4 rounded-full  text-md text-center  font-bold ${
                         deliveryStatus === 0
                           ? "bg-primary text-white border-2 border-primary"
                           : "bg-white text-dark/60 border border-dark/10"
@@ -144,7 +144,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
 
                 <div>
                   <label
-                    className={`block font-sans text-md font-medium  ${
+                    className={`block  text-md font-medium  ${
                       errors.delivery_date
                         ? " text-red-500 font-semibold"
                         : "text-dark/60"
@@ -159,7 +159,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       type="date"
                       placeholder="dd-mm-yyyy"
                       {...register("delivery_date", { required: true })}
-                      className="w-full bg-white px-0 py-3 outline-none transition-all font-sans text-base text-dark"
+                      className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark"
                     />
                   </div>
                 </div>
@@ -172,11 +172,11 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-lg md:text-xl font-sans text-dark font-medium">
+                <h2 className="text-lg md:text-xl  text-dark font-medium">
                   Stay Duration
                 </h2>
               </div>
-              <p className="text-dark/70 text-base font-sans mb-4 ml-[52px]">
+              <p className="text-dark/70 text-base  mb-4 ml-[52px]">
                 When would you like to stay with us?
               </p>
 
@@ -186,7 +186,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                     className={`${
                       errors.date_from
                         ? "text-red-500 font-semibold"
-                        : "text-md font-medium text-dark/60 mb-2 block font-sans"
+                        : "text-md font-medium text-dark/60 mb-2 block "
                     }`}
                   >
                     Arrival Date
@@ -196,13 +196,13 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       type="date"
                       placeholder="dd-mm-yyyy"
                       {...register("date_from", { required: true })}
-                      className="w-full bg-white px-0 py-3 outline-none transition-all font-sans text-base text-dark"
+                      className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-md font-medium text-dark/60 mb-2 block font-sans">
+                  <label className="text-md font-medium text-dark/60 mb-2 block ">
                     Departure Date
                   </label>
                   <div className="relative">
@@ -211,7 +211,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       placeholder="dd-mm-yyyy"
                       disabled={true}
                       {...register("date_to")}
-                      className="w-full bg-white px-0 py-3 outline-none transition-all font-sans text-base text-dark"
+                      className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark"
                     />
                   </div>
                 </div>
@@ -224,11 +224,11 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <FileText className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-lg md:text-xl font-sans text-dark font-medium">
+                <h2 className="text-lg md:text-xl  text-dark font-medium">
                   Additional Notes
                 </h2>
               </div>
-              <p className="text-dark/70 text-base font-sans mb-4 ml-[52px]">
+              <p className="text-dark/70 text-base  mb-4 ml-[52px]">
                 Share any special requirements
               </p>
 
@@ -237,7 +237,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                   rows={4}
                   placeholder="Type your notes here..."
                   {...register("additional_note")}
-                  className="w-full bg-white px-0 py-3 outline-none transition-all font-sans text-base text-dark resize-none placeholder-dark/40 leading-relaxed"
+                  className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark resize-none placeholder-dark/40 leading-relaxed"
                 />
               </div>
             </div>
@@ -245,7 +245,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
             {/* Submit Button */}
             <div className=" md:pt-2 ">
               <button
-                className="w-full bg-primary text-white py-4 px-12 rounded-full font-sans text-md md:text-lg text-center shadow-lg font-semibold cursor-pointer"
+                className="w-full bg-primary text-white py-4 px-12 rounded-full text-md md:text-lg text-center shadow-lg font-medium cursor-pointer"
                 type="submit"
               >
                 Book Now

@@ -40,15 +40,15 @@ export default function AmenitiesSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-14">
           <div className="max-w-2xl">
-            <span className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-gold uppercase block mb-3">
+            <span className="text-[10px] md:text-[11px] font-medium tracking-[0.2em] text-gold uppercase block mb-3">
               Premium Facilities
             </span>
 
-            <h2 className="font-serif text-dark text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">
+            <h2 className=" text-dark text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">
               A Premium Ecosystem of Care
             </h2>
 
-            <p className="text-dark/60 text-[15px] leading-relaxed font-sans">
+            <p className="text-dark/60 text-[18px] leading-relaxed ">
               We integrate medical expertise with holistic wellness, ensuring every detail is looked after.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function AmenitiesSection() {
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <h3 className="font-serif text-white text-lg mb-1">
+                <h3 className=" text-white text-lg mb-1">
                   {item.title}
                 </h3>
 

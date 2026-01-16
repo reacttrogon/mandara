@@ -29,7 +29,7 @@ export default function Packages() {
             Postnatal Recovery
           </span>
 
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className=" text-3xl md:text-4xl lg:text-5xl leading-tight">
             Curated Wellness Journeys
           </h2>
         </div>
@@ -55,13 +55,13 @@ export default function Packages() {
                 />
 
                 <span className="absolute top-4 right-4 px-3 py-1 text-[10px] uppercase font-bold bg-gold text-dark tracking-widest">
-                  {pkg?.duration_days}
+                  {pkg?.duration_days} DAYS
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="font-serif text-[20px] md:text-[22px] mb-2">
+                <h3 className=" text-[20px] md:text-[22px] mb-2">
                   {pkg?.title}
                 </h3>
 

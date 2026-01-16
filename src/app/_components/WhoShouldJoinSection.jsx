@@ -18,7 +18,7 @@ export default function WhoShouldJoinSection() {
             Exclusive Retreats
           </span>
 
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className=" text-3xl md:text-4xl lg:text-5xl leading-tight">
             Who is Mandara for?
           </h2>
         </div>
@@ -54,7 +54,7 @@ export default function WhoShouldJoinSection() {
                 <motion.div className="transition-transform duration-500 group-hover:-translate-y-2">
 
                   <div className="mb-4">
-                    <h3 className="text-2xl font-serif leading-snug mb-1">
+                    <h3 className="text-2xl  leading-snug mb-1">
                       {item.title}
                     </h3>
 

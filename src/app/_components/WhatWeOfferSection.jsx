@@ -15,7 +15,7 @@ export default function WhatWeOfferSection() {
           </span>
 
           {/* Heading — slightly increased */}
-          <h2 className="font-serif text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className=" text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">
             Mandara Amenities
           </h2>
 
@@ -77,7 +77,7 @@ export default function WhatWeOfferSection() {
                   </div>
 
                   {/* Heading - Always visible at bottom */}
-                  <h3 className="font-serif text-[18px] md:text-[20px] text-white">
+                  <h3 className=" text-[18px] md:text-[20px] text-white">
                     {item?.title}
                   </h3>
                 </div>

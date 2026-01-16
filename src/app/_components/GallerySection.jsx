@@ -41,11 +41,11 @@ export default function GallerySection() {
     <section id="gallery" className="bg-dark text-white">
       {/* Heading */}
       <div className="container mx-auto px-4 md:px-10 py-12 md:py-20">
-        <span className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-white/60 font-semibold block mb-2.5">
+        <span className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-white/60 font-medium block mb-2.5">
           Visual Journey
         </span>
 
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight">
+        <h2 className=" text-3xl md:text-4xl lg:text-5xl leading-tight">
           A glimpse into tranquility
         </h2>
 
@@ -83,7 +83,7 @@ export default function GallerySection() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors duration-500" />
 
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-full px-4 py-2 text-white/80 text-[12px] tracking-wide">
+                  <div className=" bg-black/30 border border-white/10 rounded-full px-4 py-2 text-white/80 text-[16px] tracking-wide">
                     Mandara Wellness Retreat
                   </div>
                 </div>

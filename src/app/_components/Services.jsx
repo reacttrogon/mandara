@@ -25,7 +25,7 @@ export default function Services() {
           </span>
 
           {/* Increased */}
-          <h2 className="font-serif text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className=" text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">
             Wellness Services
           </h2>
         </div>
@@ -37,14 +37,14 @@ export default function Services() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className={`group relative border-t border-dark/10 py-6 cursor-pointer transition-all duration-500 
+                className={`group relative py-6 cursor-pointer transition-all duration-500 
                 ${activeService === index ? "opacity-100" : "opacity-70 hover:opacity-100"}`}
                 onMouseEnter={() => setActiveService(index)}
               >
                 <div className="flex items-center justify-between mb-2">
                   {/* Increased */}
                   <span
-                    className={`text-[20px] md:text-[22px] font-serif transition-colors duration-300 
+                    className={`text-[20px] md:text-[22px]  transition-colors duration-300 
                     ${activeService === index ? "text-gold" : "text-dark/40"}`}
                   >
                     {service.number}
@@ -58,7 +58,7 @@ export default function Services() {
 
                 {/* Increased */}
                 <h3
-                  className={`text-[26px] md:text-[34px] font-serif mb-2 transition-colors duration-300 
+                  className={`text-[26px] md:text-[34px]  mb-2 transition-colors duration-300 
                   ${activeService === index ? "text-dark" : "text-dark/80"}`}
                 >
                   {service.title}
@@ -73,14 +73,13 @@ export default function Services() {
                   className="overflow-hidden"
                 >
                   {/* Slightly larger body */}
-                  <p className="text-dark/70 leading-relaxed max-w-md pb-1.5 text-[15.5px] md:text-[16px] font-sans">
+                  <p className="text-dark/70 leading-relaxed max-w-md pb-1.5 text-[15.5px] md:text-[16px] ">
                     {service.description}
                   </p>
                 </motion.div>
               </motion.div>
             ))}
 
-            <div className="border-t border-dark/10" />
           </div>
 
           {/* Image Preview */}
@@ -119,7 +118,7 @@ export default function Services() {
                       </p>
 
                       {/* Increased */}
-                      <p className="font-serif text-[22px] text-white">
+                      <p className=" text-[22px] text-white">
                         {services[activeService].title}
                       </p>
                     </div>

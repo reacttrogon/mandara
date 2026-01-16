@@ -39,16 +39,16 @@ export default function ContactUs() {
 
           {/* Form Side */}
           <div className="lg:w-7/12 p-10 md:p-16 lg:p-20 bg-cream">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 font-light uppercase tracking-wider">
-              Start your journey today
+            <h2 className="text-3xl md:text-4xl lg:text-5xl  mb-6 font-light  text-black">
+              Start Your Journey Today
             </h2>
-            <p className="text-dark/80 mb-10 font-sans leading-relaxed">
+            <p className="text-dark/80 mb-10  leading-relaxed">
               Fill in your details and our team will curate your experience.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-3">
-                <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
+                <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block ">
                   Full Name
                 </label>
                 <input
@@ -57,14 +57,14 @@ export default function ContactUs() {
                   placeholder="Enter your full name"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all placeholder-dark/40 font-sans text-base"
+                  className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all placeholder-dark/40  text-base"
                   required
                 />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-3">
-                  <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
+                  <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block ">
                     Phone Number
                   </label>
                   <input
@@ -73,12 +73,12 @@ export default function ContactUs() {
                     placeholder="+91 00000 00000"
                     value={form.phone}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all placeholder-dark/40 font-sans text-base"
+                    className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all placeholder-dark/40  text-base"
                     required
                   />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
+                  <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block ">
                     Enquiry Type
                   </label>
                   <div className="relative">
@@ -86,7 +86,7 @@ export default function ContactUs() {
                       name="status"
                       value={form.status}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all text-dark font-sans text-base appearance-none cursor-pointer"
+                      className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all text-dark  text-base appearance-none cursor-pointer"
                     >
                       <option>General Enquiry</option>
                       <option>Booking Request</option>
@@ -100,7 +100,7 @@ export default function ContactUs() {
               </div>
 
               <div className="space-y-3">
-                <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block font-sans">
+                <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block ">
                   Message / Requests
                 </label>
                 <textarea
@@ -109,7 +109,7 @@ export default function ContactUs() {
                   placeholder="Tell us about your needs or any special requests"
                   value={form.address}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all resize-none placeholder-dark/40 font-sans text-base leading-relaxed"
+                  className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none focus:border-primary transition-all resize-none placeholder-dark/40  text-base leading-relaxed"
                   required
                 />
               </div>

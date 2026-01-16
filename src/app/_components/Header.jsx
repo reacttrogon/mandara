@@ -149,7 +149,7 @@ export default function Header() {
 
           <a
             href="/booking"
-            className="rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary  font-medium"
+            className="rounded-full px-4 py-4 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay

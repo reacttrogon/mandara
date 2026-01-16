@@ -73,7 +73,7 @@ export default function FAQSection() {
                     onClick={() => toggleAccordion(index)}
                   >
                     <span
-                      className={`text-lg md:text-xl pr-8 transition-colors duration-300 font-medium ${
+                      className={`text-md md:text-lg pr-8 transition-colors duration-300 font-normal ${
                         activeIndex === index
                           ? "text-gold"
                           : "text-dark group-hover:text-gold/80"
@@ -100,7 +100,7 @@ export default function FAQSection() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="text-dark/70 leading-relaxed max-w-2xl pb-6 text-base md:text-lg">
+                        <p className="text-dark/70 leading-relaxed max-w-2xl pb-6 text-md md:text-lg">
                           {faq?.answer}
                         </p>
                       </motion.div>

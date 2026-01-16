@@ -80,7 +80,7 @@ export default function GallerySection() {
                   loading="lazy"
                   fill
                   alt={image}
-                  sizes="(max-width: 768px) 50vw, 33vw"
+                  quality={90}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 

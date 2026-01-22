@@ -38,7 +38,7 @@ export default function ContactUs() {
           </div>
 
           {/* Form Side */}
-          <div className="lg:w-7/12 p-10 md:p-16 lg:p-20 bg-cream">
+          <div className="lg:w-7/12 p-6 md:p-16 lg:p-20 bg-cream">
             <h2 className="text-3xl md:text-4xl lg:text-5xl  mb-6 font-light  text-black">
               Start Your Journey Today
             </h2>

@@ -1,20 +1,59 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import gsap from "gsap";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  /* GSAP scope */
+  const headerRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    /* GSAP animation (DESKTOP ONLY) */
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        defaults: { ease: "expo.out", duration: 0.7 },
+      });
+
+      tl.fromTo(
+        ".nav-container",
+        { y: -80 },
+        { y: 0 }
+      )
+        .fromTo(
+          ".anim-logo",
+          { opacity: 0, x: -20 },
+          { opacity: 1, x: 0 },
+          "-=0.5"
+        )
+        .fromTo(
+          ".anim-link",
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, stagger: 0.08 },
+          "-=0.5"
+        )
+        .fromTo(
+          ".anim-btn",
+          { opacity: 0, scale: 0.9 },
+          { opacity: 1, scale: 1, ease: "back.out(1.8)" },
+          "-=0.4"
+        );
+    }, headerRef);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      ctx.revert();
+    };
   }, []);
 
-  const navClass = ` transition-colors ${
+  const navClass = `transition-colors ${
     isScrolled
       ? "text-dark hover:text-primary font-medium whitespace-nowrap"
       : "text-white hover:text-primary font-medium whitespace-nowrap"
@@ -22,7 +61,8 @@ export default function Header() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      ref={headerRef}
+      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
@@ -33,7 +73,7 @@ export default function Header() {
           }`}
         >
           {/* Desktop Logo */}
-          <a href="/" className="hidden md:block">
+          <a href="/" className="hidden md:block anim-logo">
             <Image
               src={
                 isScrolled
@@ -43,13 +83,12 @@ export default function Header() {
               alt="Mandara Logo"
               width={150}
               height={54}
-              loading="eager"
-              priority="true"
+              priority
               className="h-10 md:h-14 lg:h-16 transition-all duration-300"
             />
           </a>
 
-          {/* Mobile Logo */}
+          {/* Mobile Logo (unchanged, no GSAP) */}
           {!isMenuOpen && (
             <a href="/" className="md:hidden">
               <Image
@@ -61,46 +100,35 @@ export default function Header() {
                 alt="Mandara Logo"
                 width={96}
                 height={58}
-                loading="eager"
-                priority="true"
+                priority
                 className="h-9 md:h-12 pl-4 transition-all duration-300"
               />
             </a>
           )}
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 ">
-            <li>
-              <a href="/#home" className={navClass}>
-                Home
-              </a>
+          <ul className="hidden md:flex items-center gap-8">
+            <li className="anim-link">
+              <a href="/#home" className={navClass}>Home</a>
             </li>
-            <li>
-              <a href="/#about" className={navClass}>
-                About
-              </a>
+            <li className="anim-link">
+              <a href="/#about" className={navClass}>About</a>
             </li>
-            <li>
-              <a href="/#amenities" className={navClass}>
-                Amenities
-              </a>
+            <li className="anim-link">
+              <a href="/#amenities" className={navClass}>Amenities</a>
             </li>
-            <li>
-              <a href="/#packages" className={navClass}>
-                Packages
-              </a>
+            <li className="anim-link">
+              <a href="/#packages" className={navClass}>Packages</a>
             </li>
-            <li>
-              <a href="#contact" className={navClass}>
-                Contact Us
-              </a>
+            <li className="anim-link">
+              <a href="#contact" className={navClass}>Contact Us</a>
             </li>
           </ul>
 
           {/* Button */}
           <a
             href="/booking"
-            className={`hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200  ${
+            className={`anim-btn hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${
               isScrolled ? "hover:border hover:border-primary" : ""
             }`}
           >
@@ -115,15 +143,15 @@ export default function Header() {
               }`}
               onClick={() => setIsMenuOpen(true)}
             >
-              <Menu className={`${isScrolled ? "text-black" : "text-white"}`} />
+              <Menu className={isScrolled ? "text-black" : "text-white"} />
             </button>
           )}
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (NO GSAP, untouched) */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark ">
+        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark">
           <button
             className="self-end p-2 rounded bg-white"
             onClick={() => setIsMenuOpen(false)}
@@ -131,21 +159,11 @@ export default function Header() {
             <X className="text-black" />
           </button>
 
-          <a href="#home" onClick={() => setIsMenuOpen(false)} className=" font-medium">
-            Home
-          </a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)} className=" font-medium">
-            About
-          </a>
-          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className=" font-medium">
-            Amenities
-          </a> 
-          <a href="#packages" onClick={() => setIsMenuOpen(false)} className=" font-medium">
-            Packages
-          </a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)} className=" font-medium">
-            Contact Us
-          </a>
+          <a href="#home" onClick={() => setIsMenuOpen(false)} className="font-medium">Home</a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)} className="font-medium">About</a>
+          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className="font-medium">Amenities</a>
+          <a href="#packages" onClick={() => setIsMenuOpen(false)} className="font-medium">Packages</a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="font-medium">Contact Us</a>
 
           <a
             href="/booking"

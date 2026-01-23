@@ -12,7 +12,7 @@ export default function Services() {
   const serviceImages = [galleries[0], galleries[4], galleries[2]];
 
   return (
-    <section className="py-8 md:py-16 bg-cream overflow-hidden">
+    <section className="py-8 md:py-16 bg-cream overflow-hidden relative z-10">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-8 md:mb-12 text-center md:text-left">
@@ -33,11 +33,10 @@ export default function Services() {
               <motion.div
                 key={index}
                 className={`group relative py-6 cursor-pointer transition-all duration-500 
-                ${
-                  activeService === index
+                ${activeService === index
                     ? "opacity-100"
                     : "opacity-70 hover:opacity-100"
-                }`}
+                  }`}
                 onMouseEnter={() => setActiveService(index)}
               >
                 <div className="flex items-center justify-between mb-2">
@@ -51,11 +50,10 @@ export default function Services() {
 
                   <ArrowUpRight
                     className={`w-6 h-6 md:w-7 md:h-7 transition-transform duration-500 
-                    ${
-                      activeService === index
+                    ${activeService === index
                         ? "text-gold rotate-45"
                         : "text-dark/40 group-hover:text-dark"
-                    }`}
+                      }`}
                   />
                 </div>
 

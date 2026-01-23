@@ -55,8 +55,7 @@ export default function WhyChooseUsSection() {
                 <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                     <h3
-                      className={` text-white leading-tight transition-all
-                      ${isWide ? "text-2xl md:text-3xl" : "text-lg md:text-xl"}`}
+                      className={` text-white leading-tight transition-all text-lg md:text-xl`}
                     >
                       {reason?.title}
                     </h3>

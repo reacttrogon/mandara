@@ -10,10 +10,6 @@ export default function WhatWeOfferSection() {
       <div className="container mx-auto px-4 md:px-10">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-[#BFA095] font-semibold block mb-2.5">
-            Holistic Experience
-          </span>
-
           {/* Heading — slightly increased */}
           <h2 className=" text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">
             Mandara Amenities

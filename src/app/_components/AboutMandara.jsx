@@ -12,7 +12,7 @@ export default function AboutMandara() {
   const sectionRef = useRef(null);
   const imageRefs = useRef([]);
 
-  const { label, heading, lead, description, image } = aboutMandara || {};
+  const { heading,descriptions, image } = aboutMandara || {};
 
   const stackImages = [
     image,
@@ -110,26 +110,22 @@ export default function AboutMandara() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-cream overflow-hidden">
+    <section ref={sectionRef} className="bg-cream overflow-hidden" id="about">
       <div className="min-h-screen flex items-center justify-center container mx-auto px-4 md:px-14 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-10">
 
           {/* Left content */}
           <div className="w-full md:w-1/2 z-10">
-            <div data-animate="text" className="mb-4">
-              <span className="text-primary uppercase text-sm font-medium">
-                {label}
-              </span>
-            </div>
-
             <h2 data-animate="text" className="text-4xl md:text-6xl text-dark mb-8">
               {heading}
             </h2>
 
             <div data-animate="text" className="space-y-6 max-w-lg">
-              <p className="text-lg text-dark/70 leading-relaxed">{lead}</p>
-              <p className="text-dark/60 leading-relaxed">{description}</p>
+              {descriptions.map((description,i)=>{
+                return  <p className="text-dark/60 leading-relaxed" key={i}>{description}</p>
+              })}
             </div>
+
           </div>
 
           {/* Right stacked images */}

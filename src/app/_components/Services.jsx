@@ -16,9 +16,6 @@ export default function Services() {
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-8 md:mb-12 text-center md:text-left">
-          <span className="text-[11px] md:text-[12px] font-bold tracking-[0.2em] text-gold uppercase block mb-2.5">
-            Holistic Care
-          </span>
 
           {/* Increased */}
           <h2 className=" text-dark text-3xl md:text-4xl lg:text-5xl leading-tight">

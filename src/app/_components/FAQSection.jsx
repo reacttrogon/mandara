@@ -21,10 +21,6 @@ export default function FAQSection() {
           {/* --- LEFT PANEL --- */}
           <div className="w-full lg:w-5/12">
             <div className="sticky top-24 space-y-8">
-              <span className="text-xs font-medium tracking-[0.2em] text-gold uppercase block">
-                Common Questions
-              </span>
-
               <h2 className="text-3xl md:text-4xl lg:text-5xl text-dark leading-tight">
                 Everything you need to know
               </h2>
@@ -64,7 +60,7 @@ export default function FAQSection() {
           {/* --- RIGHT PANEL (ACCORDION) --- */}
           <div className="w-full lg:w-7/12">
             <div className="space-y-2">
-              {faqs.map((faq, index) => (
+              {faqs.slice(0,4).map((faq, index) => (
                 <div
                   key={index}
                 >

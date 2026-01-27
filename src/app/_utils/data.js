@@ -147,25 +147,70 @@ export const galleries = [
 
 export const faqs = [
   {
-    question: "What is Mandara and who is it for?",
+    question: "Who is Mandara for?",
     answer:
-      "Mandara is a dedicated postnatal wellness sanctuary designed for new mothers seeking rest, recovery, and professional care after childbirth. It supports women during the early postpartum phase in a calm, nurturing, and restorative environment.",
+      "Mandara is designed for women at different stages of life, including general wellness, prenatal care, postnatal recovery, menopausal wellbeing, and healthy ageing."
   },
   {
-    question: "What kind of care does Mandara provide?",
+    question: "Are the wellness programmes supervised?",
     answer:
-      "Mandara offers personalized postnatal care, including professional nursing support, mother-and-baby assistance, nutritious meals, wellness therapies, and guided recovery programs tailored to each mother’s unique needs.",
+      "Yes. All wellness programmes are guided by an in-house care and clinical team to ensure safety, comfort, and continuity of care."
   },
   {
-    question: "What can I expect during my stay at Mandara?",
+    question: "How are wellness plans decided?",
     answer:
-      "During your stay, you can expect comfortable accommodation, attentive maternal care, holistic wellness treatments, and a peaceful atmosphere focused on helping you heal, rest, and regain strength after childbirth.",
+      "Each stay begins with a personal consultation, after which a personalised wellness plan is thoughtfully created based on individual needs and preferences."
   },
   {
-    question: "How do I book or enquire about a stay at Mandara?",
+    question: "Is privacy maintained during the stay?",
     answer:
-      "You can book or enquire about a stay at Mandara by filling out the booking or enquiry form available on our website. Our team will get in touch with you to guide you through the next steps.",
+      "Yes. Privacy, dignity, and confidentiality are respected at every stage of the Mandara experience."
   },
+  {
+    question: "What kind of cuisine is offered?",
+    answer:
+      "Mandara offers wellness-aligned meals prepared with care. Menus are adapted to individual health needs, cultural preferences, and dietary requirements."
+  },
+  {
+    question: "What amenities are available during the stay?",
+    answer:
+      "Guests stay in AI-integrated private cottages and have access to modern wellness amenities, Ayurvedic wellness facilities, and thoughtfully curated experiences, all personalised to support rest and recovery."
+  },
+  {
+    question: "Is Mandara a hospital or a medical facility?",
+    answer:
+      "No. Mandara is a wellness sanctuary. While care is guided by clinical insight and professional teams, it does not function as a hospital or provide emergency medical services."
+  },
+  {
+    question: "Is Mandara only for postnatal mothers?",
+    answer:
+      "No. While Mandara offers dedicated postnatal support, it is designed for women across different life stages and wellness needs."
+  },
+  {
+    question: "Is baby care support available?",
+    answer:
+      "Yes. A 24-hour baby nursery is available for postnatal mothers, along with gentle baby care support and baby spa services, allowing mothers time to rest, recover, and bond."
+  },
+  {
+    question: "Are spa and therapy services included?",
+    answer:
+      "Yes. Mandara offers a blend of modern wellness therapies and Ayurvedic treatments, thoughtfully aligned with each guest’s personalised wellness plan."
+  },
+  {
+    question: "How long can one stay at Mandara?",
+    answer:
+      "The length of stay varies based on individual needs and the selected wellness programme, guided through the consultation process."
+  },
+  {
+    question: "Can family members stay or visit?",
+    answer:
+      "Mandara prioritises a woman’s rest and privacy. One bystander guest may stay along with the primary guest as part of the package. Family visits are limited to the reception building only."
+  },
+  {
+    question: "How do I begin my Mandara journey?",
+    answer:
+      "You can begin by speaking with our team at +91 99612 00055. We will guide you through the consultation, planning, and booking process with care and clarity."
+  }
 ];
 
 export const audience = [
@@ -189,18 +234,18 @@ export const audience = [
 
 export const slides = [
   {
-    subtitle: "India's First Holistic Wellness Retreat",
-    title: "Luxury Postnatal Care",
+    subtitle: "India's First Holistic Retreat For Women",
+    title: "Rest. Reconnect. Recover.",
     image: "/assets/images/image1.webp",
   },
   {
-    subtitle: "Where Compassion Meets Class",
-    title: "Redefining Recovery",
+    subtitle: "A Sanctuary Designed For Motherhood",
+    title: "Reinventing Care",
     image: "/assets/images/image2.webp",
   },
   {
-    subtitle: "Your Sanctuary of Peace",
-    title: "The Perfect Base",
+    subtitle: "A New Standared of Personalised Wellness",
+    title: "Reimagining Wellbeing",
     image: "/assets/images/image3.webp",
   },
 ];
@@ -254,12 +299,13 @@ export const termsAndConditions = {
 };
 
 export const aboutMandara = {
-  label: "About Mandara",
-  heading: "A Sanctuary for New Mothers",
+  heading: "A Sanctuary for Women",
   image: "/assets/images/couple-abt.webp",
-  lead: "Where new beginnings are nurtured with world-class care, comfort, and compassion.",
-  description:
-    "Mandara Wellness Clinic is a premier postnatal care facility where medical excellence meets luxury hospitality. We provide new mothers and their babies with an unparalleled experience of comfort, care, and holistic recovery.",
+  descriptions: [
+    "Mandara is a wellness sanctuary created exclusively for women who seek rest, recovery, and balance in a safe and supportive environment. It is a place designed to slow life down, where care is thoughtful, privacy is respected, and every detail exists to ease both body and mind.",
+    "At Mandara, wellness is shaped around comfort, calm, and individual rhythm. Support is always present, never overwhelming, with gentle baby care and restorative therapies forming a natural part of the experience. Whether a woman arrives for postnatal recovery, emotional renewal, or a quiet pause from daily demands, her time here is guided by her needs, comfort, and pace.",
+    "Set within serene, green surroundings, Mandara brings together nature, carefully designed private spaces, and professional care to create an atmosphere of calm reassurance. Rooted in clinical values and delivered with warmth, it offers women the time and space they deserve to heal, reconnect, and regain strength.",
+  ],
   buttonText: "More About Mandara",
 };
 
@@ -289,4 +335,14 @@ export const amenities = [
     title: "Medical Experts",
     description: "Doctors & Pediatricians",
   },
+];
+
+export const navigation = [
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Philosophy", href: "#philosophy" },
+  { label: "Wellness Service", href: "/#" },
+  { label: "Mandara Life", href: "#" },
+  { label: "Gallery", href: "#" },
+  { label: "Contact Us", href: "#" },
 ];

@@ -15,10 +15,6 @@ export default function WhoShouldJoinSection() {
 
         {/* Header */}
         <div className="mb-10 md:mb-14">
-          <span className="text-[10px] md:text-[11px] font-bold tracking-[0.25em] text-gold uppercase block mb-3">
-            Exclusive Retreats
-          </span>
-
           <h2 className=" text-3xl md:text-4xl lg:text-5xl leading-tight">
             Who is Mandara for?
           </h2>

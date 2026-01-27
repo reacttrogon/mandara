@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import gsap from "gsap";
+import { navigation } from "../_utils/data";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,28 +23,24 @@ export default function Header() {
         defaults: { ease: "expo.out", duration: 0.7 },
       });
 
-      tl.fromTo(
-        ".nav-container",
-        { y: -80 },
-        { y: 0 }
-      )
+      tl.fromTo(".nav-container", { y: -80 }, { y: 0 })
         .fromTo(
           ".anim-logo",
           { opacity: 0, x: -20 },
           { opacity: 1, x: 0 },
-          "-=0.5"
+          "-=0.5",
         )
         .fromTo(
           ".anim-link",
           { opacity: 0, y: 10 },
           { opacity: 1, y: 0, stagger: 0.08 },
-          "-=0.5"
+          "-=0.5",
         )
         .fromTo(
           ".anim-btn",
           { opacity: 0, scale: 0.9 },
           { opacity: 1, scale: 1, ease: "back.out(1.8)" },
-          "-=0.4"
+          "-=0.4",
         );
     }, headerRef);
 
@@ -108,21 +105,15 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8">
-            <li className="anim-link">
-              <a href="/#home" className={navClass}>Home</a>
-            </li>
-            <li className="anim-link">
-              <a href="/#about" className={navClass}>About</a>
-            </li>
-            <li className="anim-link">
-              <a href="/#amenities" className={navClass}>Amenities</a>
-            </li>
-            <li className="anim-link">
-              <a href="/#packages" className={navClass}>Packages</a>
-            </li>
-            <li className="anim-link">
-              <a href="#contact" className={navClass}>Contact Us</a>
-            </li>
+            {navigation.map((navigate, index) => {
+              return (
+                <li className="anim-link" key={index}>
+                  <a href={navigate.href} className={navClass}>
+                    {navigate.label}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Button */}
@@ -159,11 +150,41 @@ export default function Header() {
             <X className="text-black" />
           </button>
 
-          <a href="#home" onClick={() => setIsMenuOpen(false)} className="font-medium">Home</a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)} className="font-medium">About</a>
-          <a href="#amenities" onClick={() => setIsMenuOpen(false)} className="font-medium">Amenities</a>
-          <a href="#packages" onClick={() => setIsMenuOpen(false)} className="font-medium">Packages</a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="font-medium">Contact Us</a>
+          <a
+            href="#home"
+            onClick={() => setIsMenuOpen(false)}
+            className="font-medium"
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            onClick={() => setIsMenuOpen(false)}
+            className="font-medium"
+          >
+            About
+          </a>
+          <a
+            href="#amenities"
+            onClick={() => setIsMenuOpen(false)}
+            className="font-medium"
+          >
+            Amenities
+          </a>
+          <a
+            href="#packages"
+            onClick={() => setIsMenuOpen(false)}
+            className="font-medium"
+          >
+            Packages
+          </a>
+          <a
+            href="#contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="font-medium"
+          >
+            Contact Us
+          </a>
 
           <a
             href="/booking"

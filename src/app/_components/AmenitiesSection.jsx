@@ -10,10 +10,6 @@ export default function AmenitiesSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-14">
           <div className="max-w-2xl">
-            <span className="text-[10px] md:text-[11px] font-medium tracking-[0.2em] text-gold uppercase block mb-3">
-              Premium Facilities
-            </span>
-
             <h2 className=" text-dark text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">
               A Premium Ecosystem of Care
             </h2>

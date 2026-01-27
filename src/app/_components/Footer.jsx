@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="text-white/80 pt-12 pb-6 md:pt-24 md:pb-12 border-t border-white/10"
+    <footer className="text-white/80 pt-12 md:pt-24  border-t border-white/10"
       style={{ backgroundColor: "#051512" }}
     >
       <div className="container mx-auto px-4 md:px-12">
@@ -94,11 +94,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-6 flex flex-col md:flex-row justify-between items-center gap-6 text-xs uppercase tracking-widest text-white/40 ">
+        <div className="flex justify-center py-6 opacity-70 uppercase text-sm ">
           <p>&copy; 2026 Mandara Wellness Center. All rights reserved.</p>
-          <div className="flex gap-4">
-      
-          </div>
         </div>
       </div>
     </footer>

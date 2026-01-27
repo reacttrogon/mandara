@@ -143,6 +143,16 @@ export const galleries = [
   "/assets/gallery/abouttt.png",
   "/assets/gallery/modern.png",
   "/assets/gallery/bedroom.png",
+  "/assets/images/image1.webp",
+  "/assets/images/image2.webp",
+  "/assets/images/image3.webp",
+  "/assets/images/couple-abt.webp",
+  "/assets/amenities/PrivateLuxuryAccommodations.png",
+  "/assets/amenities/HolisticNutrition.png",
+  "/assets/amenities/Therapeutictreatments.png",
+  "/assets/whychooseUs/bedroom.png",
+  "/assets/whychooseUs/abut-2.png",
+  "/assets/amenities/24care.png",
 ];
 
 export const faqs = [
@@ -216,19 +226,33 @@ export const faqs = [
 export const audience = [
   {
     image: "/assets/mandara/mother.webp",
-    title: "A new mother seeking premium postnatal recovery",
+    title: "New Mothers",
+    description: "Premium postnatal recovery with dedicated baby care and therapeutic support"
   },
   {
     image: "/assets/mandara/pregnant.webp",
-    title: "An expecting mother preparing for childbirth",
+    title: "Expecting Mothers",
+    description: "Preparing for childbirth with prenatal wellness and comfort-focused care"
   },
   {
     image: "/assets/mandara/women.webp",
-    title: "A woman in need of focused rest and hormonal balance",
+    title: "Women's Wellness",
+    description: "Focused rest, hormonal balance, and holistic rejuvenation"
   },
   {
     image: "/assets/mandara/coup.png",
-    title: "A couple seeking peaceful, supported bonding time",
+    title: "Couples",
+    description: "Peaceful, supported bonding time in a serene environment"
+  },
+  {
+    image: "/assets/images/image2.webp",
+    title: "Menopausal Wellness",
+    description: "Guided support through physical and emotional transitions"
+  },
+  {
+    image: "/assets/gallery/about.jpeg",
+    title: "Geriatric Care",
+    description: "Respectful, adaptive care focused on comfort and quality of life"
   },
 ];
 

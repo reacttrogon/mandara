@@ -15,13 +15,13 @@ export default function WhoShouldJoinSection() {
 
         {/* Header */}
         <div className="mb-10 md:mb-14">
-          <h2 className=" text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight">
             Who is Mandara for?
           </h2>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {audience.map((item, index) => (
             <motion.div
@@ -30,7 +30,7 @@ export default function WhoShouldJoinSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12, duration: 0.7 }}
-              className="relative group h-[480px] rounded-sm overflow-hidden cursor-pointer"
+              className="relative group h-[420px] md:h-[480px] rounded-sm overflow-hidden cursor-pointer"
             >
 
               {/* Image */}
@@ -49,11 +49,11 @@ export default function WhoShouldJoinSection() {
               <div className="absolute inset-4 border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-95 group-hover:scale-100" />
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
                 <motion.div className="transition-transform duration-500 group-hover:-translate-y-2">
 
                   <div className="mb-4">
-                    <h3 className="text-2xl  leading-snug mb-1">
+                    <h3 className="text-xl md:text-2xl leading-snug mb-1">
                       {item?.title}
                     </h3>
 
@@ -61,7 +61,7 @@ export default function WhoShouldJoinSection() {
                   </div>
 
                   <p className="text-sm text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 translate-y-4 group-hover:translate-y-0">
-                    Experience refined wellness designed for your lifestyle.
+                    {item?.description || "Experience refined wellness designed for your lifestyle."}
                   </p>
 
                 </motion.div>

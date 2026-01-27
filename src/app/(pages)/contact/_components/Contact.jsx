@@ -63,22 +63,21 @@ const Contact = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="text-primary w-5 h-5 mt-1" />
                 <p className="leading-relaxed hover:text-primary transition">
-                  G1003, NH 66, Kozhikode Bypass <br />
-                  Calicut, Kerala
+                  Mandara Women's Wellness,<br />
+                  Athanikkal, Kerala 673314
                 </p>
               </div>
             </div>
           </div>
 
           {/* Map Card */}
-          <div className="rounded-2xl overflow-hidden shadow-xl h-[420px] w-[520px]">
+          <div className="rounded-2xl overflow-hidden shadow-xl w-full h-[300px] sm:h-[350px] md:h-[420px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18121.23184063282!2d75.85209349995468!3d11.132565572191874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6513f0fb1d021%3A0x476b9558ddb813da!2sMandara%20Women&#39;s%20Wellness!5e0!3m2!1sen!2sin!4v1769509154080!5m2!1sen!2sin"
               loading="lazy"
-              height={420}
-              width={520}
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              className="w-full h-full border-0"
+            />
           </div>
         </div>
       </section>

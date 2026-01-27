@@ -53,8 +53,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="pt-4 leading-relaxed ">
-                  G1003, NH 66, Kozhikode Bypass<br />
-                  Calicut, Kerala
+                 Mandara Women's Wellness,<br />
+                 Athanikkal, Kerala 673314
                 </li>
               </ul>
             </div>

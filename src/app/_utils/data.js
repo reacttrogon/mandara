@@ -341,8 +341,8 @@ export const navigation = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
   { label: "Philosophy", href: "#philosophy" },
-  { label: "Wellness Service", href: "/#" },
+  { label: "Wellness Service", href: "/wellness-service" },
   { label: "Mandara Life", href: "#" },
-  { label: "Gallery", href: "#" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },
 ];

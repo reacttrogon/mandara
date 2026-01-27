@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { navigation } from "../_utils/data";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ isTransaparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -15,6 +15,7 @@ export default function Header() {
   const headerRef = useRef(null);
 
   useEffect(() => {
+    if (isTransaparent) setIsScrolled(true)
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
 
@@ -51,24 +52,21 @@ export default function Header() {
     };
   }, []);
 
-  const navClass = `transition-colors ${
-    isScrolled
-      ? "text-dark hover:text-primary font-medium whitespace-nowrap"
-      : "text-white hover:text-primary font-medium whitespace-nowrap"
-  }`;
+  const navClass = `transition-colors ${isScrolled
+    ? "text-dark hover:text-primary font-medium whitespace-nowrap"
+    : "text-white hover:text-primary font-medium whitespace-nowrap"
+    }`;
 
   return (
     <nav
       ref={headerRef}
-      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-bage shadow-md" : "bg-transparent"
-      }`}
+      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-bage shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4">
         <div
-          className={`flex items-center justify-between ${
-            !isMenuOpen ? "py-4" : "py-0"
-          }`}
+          className={`flex items-center justify-between ${!isMenuOpen ? "py-4" : "py-0"
+            }`}
         >
           {/* Desktop Logo */}
           <a href="/" className="hidden md:block anim-logo">
@@ -120,9 +118,8 @@ export default function Header() {
           {/* Button */}
           <Link
             href="/booking"
-            className={`anim-btn hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${
-              isScrolled ? "hover:border hover:border-primary" : ""
-            }`}
+            className={`anim-btn hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${isScrolled ? "hover:border hover:border-primary" : ""
+              }`}
           >
             Book your stay
           </Link>
@@ -130,9 +127,8 @@ export default function Header() {
           {/* Mobile Menu Button */}
           {!isMenuOpen && (
             <button
-              className={`md:hidden p-2 rounded ${
-                isScrolled ? "text-dark" : "text-white"
-              }`}
+              className={`md:hidden p-2 rounded ${isScrolled ? "text-dark" : "text-white"
+                }`}
               onClick={() => setIsMenuOpen(true)}
             >
               <Menu className={isScrolled ? "text-black" : "text-white"} />
@@ -151,49 +147,24 @@ export default function Header() {
             <X className="text-black" />
           </button>
 
-          <a
-            href="#home"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-medium"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-medium"
-          >
-            About
-          </a>
-          <a
-            href="#amenities"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-medium"
-          >
-            Amenities
-          </a>
-          <a
-            href="#packages"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-medium"
-          >
-            Packages
-          </a>
-          <a
-            href="#contact"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-medium"
-          >
-            Contact Us
-          </a>
+          {navigation.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="font-medium hover:text-primary transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
 
-          <a
+          <Link
             href="/booking"
             className="rounded-full px-4 py-4 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay
-          </a>
+          </Link>
         </div>
       )}
     </nav>

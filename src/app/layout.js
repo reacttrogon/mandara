@@ -1,11 +1,11 @@
 import "./globals.css";
-import { DM_Sans } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 
-const dmSans = DM_Sans({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
-  weight: ["400", "500", "700"],
-  display: 'swap', 
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -40,8 +40,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={dmSans.variable}>
-      <body className="  bg-[#051512] text-white">
+    <html lang="en" className={playfair.variable}>
+      <body className=" bg-[#051512] text-white">
         {children}
       </body>
     </html>

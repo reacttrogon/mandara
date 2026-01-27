@@ -12,7 +12,7 @@ export default function Services() {
   const serviceImages = [galleries[0], galleries[4], galleries[2]];
 
   return (
-    <section className="py-8 md:py-16 bg-cream overflow-hidden relative z-10">
+    <section className="py-8 md:py-16 bg-bage overflow-hidden relative z-10">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-8 md:mb-12 text-center md:text-left">

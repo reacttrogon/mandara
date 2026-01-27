@@ -14,7 +14,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 md:py-24 bg-cream">
+    <section className="py-20 md:py-24 bg-bage">
       <div className="container mx-auto px-6 md:px-10">
         <div className="flex flex-col lg:flex-row gap-14 lg:gap-20">
           

@@ -5,7 +5,7 @@ import { amenities } from "../_utils/data";
 export default function AmenitiesSection() {
 
   return (
-    <section className="py-14 md:py-10 bg-cream">
+    <section className="py-14 md:py-10 bg-bage">
       <div className="container mx-auto px-4 md:px-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-end justify-between gap-8 mb-14">

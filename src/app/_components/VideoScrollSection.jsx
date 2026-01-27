@@ -92,7 +92,7 @@ export default function VideoScrollSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative z-10 md:h-screen w-full py-4 bg-cream"
+      className="relative z-10 md:h-screen w-full py-4 bg-bage"
     >
       <div className="flex h-full w-full items-center justify-center">
         <div

@@ -6,7 +6,7 @@ import { reasons } from "../_utils/data";
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-12 md:py-24 bg-[#F9F6F0] overflow-hidden">
+    <section className="py-12 md:py-24 bg-bage overflow-hidden">
       <div className="container mx-auto px-4 md:px-12">
         
         {/* Header Section */}

@@ -60,7 +60,7 @@ export default function Header() {
     <nav
       ref={headerRef}
       className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        isScrolled ? "bg-bage shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">

@@ -29,7 +29,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
   };
 
   return (
-    <section className="bg-cream py-8 md:py-12 lg:py-16">
+    <section className="bg-bage py-8 md:py-12 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 max-w-4xl">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-10">
@@ -58,7 +58,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                   </h2>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 bg-cream/50 rounded-lg p-4">
+                <div className="flex flex-col sm:flex-row gap-4 bg-bage/50 rounded-lg p-4">
                   <div className="relative w-full sm:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
                     <Image
                       src={selectedPackage?.images}

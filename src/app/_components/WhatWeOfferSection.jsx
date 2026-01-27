@@ -6,7 +6,7 @@ import { offerings } from "../_utils/data";
 
 export default function WhatWeOfferSection() {
   return (
-    <section id="amenities" className="py-14 md:py-24 bg-cream">
+    <section id="amenities" className="py-14 md:py-24 bg-bage">
       <div className="container mx-auto px-4 md:px-10">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">

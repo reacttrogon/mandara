@@ -24,8 +24,6 @@ export default function Home() {
       <Philosophy/>
       <VideoScrollSection />
       <Services />
-      {/*Hided because of client requirement*/}
-      {/* <MarqueeSection /> */}
       <WhatWeOfferSection />
       <WhyChooseUsSection />
       <GallerySection />

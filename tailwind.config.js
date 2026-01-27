@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#508066",
+        bage: "#F3EEE7",
         secondary: "#c5a059", // Gold
         "off-white": "#f9f7f2", // More subtle cream
         cream: "#f4f1ea", // For sections

@@ -110,7 +110,7 @@ export default function AboutMandara() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-cream overflow-hidden" id="about">
+    <section ref={sectionRef} className="bg-bage overflow-hidden" id="about">
       <div className="min-h-screen flex items-center justify-center container mx-auto px-4 md:px-14 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-10">
 

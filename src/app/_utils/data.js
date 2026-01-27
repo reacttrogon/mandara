@@ -353,7 +353,7 @@ export const amenities = [
 
 export const navigation = [
   { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Philosophy", href: "#philosophy" },
   { label: "Wellness Service", href: "/wellness-service" },
   { label: "Mandara Life", href: "/mandara-life" },

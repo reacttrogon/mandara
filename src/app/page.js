@@ -23,12 +23,12 @@ export default function Home() {
       <AboutMandara />
       <Philosophy/>
       <VideoScrollSection />
-      <Services />
+      {/* <Services />
       <WhatWeOfferSection />
-      <WhyChooseUsSection />
+      <WhyChooseUsSection /> */}
       <GallerySection />
       <FAQSection />
-      <AmenitiesSection />
+      {/* <AmenitiesSection /> */}
       <WhoShouldJoinSection />
       <ContactUs />
       <Footer />

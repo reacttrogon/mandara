@@ -344,5 +344,5 @@ export const navigation = [
   { label: "Wellness Service", href: "/#" },
   { label: "Mandara Life", href: "#" },
   { label: "Gallery", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Contact Us", href: "/contact" },
 ];

@@ -57,7 +57,7 @@ export default function HeroSlider() {
             {slides[currentSlide].subtitle}
           </span>
 
-          <h1 className=" text-white mb-8 leading-tight drop-shadow-lg">
+          <h1 className=" text-bage mb-8 leading-tight drop-shadow-lg">
             {slides[currentSlide].title}
           </h1>
 

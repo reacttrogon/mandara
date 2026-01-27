@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import gsap from "gsap";
 import { navigation } from "../_utils/data";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -108,23 +109,23 @@ export default function Header() {
             {navigation.map((navigate, index) => {
               return (
                 <li className="anim-link" key={index}>
-                  <a href={navigate.href} className={navClass}>
+                  <Link href={navigate?.href} className={navClass}>
                     {navigate.label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
           </ul>
 
           {/* Button */}
-          <a
+          <Link
             href="/booking"
             className={`anim-btn hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${
               isScrolled ? "hover:border hover:border-primary" : ""
             }`}
           >
             Book your stay
-          </a>
+          </Link>
 
           {/* Mobile Menu Button */}
           {!isMenuOpen && (

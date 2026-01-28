@@ -117,7 +117,7 @@ export default function Header({ isTransaparent }) {
 
           {/* Button */}
           <Link
-            href="/booking"
+            href="/bookings"
             className={`anim-btn hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${isScrolled ? "hover:border hover:border-primary" : ""
               }`}
           >
@@ -159,7 +159,7 @@ export default function Header({ isTransaparent }) {
           ))}
 
           <Link
-            href="/booking"
+            href="/bookings"
             className="rounded-full px-4 py-4 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
             onClick={() => setIsMenuOpen(false)}
           >

@@ -14,6 +14,7 @@ import ContactUs from "./_components/ContactUs.jsx";
 import Footer from "./_components/Footer.jsx";
 import Philosophy from "./_components/Philosophy.jsx";
 import VideoScrollSection from "./_components/VideoScrollSection.jsx";
+import WhatsAppButton from "./_components/WhatsAppButton.jsx";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
       <Header />
       <HeroSlider />
       <AboutMandara />
-      <Philosophy/>
+      <Philosophy />
       <VideoScrollSection />
       {/* <Services />
       <WhatWeOfferSection />
@@ -32,6 +33,7 @@ export default function Home() {
       <WhoShouldJoinSection />
       <ContactUs />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

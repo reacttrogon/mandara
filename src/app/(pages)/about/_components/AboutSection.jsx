@@ -27,14 +27,6 @@ export default function AboutSection() {
                     >
                         About Us
                     </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-base md:text-lg text-white/90 font-light leading-relaxed mx-auto max-w-2xl tracking-wide"
-                    >
-                        A Sanctuary for Women
-                    </motion.p>
                 </div>
             </div>
 

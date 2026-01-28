@@ -16,7 +16,7 @@ const getColumnSpan = (index) => {
 
 const ImagesCardContainer = () => {
   return (
-    <section className="bg-bage py-24">
+    <section className="bg-bage pt-36 pb-24">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="mb-12 text-center">

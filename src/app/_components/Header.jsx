@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { navigation } from "../_utils/data";
 import Link from "next/link";
 
-export default function Header({ isTransaparent }) {
+export default function Header({ isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -15,8 +15,17 @@ export default function Header({ isTransaparent }) {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    if (isTransaparent) setIsScrolled(true)
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      if (isTransparent) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(window.scrollY > 50);
+      }
+    };
+
+    // Initial check
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
     /* GSAP animation (DESKTOP ONLY) */

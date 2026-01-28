@@ -5,7 +5,7 @@ import Footer from "../../_components/Footer";
 const Page = () => {
   return (
     <>
-      <Header isTransaparent={true} />
+      <Header isTransparent={true} />
       <ImagesCardContainer />
       <Footer />
     </>

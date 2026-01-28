@@ -2,7 +2,7 @@ import ServicesCard from "./ServicesCard";
 
 const WellnessServiceContainer = () => {
   return (
-    <div className="w-full py-10 md:py-20 bg-bage text-dark">
+    <div className="w-full pt-32 pb-10 md:pt-40 md:pb-20 bg-bage text-dark">
       <div className="flex flex-col justify-center items-center px-6 md:px-28 text-center max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-serif text-primary mb-6">Wellness Service</h1>
         <p className="text-base font-light leading-relaxed max-w-3xl">

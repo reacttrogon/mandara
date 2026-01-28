@@ -167,7 +167,7 @@ export default function WellnessBooking() {
                                             )}
 
                                             {/* Green Button */}
-                                            <button className="w-full py-3.5 bg-primary text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+                                            <button className="w-full mt-auto py-3.5 bg-primary text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
                                                 VIEW PACKAGE <span className="text-base">→</span>
                                             </button>
                                         </div>

@@ -101,13 +101,13 @@ export default function HeroSlider() {
       <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 hidden md:block">
         <Link
           href="/bookings"
-          className="flex items-center justify-center bg-white/90 hover:bg-primary text-dark hover:text-white py-10 px-2 rounded-l-2xl shadow-2xl transition-all duration-300 backdrop-blur-md"
+          className="flex items-center justify-center  hover:bg-[#051512] text-white  hover:text-white py-10 px-2 rounded-l-2xl shadow-2xl transition-all duration-300 bg-[#051512]"
         >
           <span
-            className="uppercase tracking-[0.25em] text-xs font-bold whitespace-nowrap"
+            className="uppercase  text-md font-bold whitespace-nowrap "
             style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
           >
-            Book Your Stay
+            Book now
           </span>
         </Link>
       </div>

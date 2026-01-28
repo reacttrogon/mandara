@@ -6,6 +6,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { navigation } from "../_utils/data";
 import Link from "next/link";
+import { montserrat } from "../_utils/font";
 
 export default function Header({ isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,9 +127,8 @@ export default function Header({ isTransparent }) {
 
           {/* Button */}
           {/* HiLITE Group Badge */}
-          <div className={`anim-btn hidden md:flex flex-col items-end leading-none ${isScrolled ? "text-dark" : "text-white"}`}>
-            <span className="text-[10px] uppercase tracking-widest opacity-70">From</span>
-            <span className="text-lg font-sans font-medium"><span className="font-bold">HiLITE</span> Group</span>
+          <div className={`anim-btn hidden md:flex flex-col items-end text-sm ${isScrolled ? "text-dark" : "text-white"}`}>
+            <span className={`${montserrat.className}`}>From <span className="font-extrabold tracking-tight ">HiLite </span>Group</span>
           </div>
 
           {/* Mobile Menu Button */}

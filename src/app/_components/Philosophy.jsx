@@ -68,7 +68,7 @@ const Philosophy = () => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#0f1c16] text-[#f5f3ee] py-24 px-6" id="philosophy"
+      className="relative bg-bage text-dark py-24 px-6" id="philosophy"
     >
       <div className="mx-auto max-w-2xl text-center">
         <h2 data-animate className="mb-10 text-2xl leading-snug md:text-4xl">
@@ -85,7 +85,7 @@ const Philosophy = () => {
 
           <p
             data-animate
-            className="my-10 text-2xl tracking-wide text-[#d8cfae] md:text-3xl"
+            className="my-10 text-2xl tracking-wide text-secondary md:text-3xl"
           >
             सा विश्वायुः सा विश्वकर्मा सा विश्वधायाः
           </p>
@@ -139,7 +139,7 @@ const Philosophy = () => {
             Mandara believes:
           </p>
 
-          <p data-animate className="text-xl text-[#cbbf9a] md:text-2xl">
+          <p data-animate className="text-xl text-secondary md:text-2xl">
             Women deserve to begin every new chapter with care, balance, and
             dignity.
           </p>

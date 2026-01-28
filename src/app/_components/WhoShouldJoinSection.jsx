@@ -6,16 +6,17 @@ import { audience } from "../_utils/data";
 
 export default function WhoShouldJoinSection() {
   return (
-    <section className="py-14 md:py-20 bg-dark text-white relative overflow-hidden">
+    <section className="py-14 md:py-20 bg-bage text-dark relative overflow-hidden">
 
       {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/70 opacity-90 z-0" />
+      {/* Subtle overlay */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/70 opacity-90 z-0" /> */}
 
       <div className="container mx-auto px-4 md:px-10 relative z-10">
 
         {/* Header */}
         <div className="mb-10 md:mb-14">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight">
+          <h2 className="text-4xl md:text-6xl font-light leading-tight">
             Who is Mandara for?
           </h2>
         </div>
@@ -53,14 +54,14 @@ export default function WhoShouldJoinSection() {
                 <motion.div className="transition-transform duration-500 group-hover:-translate-y-2">
 
                   <div className="mb-4">
-                    <h3 className="text-xl md:text-2xl leading-snug mb-1">
+                    <h3 className="text-xl md:text-2xl leading-snug mb-1 font-light text-bage">
                       {item?.title}
                     </h3>
 
                     <div className="h-[2px] w-0 bg-gold group-hover:w-12 transition-all duration-500" />
                   </div>
 
-                  <p className="text-sm text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 translate-y-4 group-hover:translate-y-0">
+                  <p className="text-sm text-bage/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 translate-y-4 group-hover:translate-y-0">
                     {item?.description || "Experience refined wellness designed for your lifestyle."}
                   </p>
 

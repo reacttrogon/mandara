@@ -39,14 +39,14 @@ export default function GallerySection() {
   const x = useTransform(scrollYProgress, [0, 1], [0, -scrollDistance]);
 
   return (
-    <section id="gallery" className="bg-dark text-white">
+    <section id="gallery" className="bg-bage text-dark">
       {/* Heading */}
       <div className="container mx-auto px-4 md:px-10 py-12 md:py-20">
         <h2 className=" text-3xl md:text-4xl lg:text-5xl leading-tight">
           A glimpse into tranquility
         </h2>
 
-        <p className="text-white/60 text-[14px] md:text-[15px] mt-3 max-w-md">
+        <p className="text-dark/60 text-[14px] md:text-[15px] mt-3 max-w-md">
           Discover calming spaces designed for rest, renewal, and silence.
         </p>
       </div>
@@ -58,7 +58,8 @@ export default function GallerySection() {
           className="sticky top-[80px] md:top-[96px] flex h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] items-center overflow-hidden"
         >
           {/* Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
+          {/* Gradient - Removed for light theme */}
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" /> */}
 
           {/* Scrolling Row */}
           <motion.div
@@ -83,7 +84,7 @@ export default function GallerySection() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors duration-500" />
 
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className=" bg-black/30 border border-white/10 rounded-full px-8 py-4 text-white/80 text-[16px] tracking-wide">
+                  <div className="bg-white/90 backdrop-blur-md border border-white/40 rounded-full px-8 py-4 text-white/80 font-medium text-[16px] tracking-wide shadow-lg">
                     Mandara Wellness Retreat
                   </div>
                 </div>

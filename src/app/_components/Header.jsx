@@ -125,13 +125,11 @@ export default function Header({ isTransparent }) {
           </ul>
 
           {/* Button */}
-          <Link
-            href="/bookings"
-            className={`anim-btn hidden md:inline-flex rounded-full px-4 py-2 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 ${isScrolled ? "hover:border hover:border-primary" : ""
-              }`}
-          >
-            Book your stay
-          </Link>
+          {/* HiLITE Group Badge */}
+          <div className={`anim-btn hidden md:flex flex-col items-end leading-none ${isScrolled ? "text-dark" : "text-white"}`}>
+            <span className="text-[10px] uppercase tracking-widest opacity-70">From</span>
+            <span className="text-lg font-sans font-medium"><span className="font-bold">HiLITE</span> Group</span>
+          </div>
 
           {/* Mobile Menu Button */}
           {!isMenuOpen && (

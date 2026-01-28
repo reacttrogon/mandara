@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { slides } from "../_utils/data";
+import Link from "next/link";
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,7 +64,7 @@ export default function HeroSlider() {
 
           <a
             href="#about"
-            className="inline-block px-10 py-4 bg-white/10 backdrop-blur-sm  rounded-full text-white font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-10 py-4 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
           >
             Discover More
           </a>
@@ -78,9 +79,8 @@ export default function HeroSlider() {
             className="group relative h-12 w-2 flex flex-col items-center justify-end overflow-hidden focus:outline-none"
           >
             <div
-              className={`w-0.5 bg-white/30 transition-all duration-500 rounded-full ${
-                index === currentSlide ? "h-12 bg-white" : "h-8"
-              }`}
+              className={`w-0.5 bg-white/30 transition-all duration-500 rounded-full ${index === currentSlide ? "h-12 bg-white" : "h-8"
+                }`}
             />
           </button>
         ))}
@@ -96,6 +96,21 @@ export default function HeroSlider() {
           <ChevronDown className="w-4 h-4" />
         </motion.div>
       </motion.div>
+
+      {/* Floating Book Button - Right Side (Vertical) */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 hidden md:block">
+        <Link
+          href="/bookings"
+          className="flex items-center justify-center bg-white/90 hover:bg-primary text-dark hover:text-white py-10 px-2 rounded-l-2xl shadow-2xl transition-all duration-300 backdrop-blur-md"
+        >
+          <span
+            className="uppercase tracking-[0.25em] text-xs font-bold whitespace-nowrap"
+            style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+          >
+            Book Your Stay
+          </span>
+        </Link>
+      </div>
     </section>
   );
 }

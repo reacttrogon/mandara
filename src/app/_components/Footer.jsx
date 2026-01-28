@@ -13,13 +13,17 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="max-w-sm">
-            <a href="/" className="block mb-10">
+            <a href="/" className="block mb-6">
               <img
                 src="/assets/images/logo_updated.png"
                 alt="Mandara Logo"
                 className="h-24 w-auto opacity-100"
               />
             </a>
+            <div className="flex flex-col items-start leading-none mb-10 text-white/80">
+              <span className="text-[10px] uppercase tracking-widest opacity-70">From</span>
+              <span className="text-lg font-sans font-medium"><span className="font-bold">HiLITE</span> Group</span>
+            </div>
             <p className="text-md text-white/60 mb-10 leading-relaxed  font-light">
               A sanctuary for new beginnings, where luxury meets holistic postnatal care. Reconnect with yourself in our serene haven.
             </p>
@@ -34,7 +38,7 @@ export default function Footer() {
                 <Youtube className="w-4 h-4" />
               </a>
             </div>
-            
+
           </div>
 
           {/* Links Grid */}
@@ -53,8 +57,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="pt-4 leading-relaxed ">
-                 Mandara Women's Wellness,<br />
-                 Athanikkal, Kerala 673314
+                  Mandara Women's Wellness,<br />
+                  Athanikkal, Kerala 673314
                 </li>
               </ul>
             </div>
@@ -66,8 +70,8 @@ export default function Footer() {
                 <li><a href="#packages" className="hover:text-gold transition-colors">Packages</a></li>
                 <li><a href="#amenities" className="hover:text-gold transition-colors">Amenities</a></li>
                 <li>
-                  <a 
-                    href="#gallery" 
+                  <a
+                    href="#gallery"
                     onClick={(e) => {
                       e.preventDefault();
                       const gallerySection = document.getElementById('gallery');

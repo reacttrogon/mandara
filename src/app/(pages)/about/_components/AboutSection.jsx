@@ -23,7 +23,7 @@ export default function AboutSection() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6"
+                        className="text-4xl md:text-6xl font-serif text-white mb-6"
                     >
                         About Us
                     </motion.h1>
@@ -46,7 +46,7 @@ export default function AboutSection() {
                         {aboutMandara.heading}
                     </motion.h2>
 
-                    <div className="space-y-6 text-dark/70 text-base md:text-lg leading-relaxed font-light md:text-center text-justify">
+                    <div className="space-y-6 text-dark/70 text-base leading-relaxed font-light md:text-center text-justify">
                         {aboutMandara.descriptions.map((desc, index) => (
                             <motion.p
                                 key={index}

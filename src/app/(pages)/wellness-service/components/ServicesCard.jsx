@@ -63,11 +63,11 @@ const ServicesCard = () => {
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary tracking-tight break-words">
                                 {service.title}
                             </h3>
-                            <p className="text-base md:text-lg text-secondary font-medium italic leading-relaxed break-words">
+                            <p className="text-lg text-secondary font-medium italic leading-relaxed break-words">
                                 {service.headline}
                             </p>
                             <div className="w-16 md:w-20 h-[1px] bg-primary/20 mx-auto lg:mx-0 my-3 md:my-4 lg:my-6" />
-                            <p className="text-sm md:text-base lg:text-lg text-dark/80 font-light leading-6 md:leading-7 lg:leading-8 break-words">
+                            <p className="text-base text-dark/80 font-light leading-6 md:leading-7 lg:leading-8 break-words">
                                 {service.description}
                             </p>
                         </div>

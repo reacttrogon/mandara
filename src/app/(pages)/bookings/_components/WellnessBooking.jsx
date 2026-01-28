@@ -229,7 +229,7 @@ export default function WellnessBooking() {
                                         initial={{ opacity: 0, y: 30 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="bg-white flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden"
+                                        className="bg-white flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
                                     >
                                         {/* Image with Badge */}
                                         <div className="relative h-56 w-full overflow-hidden">
@@ -240,7 +240,7 @@ export default function WellnessBooking() {
                                                 className="object-cover"
                                             />
                                             {/* Gold Duration Badge */}
-                                            <div className="absolute top-4 right-4 bg-secondary text-dark text-xs font-bold px-4 py-2 uppercase tracking-wider rounded-sm shadow-sm">
+                                            <div className="absolute top-4 right-4 bg-secondary text-dark text-xs font-bold px-4 py-2 uppercase tracking-wider shadow-sm">
                                                 {pkg.duration}
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@ export default function WellnessBooking() {
                                             </p>
 
                                             {/* Green Button */}
-                                            <button className="w-full mt-auto py-3.5 bg-primary text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 rounded-sm">
+                                            <button className="w-full mt-auto py-3.5 bg-primary text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
                                                 VIEW PACKAGE <span className="text-base">→</span>
                                             </button>
                                         </div>

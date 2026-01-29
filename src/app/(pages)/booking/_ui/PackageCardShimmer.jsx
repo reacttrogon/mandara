@@ -4,7 +4,7 @@ const PackageCardShimmer = () => {
       {Array.from({ length: 3 }).map((_, i) => (
         <div
           key={i}
-          className="relative rounded-xl overflow-hidden flex flex-col border-[3px] border-gray-200 bg-white animate-pulse"
+          className="relative rounded-xl overflow-hidden flex flex-col border-[3px] border-gray-200 bg-bage animate-pulse"
         >
           {/* Image */}
           <div className="h-64 bg-gray-200" />

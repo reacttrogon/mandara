@@ -79,8 +79,8 @@ export default function Header({ isTransparent }) {
   }, []);
 
   const navClass = `transition-colors ${isScrolled
-    ? "text-dark hover:text-primary font-medium whitespace-nowrap"
-    : "text-white hover:text-primary font-medium whitespace-nowrap"
+    ? "text-dark hover:text-primary font-medium bagespace-nowrap"
+    : "text-bage hover:text-primary font-medium bagespace-nowrap"
     }`;
 
   return (
@@ -156,12 +156,12 @@ export default function Header({ isTransparent }) {
                   {/* Dropdown Menu */}
                   {hasDropdown && (
                     <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="bg-white shadow-xl rounded-lg overflow-hidden min-w-[240px] border border-gray-100">
+                      <div className="bg-bage shadow-xl rounded-lg overflow-hidden min-w-[240px] border border-gray-100">
                         {navigate.dropdown.map((item, idx) => (
                           <Link
                             key={idx}
                             href={item.href}
-                            className="block px-5 py-3 text-dark hover:bg-primary hover:text-white transition-colors duration-200 text-sm font-medium"
+                            className="block px-5 py-3 text-dark hover:bg-primary hover:text-bage transition-colors duration-200 text-sm font-medium"
                           >
                             {item.label}
                           </Link>
@@ -176,18 +176,18 @@ export default function Header({ isTransparent }) {
 
           {/* Button */}
           {/* HiLITE Group Badge */}
-          <div className={`anim-btn hidden md:flex flex-col items-end text-sm ${isScrolled ? "text-dark" : "text-white"}`}>
+          <div className={`anim-btn hidden md:flex flex-col items-end text-sm ${isScrolled ? "text-dark" : "text-bage"}`}>
             <span className={`${montserrat.className}`}>From <span className="font-extrabold tracking-tight ">HiLite </span>Group</span>
           </div>
 
           {/* Mobile Menu Button */}
           {!isMenuOpen && (
             <button
-              className={`md:hidden p-2 rounded ${isScrolled ? "text-dark" : "text-white"
+              className={`md:hidden p-2 rounded ${isScrolled ? "text-dark" : "text-bage"
                 }`}
               onClick={() => setIsMenuOpen(true)}
             >
-              <Menu className={isScrolled ? "text-black" : "text-white"} />
+              <Menu className={isScrolled ? "text-black" : "text-bage"} />
             </button>
           )}
         </div>
@@ -195,9 +195,9 @@ export default function Header({ isTransparent }) {
 
       {/* Mobile Menu (NO GSAP, untouched) */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark">
+        <div className="md:hidden bg-bage shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark">
           <button
-            className="self-end p-2 rounded bg-white"
+            className="self-end p-2 rounded bg-bage"
             onClick={() => setIsMenuOpen(false)}
           >
             <X className="text-black" />
@@ -219,7 +219,7 @@ export default function Header({ isTransparent }) {
 
           <Link
             href="/bookings"
-            className="rounded-full px-4 py-4 bg-primary text-white whitespace-nowrap hover:bg-white hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
+            className="rounded-full px-4 py-4 bg-primary text-bage bagespace-nowrap hover:bg-bage hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Book your stay

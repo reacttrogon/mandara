@@ -84,7 +84,7 @@ export default function GallerySection() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-colors duration-500" />
 
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="bg-black/40 backdrop-blur-md border border-white/40 rounded-full px-8 py-4 text-white/80 font-medium text-[16px] tracking-wide shadow-lg">
+                  <div className="bg-black/40 backdrop-blur-md border border-bage/40 rounded-full px-8 py-4 text-bage/80 font-medium text-[16px] tracking-wide shadow-lg">
                     Mandara Wellness Retreat
                   </div>
                 </div>

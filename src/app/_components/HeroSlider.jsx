@@ -54,7 +54,7 @@ export default function HeroSlider() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="inline-block mb-6 text-sm md:text-base font-medium tracking-[0.2em] text-white/90 uppercase border-b border-white/30 pb-2">
+          <span className="inline-block mb-6 text-sm md:text-base font-medium tracking-[0.2em] text-bage/90 uppercase border-b border-bage/30 pb-2">
             {slides[currentSlide].subtitle}
           </span>
 
@@ -64,7 +64,7 @@ export default function HeroSlider() {
 
           <Link
             href="/bookings"
-            className="inline-block px-10 py-4 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-10 py-4 bg-bage/10 backdrop-blur-sm rounded-full text-bage font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
           >
             Start Your Journey
           </Link>
@@ -79,7 +79,7 @@ export default function HeroSlider() {
             className="group relative h-12 w-2 flex flex-col items-center justify-end overflow-hidden focus:outline-none"
           >
             <div
-              className={`w-0.5 bg-white/30 transition-all duration-500 rounded-full ${index === currentSlide ? "h-12 bg-white" : "h-8"
+              className={`w-0.5 bg-bage/30 transition-all duration-500 rounded-full ${index === currentSlide ? "h-12 bg-bage" : "h-8"
                 }`}
             />
           </button>
@@ -90,7 +90,7 @@ export default function HeroSlider() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 right-8 z-20 hidden md:flex items-center gap-2 text-white/50 text-xs uppercase tracking-widest"
+        className="absolute bottom-8 right-8 z-20 hidden md:flex items-center gap-2 text-bage/50 text-xs uppercase tracking-widest"
       >
         <motion.div animate={{ y: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
           <ChevronDown className="w-4 h-4" />

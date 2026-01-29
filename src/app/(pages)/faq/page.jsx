@@ -44,7 +44,7 @@ export default function FAQPage() {
                                     <p className="text-dark/60 mb-4 text-sm font-medium uppercase tracking-wider">Still have questions?</p>
                                     <a
                                         href="/contact"
-                                        className="inline-block px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-all uppercase tracking-widest text-sm font-bold shadow-lg"
+                                        className="inline-block px-8 py-3 bg-primary text-bage rounded-full hover:bg-primary/90 transition-all uppercase tracking-widest text-sm font-bold shadow-lg"
                                     >
                                         Contact Us
                                     </a>

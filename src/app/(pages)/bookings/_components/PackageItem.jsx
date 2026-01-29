@@ -9,7 +9,7 @@ export default function PackageItem({ pkg, index }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+            className="bg-bage flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden"
         >
             {/* Image with Badge */}
             <div className="relative h-56 w-full overflow-hidden">
@@ -36,7 +36,7 @@ export default function PackageItem({ pkg, index }) {
                 </p>
 
                 {/* Green Button */}
-                <button className="w-full mt-auto py-3.5 bg-primary text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+                <button className="w-full mt-auto py-3.5 bg-primary text-bage text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
                     VIEW PACKAGE <span className="text-base">→</span>
                 </button>
             </div>

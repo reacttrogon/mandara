@@ -101,29 +101,29 @@ const MultiStepBooking = () => {
                       <div className="p-6 flex flex-col flex-grow">
                         <h3
                           className={` text-[20px] md:text-[22px] mb-2 transition-colors duration-300 ${
-                            isSelected ? "text-[#D4AF37]" : "text-white"
+                            isSelected ? "text-[#D4AF37]" : "text-bage"
                           }`}
                         >
                           {pkg?.title}
                         </h3>
 
-                        <p className="text-white/70 text-[14px] leading-relaxed mb-6 ">
+                        <p className="text-bage/70 text-[14px] leading-relaxed mb-6 ">
                           {pkg?.description}
                         </p>
 
                         <div className="mt-auto">
-                          <ul className="space-y-3 text-[14px] text-white/70 ">
+                          <ul className="space-y-3 text-[14px] text-bage/70 ">
                             {pkg.includes?.map((item, i) => (
                               <li key={i} className="flex items-start gap-3">
                                 <Check
                                   className={`w-4 h-4 mt-0.5 flex-shrink-0 transition-colors duration-300 ${
                                     isSelected
                                       ? "text-[#D4AF37]"
-                                      : "text-white/40"
+                                      : "text-bage/40"
                                   }`}
                                 />
                                 <span
-                                  className={isSelected ? "text-white/90" : ""}
+                                  className={isSelected ? "text-bage/90" : ""}
                                 >
                                   {item}
                                 </span>
@@ -145,7 +145,7 @@ const MultiStepBooking = () => {
                 disabled={!selectedPackage}
                 className={`px-6 py-3 rounded-full  text-md md:text-md font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedPackage
-                    ? "bg-primary text-white hover:bg-primary/90 shadow-lg scale-105"
+                    ? "bg-primary text-bage hover:bg-primary/90 shadow-lg scale-105"
                     : "bg-dark/20 text-dark/40 cursor-not-allowed"
                 }`}
               >

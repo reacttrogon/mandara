@@ -45,7 +45,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
 
         {/* Single Form Container */}
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6 lg:p-8 border border-dark/5">
+          <div className="bg-bage rounded-2xl shadow-xl p-5 md:p-6 lg:p-8 border border-dark/5">
             {/* Selected Package Section */}
             {selectedPackage && (
               <div className="pb-5 md:pb-6 mb-5 md:mb-6 ">
@@ -72,7 +72,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       <h3 className=" text-xl md:text-2xl text-dark">
                         {selectedPackage?.title}
                       </h3>
-                      <span className="px-3 py-1 text-[10px] uppercase font-bold bg-gold text-dark whitespace-nowrap">
+                      <span className="px-3 py-1 text-[10px] uppercase font-bold bg-gold text-dark bagespace-nowrap">
                         {selectedPackage?.duration_days} DAYS
                       </span>
                     </div>
@@ -120,8 +120,8 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       }}
                       className={`py-2.5 px-4 rounded-full  text-md text-center font-bold ${
                         deliveryStatus === 1
-                          ? "bg-primary text-white border-2 border-primary"
-                          : "bg-white text-dark/60 border border-dark/10"
+                          ? "bg-primary text-bage border-2 border-primary"
+                          : "bg-bage text-dark/60 border border-dark/10"
                       }`}
                     >
                       Yes, Delivered
@@ -133,8 +133,8 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       }}
                       className={`py-2.5 px-4 rounded-full  text-md text-center  font-bold ${
                         deliveryStatus === 0
-                          ? "bg-primary text-white border-2 border-primary"
-                          : "bg-white text-dark/60 border border-dark/10"
+                          ? "bg-primary text-bage border-2 border-primary"
+                          : "bg-bage text-dark/60 border border-dark/10"
                       }`}
                     >
                       Expecting
@@ -159,7 +159,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       type="date"
                       placeholder="dd-mm-yyyy"
                       {...register("delivery_date", { required: true })}
-                      className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark"
+                      className="w-full bg-bage px-0 py-3 outline-none transition-all  text-base text-dark"
                     />
                   </div>
                 </div>
@@ -196,7 +196,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       type="date"
                       placeholder="dd-mm-yyyy"
                       {...register("date_from", { required: true })}
-                      className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark"
+                      className="w-full bg-bage px-0 py-3 outline-none transition-all  text-base text-dark"
                     />
                   </div>
                 </div>
@@ -211,7 +211,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                       placeholder="dd-mm-yyyy"
                       disabled={true}
                       {...register("date_to")}
-                      className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark"
+                      className="w-full bg-bage px-0 py-3 outline-none transition-all  text-base text-dark"
                     />
                   </div>
                 </div>
@@ -237,7 +237,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
                   rows={4}
                   placeholder="Type your notes here..."
                   {...register("additional_note")}
-                  className="w-full bg-white px-0 py-3 outline-none transition-all  text-base text-dark resize-none placeholder-dark/40 leading-relaxed"
+                  className="w-full bg-bage px-0 py-3 outline-none transition-all  text-base text-dark resize-none placeholder-dark/40 leading-relaxed"
                 />
               </div>
             </div>
@@ -245,7 +245,7 @@ const BookingForm = ({ selectedPackage = [], onChangePackage }) => {
             {/* Submit Button */}
             <div className=" md:pt-2 ">
               <button
-                className="w-full bg-primary text-white py-4 px-12 rounded-full text-md md:text-lg text-center shadow-lg font-medium cursor-pointer"
+                className="w-full bg-primary text-bage py-4 px-12 rounded-full text-md md:text-lg text-center shadow-lg font-medium cursor-pointer"
                 type="submit"
               >
                 Book Now

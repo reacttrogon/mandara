@@ -11,7 +11,7 @@ module.exports = {
         primary: "#508066",
         bage: "#F3EEE7",
         secondary: "#c5a059", // Gold
-        "off-white": "#f9f7f2", // More subtle cream
+        "off-bage": "#f9f7f2", // More subtle cream
         cream: "#f4f1ea", // For sections
         gold: "#c5a059",
         dark: "#051512", // Deep rich green-black for luxury feel

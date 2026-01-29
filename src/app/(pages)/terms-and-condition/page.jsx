@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
             <h1 className="text-4xl md:text-6xl text-dark text-center mb-8 md:mb-12">
               Terms and Conditions
             </h1>
-            <div className="bg-white shadow-lg p-8 md:p-12 lg:p-16">
+            <div className="bg-bage shadow-lg p-8 md:p-12 lg:p-16">
               <p className="text-dark/80 text-base mb-8 leading-relaxed">
                 {termsAndConditions.heading}
               </p>

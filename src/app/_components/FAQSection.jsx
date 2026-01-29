@@ -108,7 +108,7 @@ export default function FAQSection() {
               <div className="pt-8 flex justify-center lg:justify-start mb-4">
                 <Link
                   href="/faq"
-                  className="inline-block px-8 py-3 border border-dark/20 rounded-full text-dark hover:bg-primary hover:text-white hover:border-transparent transition-all duration-300 uppercase tracking-widest text-sm font-medium"
+                  className="inline-block px-8 py-3 border border-dark/20 rounded-full text-dark hover:bg-primary hover:text-bage hover:border-transparent transition-all duration-300 uppercase tracking-widest text-sm font-medium"
                 >
                   View All FAQs
                 </Link>

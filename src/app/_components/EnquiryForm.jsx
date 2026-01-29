@@ -102,7 +102,7 @@ export default function EnquiryForm() {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         type="submit"
-                        className="w-full md:w-auto px-12 py-4 bg-primary text-white font-bold uppercase tracking-widest text-xs hover:bg-primary/90 transition-colors duration-500 shadow-lg rounded-full"
+                        className="w-full md:w-auto px-12 py-4 bg-primary text-bage font-bold uppercase tracking-widest text-xs hover:bg-primary/90 transition-colors duration-500 shadow-lg rounded-full"
                     >
                         Confirm Request
                     </motion.button>

@@ -28,7 +28,7 @@ const ImagesCardContainer = () => {
           </p>
         </div>
 
-        {/* Grid with alternating wide images - no whitespace */}
+        {/* Grid with alternating wide images - no bagespace */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" style={{ gridAutoFlow: 'dense' }}>
 
           {galleries.map((image, index) => (

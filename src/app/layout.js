@@ -42,7 +42,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={playfair.variable}>
-      <body className=" bg-[#051512] text-white">
+      <body className=" bg-[#051512] text-bage">
         {children}
         <WhatsAppButton />
       </body>

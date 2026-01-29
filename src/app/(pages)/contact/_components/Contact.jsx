@@ -24,7 +24,7 @@ const Contact = () => {
           <h1 className="text-4xl md:text-6xl font-medium mb-4 ">
             Get in Touch
           </h1>
-          <p className="text-white/80 text-lg">
+          <p className="text-bage/80 text-lg">
             We’re here to support your wellness journey.
           </p>
         </div>
@@ -32,17 +32,17 @@ const Contact = () => {
 
       <section className="bg-bage px-4 md:px-6 py-20">
         <div className="max-w-6xl mx-auto relative z-30">
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden grid md:grid-cols-5">
+          <div className="bg-bage rounded-3xl shadow-xl overflow-hidden grid md:grid-cols-5">
 
             {/* Left Side - Contact Info (High Contrast) */}
-            <div className="md:col-span-2 bg-primary text-white p-10 flex flex-col justify-center gap-10 relative overflow-hidden">
+            <div className="md:col-span-2 bg-primary text-bage p-10 flex flex-col justify-center gap-10 relative overflow-hidden">
               {/* Decorative Circle */}
-              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-bage/10 rounded-full blur-3xl" />
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-bage/10 rounded-full blur-2xl" />
 
               <div className="relative z-10">
                 <h3 className="text-2xl font-serif mb-6">Contact Information</h3>
-                <p className="text-white/80 leading-relaxed mb-10 text-sm">
+                <p className="text-bage/80 leading-relaxed mb-10 text-sm">
                   A sanctuary for new beginnings, where luxury meets holistic
                   postnatal care. Reconnect with yourself in our serene haven.
                 </p>
@@ -51,7 +51,7 @@ const Contact = () => {
                   <div className="flex items-start gap-4">
                     <Phone className="w-5 h-5 mt-1 text-secondary" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-widest text-white/50 mb-1">Phone</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-bage/50 mb-1">Phone</p>
                       <a href="tel:+917654389716" className="text-lg hover:text-secondary transition">
                         +91 765 438 9716
                       </a>
@@ -61,7 +61,7 @@ const Contact = () => {
                   <div className="flex items-start gap-4">
                     <Mail className="w-5 h-5 mt-1 text-secondary" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-widest text-white/50 mb-1">Email</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-bage/50 mb-1">Email</p>
                       <a href="mailto:wellness@mandara.com" className="text-lg hover:text-secondary transition">
                         wellness@mandara.com
                       </a>
@@ -71,7 +71,7 @@ const Contact = () => {
                   <div className="flex items-start gap-4">
                     <MapPin className="w-5 h-5 mt-1 text-secondary" />
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-widest text-white/50 mb-1">Location</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-bage/50 mb-1">Location</p>
                       <p className="text-lg leading-tight">
                         Mandara Women's Wellness,<br />
                         Athanikkal, Kerala 673314

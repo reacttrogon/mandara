@@ -7,13 +7,29 @@ import gsap from "gsap";
 import { navigation } from "../_utils/data";
 import Link from "next/link";
 import { montserrat } from "../_utils/font";
+import { usePathname } from "next/navigation";
 
 export default function Header({ isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   /* GSAP scope */
   const headerRef = useRef(null);
+
+  // Helper function to check if a link is active
+  const isActiveLink = (href) => {
+    // For home link - only highlight when on home page
+    if (href === "/#home") {
+      return pathname === "/";
+    }
+    // For hash links on home page - don't highlight them as active
+    if (href.startsWith("/#")) {
+      return false;
+    }
+    // For other pages
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,9 +131,13 @@ export default function Header({ isTransparent }) {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8">
             {navigation.map((navigate, index) => {
+              const isActive = isActiveLink(navigate?.href);
               return (
                 <li className="anim-link" key={index}>
-                  <Link href={navigate?.href} className={navClass}>
+                  <Link
+                    href={navigate?.href}
+                    className={`${navClass} ${isActive ? 'text-primary border-b-2 border-primary pb-1' : ''}`}
+                  >
                     {navigate.label}
                   </Link>
                 </li>
@@ -154,16 +174,19 @@ export default function Header({ isTransparent }) {
             <X className="text-black" />
           </button>
 
-          {navigation.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="font-medium hover:text-primary transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navigation.map((item, index) => {
+            const isActive = isActiveLink(item.href);
+            return (
+              <Link
+                key={index}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`font-medium hover:text-primary transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1 inline-block' : ''}`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
 
           <Link
             href="/bookings"

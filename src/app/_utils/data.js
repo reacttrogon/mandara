@@ -159,90 +159,92 @@ export const faqs = [
   {
     question: "Who is Mandara for?",
     answer:
-      "Mandara is designed for women at different stages of life, including general wellness, prenatal care, postnatal recovery, menopausal wellbeing, and healthy ageing."
+      "Mandara is designed for women at different stages of life, including general wellness, prenatal care, postnatal recovery, menopausal wellbeing, and healthy ageing.",
   },
   {
     question: "Are the wellness programmes supervised?",
     answer:
-      "Yes. All wellness programmes are guided by an in-house care and clinical team to ensure safety, comfort, and continuity of care."
+      "Yes. All wellness programmes are guided by an in-house care and clinical team to ensure safety, comfort, and continuity of care.",
   },
   {
     question: "How are wellness plans decided?",
     answer:
-      "Each stay begins with a personal consultation, after which a personalised wellness plan is thoughtfully created based on individual needs and preferences."
+      "Each stay begins with a personal consultation, after which a personalised wellness plan is thoughtfully created based on individual needs and preferences.",
   },
   {
     question: "Is privacy maintained during the stay?",
     answer:
-      "Yes. Privacy, dignity, and confidentiality are respected at every stage of the Mandara experience."
+      "Yes. Privacy, dignity, and confidentiality are respected at every stage of the Mandara experience.",
   },
   {
     question: "What kind of cuisine is offered?",
     answer:
-      "Mandara offers wellness-aligned meals prepared with care. Menus are adapted to individual health needs, cultural preferences, and dietary requirements."
+      "Mandara offers wellness-aligned meals prepared with care. Menus are adapted to individual health needs, cultural preferences, and dietary requirements.",
   },
   {
     question: "What amenities are available during the stay?",
     answer:
-      "Guests stay in AI-integrated private cottages and have access to modern wellness amenities, Ayurvedic wellness facilities, and thoughtfully curated experiences, all personalised to support rest and recovery."
+      "Guests stay in AI-integrated private cottages and have access to modern wellness amenities, Ayurvedic wellness facilities, and thoughtfully curated experiences, all personalised to support rest and recovery.",
   },
   {
     question: "Is Mandara a hospital or a medical facility?",
     answer:
-      "No. Mandara is a wellness sanctuary. While care is guided by clinical insight and professional teams, it does not function as a hospital or provide emergency medical services."
+      "No. Mandara is a wellness sanctuary. While care is guided by clinical insight and professional teams, it does not function as a hospital or provide emergency medical services.",
   },
   {
     question: "Is Mandara only for postnatal mothers?",
     answer:
-      "No. While Mandara offers dedicated postnatal support, it is designed for women across different life stages and wellness needs."
+      "No. While Mandara offers dedicated postnatal support, it is designed for women across different life stages and wellness needs.",
   },
   {
     question: "Is baby care support available?",
     answer:
-      "Yes. A 24-hour baby nursery is available for postnatal mothers, along with gentle baby care support and baby spa services, allowing mothers time to rest, recover, and bond."
+      "Yes. A 24-hour baby nursery is available for postnatal mothers, along with gentle baby care support and baby spa services, allowing mothers time to rest, recover, and bond.",
   },
   {
     question: "Are spa and therapy services included?",
     answer:
-      "Yes. Mandara offers a blend of modern wellness therapies and Ayurvedic treatments, thoughtfully aligned with each guest’s personalised wellness plan."
+      "Yes. Mandara offers a blend of modern wellness therapies and Ayurvedic treatments, thoughtfully aligned with each guest’s personalised wellness plan.",
   },
   {
     question: "How long can one stay at Mandara?",
     answer:
-      "The length of stay varies based on individual needs and the selected wellness programme, guided through the consultation process."
+      "The length of stay varies based on individual needs and the selected wellness programme, guided through the consultation process.",
   },
   {
     question: "Can family members stay or visit?",
     answer:
-      "Mandara prioritises a woman’s rest and privacy. One bystander guest may stay along with the primary guest as part of the package. Family visits are limited to the reception building only."
+      "Mandara prioritises a woman’s rest and privacy. One bystander guest may stay along with the primary guest as part of the package. Family visits are limited to the reception building only.",
   },
   {
     question: "How do I begin my Mandara journey?",
     answer:
-      "You can begin by speaking with our team at +91 99612 00055. We will guide you through the consultation, planning, and booking process with care and clarity."
-  }
+      "You can begin by speaking with our team at +91 99612 00055. We will guide you through the consultation, planning, and booking process with care and clarity.",
+  },
 ];
 
 export const audience = [
   {
     image: "/assets/mandara/women.webp",
     title: "Women at every stage of life",
-    description: "Focused rest, hormonal balance, and holistic rejuvenation"
+    description: "Focused rest, hormonal balance, and holistic rejuvenation",
   },
   {
     image: "/assets/mandara/pregnant.webp",
     title: "Pregnancy Wellness for expecting mothers",
-    description: "Preparing for childbirth with prenatal wellness and comfort-focused care"
+    description:
+      "Preparing for childbirth with prenatal wellness and comfort-focused care",
   },
   {
     image: "/assets/mandara/mother.webp",
     title: "Gentle care for mothers in need of rest and recovery",
-    description: "Premium postnatal recovery with dedicated baby care and therapeutic support"
+    description:
+      "Premium postnatal recovery with dedicated baby care and therapeutic support",
   },
   {
     image: "/assets/mandara/coup.png",
     title: "Wellness focused shared stays",
-    description: "Peaceful, supported bonding time in a serene environment"
+    description: "Peaceful, supported bonding time in a serene environment",
   },
 ];
 
@@ -368,7 +370,8 @@ export const mandaraLife = {
   sections: [
     {
       title: "Wellness Amenities",
-      headline: "Integrated wellness spaces that support healing, relaxation, and restoration.",
+      headline:
+        "Integrated wellness spaces that support healing, relaxation, and restoration.",
       description:
         "Mandara’s wellness amenities are guided by an integrated wellness philosophy. Contemporary practices inspired by Korean and East Asian systems are thoughtfully combined with time-tested traditional wisdom. These include modern clinical wellness facilities and Ayurvedic wellness amenities that work together to promote physical comfort, sensory balance, relaxation, and overall healing.",
       image: "/assets/amenities/Therapeutictreatments.png",
@@ -382,45 +385,98 @@ export const mandaraLife = {
     },
     {
       title: "Baby Nursery and Baby Spa",
-      headline: "Supervised baby care spaces that support rest for mothers and comfort for babies.",
+      headline:
+        "Supervised baby care spaces that support rest for mothers and comfort for babies.",
       description:
         "The baby nursery functions as a hygienic, supervised care space managed by trained professionals, allowing mothers time to rest, recover, or attend wellness sessions with reassurance. The baby spa offers gentle, sensory-focused care suitable for early life, supporting comfort, bonding, and calm regulation in a safe and monitored setting.",
       image: "/assets/amenities/24care.png",
     },
     {
       title: "Smart Wellness Cottages",
-      headline: "AI-integrated private living spaces designed for comfort, recovery, and privacy.",
+      headline:
+        "AI-integrated private living spaces designed for comfort, recovery, and privacy.",
       description:
         "Mandara’s private cottages are AI-enabled living spaces that adapt to rest and recovery needs. Automated lighting, climate control, and intuitive room systems support comfort and ease of care. Selected features assist with baby wellbeing monitoring, allowing mothers to stay informed while enjoying uninterrupted rest and privacy.",
       image: "/assets/amenities/PrivateLuxuryAccommodations.png",
     },
     {
       title: "Mothers of Mandara",
-      headline: "A community space for connection, shared learning, and continued wellbeing.",
+      headline:
+        "A community space for connection, shared learning, and continued wellbeing.",
       description:
         "Mothers of Mandara is a community initiative that brings women together across different life stages. Through guided interactions, conversations, and thoughtfully curated engagements, it fosters reassurance, shared understanding, and a sense of belonging beyond individual wellness programmes.",
       image: "/assets/images/couple-abt.webp",
     },
     {
       title: "Movement & Balance",
-      headline: "Mindful practices that support strength, flexibility, and body awareness.",
+      headline:
+        "Mindful practices that support strength, flexibility, and body awareness.",
       description:
         "The Movement & Balance space supports holistic physical wellbeing through yoga for prenatal, postnatal, and general wellness, along with Pilates and guided strength training. Sessions also include pranayama, breathwork, meditation, and mobility-focused practices, encouraging stability, flexibility, balance, and calm body awareness in a safe and structured environment.",
       image: "/assets/gallery/banner-3.jpeg",
     },
     {
       title: "Wellness Cuisine",
-      headline: "Personalised nourishment designed as part of the healing process.",
+      headline:
+        "Personalised nourishment designed as part of the healing process.",
       description:
         "Wellness cuisine at Mandara is an essential part of the wellness journey. Meals are curated in a seven-course, wellness-aligned format that is therapeutically informed and personalised to individual needs. Each course supports nourishment, digestion, and recovery, allowing food to function as an integral element of overall wellbeing.",
       image: "/assets/amenities/HolisticNutrition.png",
     },
     {
       title: "Mandara Merchandise",
-      headline: "Thoughtfully designed products to continue the Mandara experience.",
+      headline:
+        "Thoughtfully designed products to continue the Mandara experience.",
       description:
         "Mandara Merchandise offers a curated collection of signature products for women, mothers, and babies. These products allow guests to carry elements of their Mandara experience into everyday life, supporting comfort, care, and mindful living beyond their stay.",
       image: "/assets/images/image3.webp",
+    },
+  ],
+};
+
+export const wellnessServices = {
+  title: "Wellness Service",
+  description:
+    "At Mandara, wellness is designed around the evolving needs of a woman across every stage of life. Our services support physical health,emotional balance, and restorative care through personalised planning and gentle supervision, offering a calm and respectful approach to wellbeing.",
+  services: [
+    {
+      title: "Women’s Wellness",
+      headline:
+        "Holistic care to restore balance, clarity, and everyday wellbeing.",
+      description:
+        "Women’s wellness at Mandara is designed for women who wish to care for themselves with intention and awareness, rather than urgency. It supports long-term wellbeing through preventive, restorative, and deeply personalised care. Each wellness journey begins with a personal consultation and unfolds at a natural pace, supporting physical rhythms, emotional steadiness, and mental clarity. Mandara values rest as much as action, offering a sanctuary where wellbeing is nurtured with care and consistency.",
+      image: "/assets/mandara/women.webp",
+    },
+    {
+      title: "Prenatal Wellness",
+      headline:
+        "Supportive care through pregnancy, focused on comfort, calm, and confidence.",
+      description:
+        "Pregnancy is a period of profound change, requiring care that is both protective and nurturing. Mandara’s prenatal wellness supports expectant mothers with reassurance, comfort-focused care, and mindful attention to both mother and baby. The approach prioritises safety and emotional grounding, helping women prepare calmly for childbirth and the journey ahead.",
+      image: "/assets/mandara/pregnant.webp",
+    },
+    {
+      title: "Postnatal Wellness",
+      headline:
+        "Gentle recovery for mothers, with integrated baby care support.",
+      description:
+        "The phase following childbirth calls for patience, restoration, and compassionate care. Mandara’s postnatal wellness recognises that recovery is a personal process, not a fixed timeline. Care includes physical recovery, emotional support, rest, and dedicated baby care assistance, allowing mothers time to heal, bond, and regain strength without pressure.",
+      image: "/assets/mandara/mother.webp",
+    },
+    {
+      title: "Menopausal Wellness",
+      headline: "Guided support through physical and emotional transitions.",
+      description:
+        "Menopause is approached at Mandara as a phase of recalibration rather than decline. Wellness care supports balance, comfort, and clarity through changing physical and emotional needs. Women are offered steady support to navigate this transition with dignity, confidence, and calm.",
+      image: "/assets/images/image2.webp",
+    },
+    {
+      title: "Geriatric Wellness",
+      headline:
+        "Respectful, adaptive care focused on comfort and quality of life.",
+      description:
+        "Wellness in later years is centred on preserving ease, independence, and emotional reassurance. Mandara’s geriatric wellness adapts thoughtfully to changing needs. The environment remains calm and supportive, ensuring women feel safe, respected, and well cared for.",
+      image: "/assets/gallery/about.jpeg",
     },
   ],
 };

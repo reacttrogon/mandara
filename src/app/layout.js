@@ -1,4 +1,5 @@
 import "./globals.css";
+import WhatsAppButton from "./_components/WhatsAppButton.jsx";
 import { Playfair_Display } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={playfair.variable}>
       <body className=" bg-[#051512] text-white">
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

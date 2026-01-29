@@ -114,7 +114,7 @@ export default function FAQSection() {
                 </Link>
               </div>
               {/* Decorative Bottom Image */}
-              <div className="relative mt-12 h-56 rounded-xl overflow-hidden shadow-md">
+              {/* <div className="relative mt-12 h-56 rounded-xl overflow-hidden shadow-md">
                 <Image
                   src={galleries?.[3]}
                   alt="Mandara peaceful atmosphere"
@@ -122,7 +122,7 @@ export default function FAQSection() {
                   sizes="(max-width: 1024px) 100vw, 60vw"
                   className="object-cover"
                 />
-              </div>
+              </div> */}
 
             </div>
           </div>

@@ -24,7 +24,7 @@ export default function LifeSection() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="text-4xl md:text-6xl font-serif text-white mb-6"
+                            className="text-4xl md:text-6xl  text-white mb-6"
                         >
                             {mandaraLife.title}
                         </motion.h1>
@@ -72,7 +72,7 @@ export default function LifeSection() {
                                     <div className="h-px w-8 bg-primary" />
                                 </div>
 
-                                <h2 className="text-3xl font-serif text-dark mb-3">
+                                <h2 className="text-3xl text-dark mb-3">
                                     {item.title}
                                 </h2>
 

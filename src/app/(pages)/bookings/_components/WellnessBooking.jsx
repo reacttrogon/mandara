@@ -64,7 +64,7 @@ export default function WellnessBooking() {
                 />
                 <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white tracking-wide mb-4">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl  text-white tracking-wide mb-4">
                         Book Your Wellness Stay
                     </h1>
                 </div>
@@ -85,7 +85,7 @@ export default function WellnessBooking() {
                             className="flex flex-col items-center"
                         >
                             <div className="text-center max-w-3xl mb-16">
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark mb-6">Begin Your Journey</h2>
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl  text-dark mb-6">Begin Your Journey</h2>
                                 <p className="text-base md:text-lg text-dark/70 font-light leading-relaxed mb-8">
                                     Choose the wellness path that resonates with your current life stage.
                                 </p>
@@ -110,7 +110,7 @@ export default function WellnessBooking() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
                                         <div className="absolute bottom-0 left-0 p-8 w-full">
-                                            <h4 className="text-3xl font-serif text-white mb-3">{category.title}</h4>
+                                            <h4 className="text-3xl  text-white mb-3">{category.title}</h4>
                                             <p className="text-white/80 font-light text-sm line-clamp-3 mb-4 leading-relaxed">
                                                 {category.description}
                                             </p>
@@ -144,14 +144,14 @@ export default function WellnessBooking() {
                                     <span className="hidden md:inline text-sm font-bold uppercase tracking-widest">Back</span>
                                 </button>
 
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark mb-6 mt-12 md:mt-0">
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl  text-dark mb-6 mt-12 md:mt-0">
                                     {selectedMain.title}
                                 </h2>
                                 <p className="text-base md:text-lg text-dark/70 font-light leading-relaxed max-w-3xl mb-8">
                                     {selectedMain.description}
                                 </p>
                                 <div className="w-24 h-1 bg-primary mx-auto mb-10" />
-                                <h3 className="text-2xl md:text-3xl font-serif text-dark/90 italic">
+                                <h3 className="text-2xl md:text-3xl  text-dark/90 italic">
                                     {selectedMain.question}
                                 </h3>
                             </div>
@@ -175,7 +175,7 @@ export default function WellnessBooking() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
                                         <div className="absolute bottom-0 left-0 p-8 w-full">
-                                            <h4 className="text-2xl font-serif text-white mb-2">{sub.title}</h4>
+                                            <h4 className="text-2xl  text-white mb-2">{sub.title}</h4>
                                             {sub.description && (
                                                 <p className="text-white/80 font-light text-sm line-clamp-2 mb-4">{sub.description}</p>
                                             )}
@@ -211,7 +211,7 @@ export default function WellnessBooking() {
                                 </div>
 
                                 <div className="text-center max-w-4xl">
-                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-dark mb-4">
+                                    <h2 className="text-3xl md:text-4xl lg:text-5xl  text-dark mb-4">
                                         {activeTitle} Packages
                                     </h2>
                                     {activeDescription && (
@@ -248,7 +248,7 @@ export default function WellnessBooking() {
                                         {/* Content */}
                                         <div className="p-6 flex flex-col flex-grow">
                                             {/* Title */}
-                                            <h3 className="text-2xl font-serif text-dark mb-3">{pkg.title}</h3>
+                                            <h3 className="text-2xl  text-dark mb-3">{pkg.title}</h3>
 
                                             {/* Description */}
                                             <p className="text-sm text-dark/70 mb-6 leading-relaxed">

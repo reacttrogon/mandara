@@ -20,7 +20,7 @@ const ImagesCardContainer = () => {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif text-primary mb-4">
+          <h1 className="text-4xl md:text-6xl  text-primary mb-4">
             Gallery
           </h1>
           <p className="text-base text-dark/70 max-w-2xl mx-auto">

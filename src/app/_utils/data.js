@@ -436,6 +436,7 @@ export const mandaraLife = {
 
 export const wellnessServices = {
   title: "Wellness Service",
+  image:"/assets/mandaraService/service.jpeg",
   description:
     "At Mandara, wellness is designed around the evolving needs of a woman across every stage of life. Our services support physical health,emotional balance, and restorative care through personalised planning and gentle supervision, offering a calm and respectful approach to wellbeing.",
   services: [

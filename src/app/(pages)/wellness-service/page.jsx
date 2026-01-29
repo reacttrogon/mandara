@@ -5,7 +5,7 @@ import Footer from "../../_components/Footer";
 const Page = () => {
   return (
     <>
-      <Header isTransparent={true} />
+      <Header/>
       <WellnessServiceContainer />
       <Footer />
     </>

@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 
 const ServicesCard = ({services }) => {
     return (
-        <div className="w-full flex flex-col gap-12 md:gap-16 lg:gap-20 py-6 md:py-10 bg-bage text-dark overflow-hidden">
+        <div className="w-full flex flex-col gap-12 md:gap-16 lg:gap-20 py-6 md:py-16 bg-bage text-dark overflow-hidden">
             {services?.map((service, index) => {
                 const isEven = index % 2 === 0;
                 return (
@@ -19,10 +19,10 @@ const ServicesCard = ({services }) => {
                     >
                         {/* Content Section */}
                         <div className="flex-1 space-y-3 md:space-y-4 lg:space-y-6 text-center lg:text-left">
-                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif text-primary tracking-tight break-words">
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl  text-dark tracking-tight break-words">
                                 {service?.title}
                             </h3>
-                            <p className="text-lg text-secondary font-medium italic leading-relaxed break-words">
+                            <p className="text-lg text-primary font-medium italic leading-relaxed break-words">
                                 {service?.headline}
                             </p>
                             <div className="w-16 md:w-20 h-[1px] bg-primary/20 mx-auto lg:mx-0 my-3 md:my-4 lg:my-6" />

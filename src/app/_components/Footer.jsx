@@ -24,7 +24,7 @@ export default function Footer() {
               />
             </a>
             <div className={`flex flex-col items-start leading-none mb-10 text-bage/80 ${montserrat.className}`}>
-              <span className="font-light tracking-tight"> From <span className="font-bold text-lg">HiLite</span> Group</span>
+              <span className="font-light tracking-tight"> From <span className="font-bold text-lg">HiLITE</span> Group</span>
             </div>
             <p className="text-md text-bage/60 mb-10 leading-relaxed  font-light">
               A sanctuary for new beginnings, where luxury meets holistic postnatal care. Reconnect with yourself in our serene haven.

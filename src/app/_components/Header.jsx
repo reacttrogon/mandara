@@ -177,7 +177,7 @@ export default function Header({ isTransparent }) {
           {/* Button */}
           {/* HiLITE Group Badge */}
           <div className={`anim-btn hidden md:flex flex-col items-end text-sm ${isScrolled ? "text-dark" : "text-bage"}`}>
-            <span className={`${montserrat.className}`}>From <span className="font-extrabold tracking-tight ">HiLite </span>Group</span>
+            <span className={`${montserrat.className}`}>From <span className="font-extrabold tracking-tight ">HiLITE </span>Group</span>
           </div>
 
           {/* Mobile Menu Button */}

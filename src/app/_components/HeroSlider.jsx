@@ -42,8 +42,8 @@ export default function HeroSlider() {
             quality={80}
           />
 
-          <div className="absolute inset-0 bg-black/30 md:bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/40 md:bg-black/40" />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" /> */}
         </motion.div>
       </AnimatePresence>
 

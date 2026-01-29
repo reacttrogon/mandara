@@ -242,17 +242,20 @@ export const slides = [
   {
     subtitle: "India's First Holistic Retreat For Women",
     title: "Rest. Reconnect. Recover.",
-    image: "/assets/images/image1.webp",
+    // image: "/assets/images/image1.webp",
+     image: "/assets/hero/scene1.webp",
   },
   {
     subtitle: "A Sanctuary Designed For Motherhood",
     title: "Reinventing Care",
-    image: "/assets/images/image2.webp",
+    // image: "/assets/images/image2.webp",
+    image: "/assets/hero/scene2.webp",
   },
   {
     subtitle: "A New Standared of Personalised Wellness",
     title: "Reimagining Wellbeing",
-    image: "/assets/images/image3.webp",
+    // image: "/assets/images/image3.webp",
+    image: "/assets/hero/scene3.webp",
   },
 ];
 

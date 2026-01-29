@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion"
+import ReadMore from "../../../_components/ReadMore";
 
 const ServicesCard = ({ services }) => {
     // Helper function to create URL-friendly IDs
@@ -34,9 +35,7 @@ const ServicesCard = ({ services }) => {
                                 {service?.headline}
                             </p>
                             <div className="w-16 md:w-20 h-[1px] bg-primary/20 mx-auto lg:mx-0 my-3 md:my-4 lg:my-6" />
-                            <p className="text-base text-dark/80 font-light leading-6 md:leading-7 lg:leading-8 break-words">
-                                {service?.description}
-                            </p>
+                            <ReadMore text={service?.description} />
                         </div>
 
                         {/* Image Section */}

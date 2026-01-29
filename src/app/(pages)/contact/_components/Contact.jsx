@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative h-[50vh] w-full flex items-center justify-center">
+      <div className="relative h-[60vh] w-full flex items-center justify-center">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 z-10" />
 
@@ -94,7 +94,7 @@ const Contact = () => {
 
       {/* Map Section */}
       <section className="bg-bage px-4 md:px-6 pb-20">
-        <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-lg h-[350px] border-4 border-white">
+        <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-lg h-[350px] ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18121.23184063282!2d75.85209349995468!3d11.132565572191874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6513f0fb1d021%3A0x476b9558ddb813da!2sMandara%20Women&#39;s%20Wellness!5e0!3m2!1sen!2sin!4v1769509154080!5m2!1sen!2sin"
             loading="lazy"

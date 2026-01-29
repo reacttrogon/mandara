@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { mandaraLife } from "../../../_utils/data";
+import ReadMore from "../../../_components/ReadMore";
 
 export default function LifeSection() {
     // Helper function to create URL-friendly IDs
@@ -89,9 +90,7 @@ export default function LifeSection() {
                                         {item.headline}
                                     </h3>
 
-                                    <p className="text-base text-dark/70 leading-relaxed">
-                                        {item.description}
-                                    </p>
+                                    <ReadMore text={item.description} />
                                 </div>
                             </motion.div>
                         );

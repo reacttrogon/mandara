@@ -143,16 +143,6 @@ export const galleries = [
   "/assets/gallery/abouttt.png",
   "/assets/gallery/modern.png",
   "/assets/gallery/bedroom.png",
-  "/assets/images/image1.webp",
-  "/assets/images/image2.webp",
-  "/assets/images/image3.webp",
-  "/assets/images/couple-abt.webp",
-  "/assets/amenities/PrivateLuxuryAccommodations.png",
-  "/assets/amenities/HolisticNutrition.png",
-  "/assets/amenities/Therapeutictreatments.png",
-  "/assets/whychooseUs/bedroom.png",
-  "/assets/whychooseUs/abut-2.png",
-  "/assets/amenities/24care.png",
 ];
 
 export const faqs = [

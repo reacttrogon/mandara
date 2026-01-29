@@ -28,7 +28,7 @@ export default function PackageItem({ pkg, index }) {
             {/* Content */}
             <div className="p-6 flex flex-col flex-grow">
                 {/* Title */}
-                <h3 className="text-2xl text-dark mb-3">{pkg.title}</h3>
+                <h3 className="text-xl md:text-2xl text-dark mb-3">{pkg.title}</h3>
 
                 {/* Description */}
                 <p className="text-sm text-dark/70 mb-6 leading-relaxed">

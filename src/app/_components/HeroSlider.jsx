@@ -62,12 +62,12 @@ export default function HeroSlider() {
             {slides[currentSlide].title}
           </h1>
 
-          <a
-            href="#about"
+          <Link
+            href="/bookings"
             className="inline-block px-10 py-4 bg-white/10 backdrop-blur-sm rounded-full text-white font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
           >
-            Discover More
-          </a>
+            Start Your Journey
+          </Link>
         </motion.div>
       </div>
 
@@ -96,21 +96,6 @@ export default function HeroSlider() {
           <ChevronDown className="w-4 h-4" />
         </motion.div>
       </motion.div>
-
-      {/* Floating Book Button - Right Side (Vertical) */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 z-30 hidden md:block">
-        <Link
-          href="/bookings"
-          className="flex items-center justify-center  hover:bg-[#051512] text-white  hover:text-white py-10 px-2 rounded-l-2xl shadow-2xl transition-all duration-300 bg-[#051512]"
-        >
-          <span
-            className="uppercase  text-md font-bold whitespace-nowrap "
-            style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-          >
-            Book now
-          </span>
-        </Link>
-      </div>
     </section>
   );
 }

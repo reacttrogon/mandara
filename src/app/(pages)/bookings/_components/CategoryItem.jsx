@@ -19,7 +19,7 @@ export default function CategoryItem({ category }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
             <div className="absolute bottom-0 left-0 p-8 w-full">
-                <h4 className="text-3xl text-white mb-3">{category.title}</h4>
+                <h4 className="text-2xl md:text-3xl text-white mb-3">{category.title}</h4>
                 <p className="text-white/80 font-light text-sm line-clamp-3 mb-4 leading-relaxed">
                     {category.description}
                 </p>

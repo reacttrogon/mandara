@@ -3,6 +3,9 @@
 import { Facebook, Youtube, Instagram } from "lucide-react";
 import Link from "next/link";
 
+import { navigation } from "../_utils/data";
+import { montserrat } from "../_utils/font";
+
 export default function Footer() {
   return (
     <footer className="text-bage/80 pt-12 md:pt-24  border-t border-bage/10"
@@ -20,9 +23,8 @@ export default function Footer() {
                 className="h-24 w-auto opacity-100"
               />
             </a>
-            <div className="flex flex-col items-start leading-none mb-10 text-bage/80">
-              <span className="text-[10px] uppercase tracking-widest opacity-70">From</span>
-              <span className="text-lg font-sans font-medium"><span className="font-bold">HiLITE</span> Group</span>
+            <div className={`flex flex-col items-start leading-none mb-10 text-bage/80 ${montserrat.className}`}>
+              <span className="font-light tracking-tight"> From <span className="font-bold text-lg">HiLite</span> Group</span>
             </div>
             <p className="text-md text-bage/60 mb-10 leading-relaxed  font-light">
               A sanctuary for new beginnings, where luxury meets holistic postnatal care. Reconnect with yourself in our serene haven.
@@ -66,24 +68,16 @@ export default function Footer() {
             <div>
               <h4 className="text-bage  text-2xl mb-8">Explore</h4>
               <ul className="space-y-4  text-sm tracking-wide text-bage/70">
-                <li><a href="#about" className="hover:text-gold transition-colors">About Us</a></li>
-                <li><a href="#packages" className="hover:text-gold transition-colors">Packages</a></li>
-                <li><a href="#amenities" className="hover:text-gold transition-colors">Amenities</a></li>
-                <li>
-                  <a
-                    href="#gallery"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const gallerySection = document.getElementById('gallery');
-                      if (gallerySection) {
-                        gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }}
-                    className="hover:text-gold transition-colors"
-                  >
-                    Gallery
-                  </a>
-                </li>
+                {navigation.map((item, index) => {
+                  if (item.label === "Contact Us") return null;
+                  return (
+                    <li key={index}>
+                      <Link href={item.href} className="hover:text-gold transition-colors">
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 

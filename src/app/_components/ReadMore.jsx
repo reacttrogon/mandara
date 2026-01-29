@@ -1,38 +1,81 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
-const ReadMore = ({ text, maxLines = 3, className = "" }) => {
+const ReadMore = ({ text, maxLines = 3, className = "", textClassName = "text-base text-dark/80 font-light leading-6 md:leading-7 lg:leading-8" }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const [showButton, setShowButton] = useState(false);
+    const [isOverflowing, setIsOverflowing] = useState(false);
+    const [isClamped, setIsClamped] = useState(true);
+    const [collapsedHeight, setCollapsedHeight] = useState(0);
     const textRef = useRef(null);
 
     useEffect(() => {
-        if (textRef.current) {
-            // Check if the content overflows the container when collapsed
-            const isOverflowing = textRef.current.scrollHeight > textRef.current.clientHeight;
-            setShowButton(isOverflowing);
-        }
+        const calculateHeight = () => {
+            if (textRef.current) {
+                const style = window.getComputedStyle(textRef.current);
+                const lh = parseFloat(style.lineHeight);
+                const currentLineHeight = !isNaN(lh) ? lh : parseFloat(style.fontSize) * 1.5;
+
+                setCollapsedHeight(currentLineHeight * maxLines);
+
+                // If currently clamped, scrollHeight > clientHeight indicates overflow.
+                // If expanded (not clamped), check via calculation? 
+                // Actually, relying on initial clamped state is safest.
+                // If valid overflow detection is needed while expanded, we'd need to compare scrollHeight vs collapsedHeight.
+                const isContentLonger = textRef.current.scrollHeight > (currentLineHeight * maxLines);
+                setIsOverflowing(isContentLonger);
+            }
+        };
+
+        // Initial calculation
+        calculateHeight();
+
+        // Recalculate on resize
+        window.addEventListener('resize', calculateHeight);
+        return () => window.removeEventListener('resize', calculateHeight);
     }, [text, maxLines]);
+
+    const handleToggle = () => {
+        if (isExpanded) {
+            setIsExpanded(false);
+            // Wait for animation to finish to re-clamp (done in onAnimationComplete)
+        } else {
+            setIsClamped(false);
+            setIsExpanded(true);
+        }
+    };
 
     return (
         <div className={className}>
-            <p
-                ref={textRef}
-                className={`text-base text-dark/80 font-light leading-6 md:leading-7 lg:leading-8 break-words transition-all duration-300 ${isExpanded ? "" : "line-clamp-3"}`}
-                style={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: isExpanded ? "unset" : maxLines,
-                    overflow: "hidden"
+            <motion.div
+                className="overflow-hidden relative"
+                initial={false}
+                animate={{ height: isExpanded ? "auto" : (collapsedHeight || "auto") }}
+                transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                onAnimationComplete={() => {
+                    if (!isExpanded) {
+                        setIsClamped(true);
+                    }
                 }}
             >
-                {text}
-            </p>
+                <p
+                    ref={textRef}
+                    className={`${textClassName} break-words whitespace-pre-line`}
+                    style={{
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: isClamped ? maxLines : "unset",
+                        overflow: "hidden"
+                    }}
+                >
+                    {text}
+                </p>
+            </motion.div>
 
-            {(showButton || isExpanded) && (
+            {(isOverflowing || isExpanded) && (
                 <button
-                    onClick={() => setIsExpanded(!isExpanded)}
+                    onClick={handleToggle}
                     className="mt-3 text-primary font-medium text-sm hover:text-primary/80 transition-colors duration-200 flex items-center gap-1 group"
                 >
                     {isExpanded ? (

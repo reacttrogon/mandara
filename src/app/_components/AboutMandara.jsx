@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { aboutMandara } from "../_utils/data";
+import ReadMore from "./ReadMore";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,7 @@ export default function AboutMandara() {
   const sectionRef = useRef(null);
   const imageRefs = useRef([]);
 
-  const { heading,descriptions, image } = aboutMandara || {};
+  const { heading, descriptions, image } = aboutMandara || {};
 
   const stackImages = [
     image,
@@ -120,10 +121,12 @@ export default function AboutMandara() {
               {heading}
             </h2>
 
-            <div data-animate="text" className="space-y-6 max-w-lg">
-              {descriptions.map((description,i)=>{
-                return  <p className="text-dark/60 leading-relaxed" key={i}>{description}</p>
-              })}
+            <div data-animate="text" className="max-w-lg">
+              <ReadMore
+                text={descriptions.join("\n\n")}
+                maxLines={8}
+                textClassName="text-base text-dark/60 leading-relaxed"
+              />
             </div>
 
           </div>

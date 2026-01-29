@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="max-w-sm">
             <a href="/" className="block mb-6">
               <img
-                src="/assets/images/logo_updated.png"
+                src="/assets/images/BR200379_MANDARA_PNG (1).png"
                 alt="Mandara Logo"
                 className="h-24 w-auto opacity-100"
               />

@@ -95,37 +95,37 @@ export default function Header({ isTransparent }) {
             }`}
         >
           {/* Desktop Logo */}
-          <a href="/" className="hidden md:block anim-logo">
+          <Link href="/" className="hidden md:block anim-logo ">
             <Image
               src={
                 isScrolled
-                  ? "/assets/images/logo_green.png"
-                  : "/assets/images/logo_updated.png"
+                  ? "/assets/images/BR200379_MANDARA_PNG.png"
+                  : "/assets/images/BR200379_MANDARA_PNG (1).png"
               }
               alt="Mandara Logo"
               width={150}
               height={54}
               priority
-              className="h-10 md:h-14 lg:h-16 transition-all duration-300"
+              className="h-10 md:h-14 lg:h-14 transition-all duration-300"
             />
-          </a>
+          </Link> 
 
           {/* Mobile Logo (unchanged, no GSAP) */}
           {!isMenuOpen && (
-            <a href="/" className="md:hidden">
+            <Link href="/" className="md:hidden">
               <Image
                 src={
                   isScrolled
-                    ? "/assets/images/logo_green.png"
-                    : "/assets/images/logo_transp_w.png"
+                    ? "/assets/images/BR200379_MANDARA_PNG.png"
+                    : "/assets/images/BR200379_MANDARA_PNG (1).png"
                 }
                 alt="Mandara Logo"
                 width={96}
                 height={58}
                 priority
-                className="h-9 md:h-12 pl-4 transition-all duration-300"
+                className="h-8 md:h-12 pl-4 transition-all duration-300"
               />
-            </a>
+            </Link>
           )}
 
           {/* Desktop Menu */}

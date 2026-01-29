@@ -102,14 +102,13 @@ export default function VideoScrollSection() {
           <video
             ref={videoRef}
             loop
-            muted
             autoPlay
             playsInline
             disablePictureInPicture
             preload="auto"
             className="block h-full w-full object-cover"
           >
-            <source src="/assets/video/video.mp4" type="video/mp4" />
+            <source src="/assets/video/video1.mp4" type="video/mp4" />
           </video>
         </div>
       </div>

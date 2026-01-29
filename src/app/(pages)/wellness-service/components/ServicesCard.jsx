@@ -1,21 +1,29 @@
 "use client";
 import Image from "next/image";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
-const ServicesCard = ({services }) => {
+const ServicesCard = ({ services }) => {
+    // Helper function to create URL-friendly IDs
+    const createId = (title) => {
+        return title.toLowerCase().replace(/['&]/g, '').replace(/\s+/g, '-');
+    };
+
     return (
         <div className="w-full flex flex-col gap-12 md:gap-16 lg:gap-20 py-6 md:py-16 bg-bage text-dark overflow-hidden">
             {services?.map((service, index) => {
                 const isEven = index % 2 === 0;
+                const sectionId = createId(service?.title);
+
                 return (
                     <motion.div
                         key={index}
+                        id={sectionId}
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true, margin: "-100px" }}
                         className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                            } items-center gap-6 md:gap-10 lg:gap-16 max-w-7xl mx-auto px-4 md:px-6`}
+                            } items-center gap-6 md:gap-10 lg:gap-16 max-w-7xl mx-auto px-4 md:px-6 scroll-mt-24`}
                     >
                         {/* Content Section */}
                         <div className="flex-1 space-y-3 md:space-y-4 lg:space-y-6 text-center lg:text-left">

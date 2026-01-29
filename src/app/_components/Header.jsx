@@ -132,14 +132,43 @@ export default function Header({ isTransparent }) {
           <ul className="hidden md:flex items-center gap-8">
             {navigation.map((navigate, index) => {
               const isActive = isActiveLink(navigate?.href);
+              const hasDropdown = navigate.dropdown && navigate.dropdown.length > 0;
+
               return (
-                <li className="anim-link" key={index}>
+                <li className="anim-link relative group" key={index}>
                   <Link
                     href={navigate?.href}
-                    className={`${navClass} ${isActive ? 'text-primary border-b-2 border-primary pb-1' : ''}`}
+                    className={`${navClass} ${isActive ? 'text-primary border-b-2 border-primary pb-1' : ''} flex items-center gap-1`}
                   >
                     {navigate.label}
+                    {hasDropdown && (
+                      <svg
+                        className="w-4 h-4 transition-transform group-hover:rotate-180"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
                   </Link>
+
+                  {/* Dropdown Menu */}
+                  {hasDropdown && (
+                    <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="bg-white shadow-xl rounded-lg overflow-hidden min-w-[240px] border border-gray-100">
+                        {navigate.dropdown.map((item, idx) => (
+                          <Link
+                            key={idx}
+                            href={item.href}
+                            className="block px-5 py-3 text-dark hover:bg-primary hover:text-white transition-colors duration-200 text-sm font-medium"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </li>
               );
             })}

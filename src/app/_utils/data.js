@@ -357,8 +357,31 @@ export const navigation = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/about" },
   { label: "Philosophy", href: "/#philosophy" },
-  { label: "Wellness Service", href: "/wellness-service" },
-  { label: "Mandara Life", href: "/mandara-life" },
+  {
+    label: "Wellness Service",
+    href: "/wellness-service",
+    dropdown: [
+      { label: "Women's Wellness", href: "/wellness-service#womens-wellness" },
+      { label: "Prenatal Wellness", href: "/wellness-service#prenatal-wellness" },
+      { label: "Postnatal Wellness", href: "/wellness-service#postnatal-wellness" },
+      { label: "Menopausal Wellness", href: "/wellness-service#menopausal-wellness" },
+      { label: "Geriatric Wellness", href: "/wellness-service#geriatric-wellness" },
+    ]
+  },
+  {
+    label: "Mandara Life",
+    href: "/mandara-life",
+    dropdown: [
+      { label: "Wellness Amenities", href: "/mandara-life#wellness-amenities" },
+      { label: "Mother's Lounge", href: "/mandara-life#mothers-lounge" },
+      { label: "Baby Nursery and Baby Spa", href: "/mandara-life#baby-nursery" },
+      { label: "Smart Wellness Cottages", href: "/mandara-life#smart-cottages" },
+      { label: "Mothers of Mandara", href: "/mandara-life#mothers-of-mandara" },
+      { label: "Movement & Balance", href: "/mandara-life#movement-balance" },
+      { label: "Wellness Cuisine", href: "/mandara-life#wellness-cuisine" },
+      { label: "Mandara Merchandise", href: "/mandara-life#mandara-merchandise" },
+    ]
+  },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -436,7 +459,7 @@ export const mandaraLife = {
 
 export const wellnessServices = {
   title: "Wellness Service",
-  image:"/assets/mandaraService/service.jpeg",
+  image: "/assets/mandaraService/service.jpeg",
   description:
     "At Mandara, wellness is designed around the evolving needs of a woman across every stage of life. Our services support physical health,emotional balance, and restorative care through personalised planning and gentle supervision, offering a calm and respectful approach to wellbeing.",
   services: [

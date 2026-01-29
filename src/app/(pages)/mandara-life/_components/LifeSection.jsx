@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import { mandaraLife } from "../../../_utils/data";
 
 export default function LifeSection() {
+    // Helper function to create URL-friendly IDs
+    const createId = (title) => {
+        return title.toLowerCase().replace(/['&]/g, '').replace(/\s+/g, '-');
+    };
+
     return (
         <section className="bg-bage min-h-screen">
             {/* Hero Section with Background Image */}
@@ -44,48 +49,53 @@ export default function LifeSection() {
 
                 {/* Simple Grip Layout */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-x-20 lg:gap-y-24">
-                    {mandaraLife.sections.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-10%" }}
-                            transition={{ duration: 0.5, delay: index % 2 * 0.1 }}
-                            className="flex flex-col h-full"
-                        >
-                            {/* Image - Clean & Simple */}
-                            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl mb-8 bg-black/5">
-                                <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 hover:scale-105"
-                                />
-                            </div>
+                    {mandaraLife.sections.map((item, index) => {
+                        const sectionId = createId(item.title);
 
-                            {/* Content */}
-                            <div className="flex flex-col flex-grow">
-                                <div className="flex items-center gap-3 mb-4 opacity-60">
-                                    <span className="text-sm font-bold tracking-widest text-primary uppercase">
-                                        0{index + 1}
-                                    </span>
-                                    <div className="h-px w-8 bg-primary" />
+                        return (
+                            <motion.div
+                                key={index}
+                                id={sectionId}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-10%" }}
+                                transition={{ duration: 0.5, delay: index % 2 * 0.1 }}
+                                className="flex flex-col h-full scroll-mt-24"
+                            >
+                                {/* Image - Clean & Simple */}
+                                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl mb-8 bg-black/5">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 hover:scale-105"
+                                    />
                                 </div>
 
-                                <h2 className="text-3xl text-dark mb-3">
-                                    {item.title}
-                                </h2>
+                                {/* Content */}
+                                <div className="flex flex-col flex-grow">
+                                    <div className="flex items-center gap-3 mb-4 opacity-60">
+                                        <span className="text-sm font-bold tracking-widest text-primary uppercase">
+                                            0{index + 1}
+                                        </span>
+                                        <div className="h-px w-8 bg-primary" />
+                                    </div>
 
-                                <h3 className="text-lg text-primary font-medium italic mb-4">
-                                    {item.headline}
-                                </h3>
+                                    <h2 className="text-3xl text-dark mb-3">
+                                        {item.title}
+                                    </h2>
 
-                                <p className="text-base text-dark/70 leading-relaxed">
-                                    {item.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+                                    <h3 className="text-lg text-primary font-medium italic mb-4">
+                                        {item.headline}
+                                    </h3>
+
+                                    <p className="text-base text-dark/70 leading-relaxed">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

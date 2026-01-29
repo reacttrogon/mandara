@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
@@ -17,7 +18,7 @@ export default function FAQSection() {
     <section className="py-20 md:py-24 bg-bage">
       <div className="container mx-auto px-6 md:px-10">
         <div className="flex flex-col lg:flex-row gap-14 lg:gap-20">
-          
+
           {/* --- LEFT PANEL --- */}
           <div className="w-full lg:w-5/12">
             <div className="sticky top-24 space-y-8">
@@ -38,7 +39,7 @@ export default function FAQSection() {
                     src={galleries?.[1]}
                     fill
                     alt="Mandara facility detail"
-                    sizes="(max-width: 768px) 50vw, 25vw" 
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -60,7 +61,7 @@ export default function FAQSection() {
           {/* --- RIGHT PANEL (ACCORDION) --- */}
           <div className="w-full lg:w-7/12">
             <div className="space-y-2">
-              {faqs.slice(0,4).map((faq, index) => (
+              {faqs.slice(0, 4).map((faq, index) => (
                 <div
                   key={index}
                 >
@@ -69,11 +70,10 @@ export default function FAQSection() {
                     onClick={() => toggleAccordion(index)}
                   >
                     <span
-                      className={`text-md md:text-lg pr-8 transition-colors duration-300 font-normal ${
-                        activeIndex === index
-                          ? "text-gold"
-                          : "text-dark group-hover:text-gold/80"
-                      }`}
+                      className={`text-md md:text-lg pr-8 transition-colors duration-300 font-normal ${activeIndex === index
+                        ? "text-gold"
+                        : "text-dark group-hover:text-gold/80"
+                        }`}
                     >
                       {faq?.question}
                     </span>
@@ -104,7 +104,15 @@ export default function FAQSection() {
                   </AnimatePresence>
                 </div>
               ))}
-
+              {/* View More Button */}
+              <div className="pt-8 flex justify-center lg:justify-start mb-4">
+                <Link
+                  href="/faq"
+                  className="inline-block px-8 py-3 border border-dark/20 rounded-full text-dark hover:bg-primary hover:text-white hover:border-transparent transition-all duration-300 uppercase tracking-widest text-sm font-medium"
+                >
+                  View All FAQs
+                </Link>
+              </div>
               {/* Decorative Bottom Image */}
               <div className="relative mt-12 h-56 rounded-xl overflow-hidden shadow-md">
                 <Image
@@ -115,6 +123,7 @@ export default function FAQSection() {
                   className="object-cover"
                 />
               </div>
+
             </div>
           </div>
         </div>

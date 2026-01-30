@@ -68,7 +68,7 @@ const Philosophy = () => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-bage text-dark py-24 px-6" id="philosophy"
+      className="relative bg-bage text-dark py- px-6" id="philosophy"
     >
       <div className="mx-auto max-w-2xl text-center">
         <h2 data-animate className="mb-10 text-2xl leading-snug md:text-4xl">

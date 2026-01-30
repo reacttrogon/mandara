@@ -2,9 +2,8 @@
 
 import { Facebook, Youtube, Instagram } from "lucide-react";
 import Link from "next/link";
-
 import { navigation } from "../_utils/data";
-import { montserrat } from "../_utils/font";
+import BrandText from "./BrandText";
 
 export default function Footer() {
   return (
@@ -16,17 +15,15 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="max-w-sm">
-            <a href="/" className="block mb-6">
+            <a href="/" className="block mb-2">
               <img
                 src="/assets/images/BR200379_MANDARA_PNG (1).png"
                 alt="Mandara Logo"
                 className="h-24 w-auto opacity-100"
               />
             </a>
-            <div className={`flex flex-col items-start leading-none mb-10 text-bage/80 ${montserrat.className}`}>
-              <span className="font-light tracking-tight"> From <span className="font-bold text-lg">HiLITE</span> Group</span>
-            </div>
-            <p className="text-md text-bage/60 mb-10 leading-relaxed  font-light">
+            <BrandText/>
+            <p className="text-md text-bage/60 mb-10 leading-relaxed  font-light mt-4">
               A sanctuary for new beginnings, where luxury meets holistic postnatal care. Reconnect with yourself in our serene haven.
             </p>
             <div className="flex gap-4">

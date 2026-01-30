@@ -11,9 +11,7 @@ const Page = () => {
     return (
         <>
             <Header />
-            <main>
-                <AboutSection />
-            </main>
+            <AboutSection />
             <Footer />
         </>
     );

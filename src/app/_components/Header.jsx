@@ -6,8 +6,8 @@ import Image from "next/image";
 import gsap from "gsap";
 import { navigation } from "../_utils/data";
 import Link from "next/link";
-import { montserrat } from "../_utils/font";
 import { usePathname } from "next/navigation";
+import BrandText from "./BrandText";
 
 export default function Header({ isTransparent }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,12 +137,14 @@ export default function Header({ isTransparent }) {
 
               return (
                 <li className="anim-link relative group whitespace-nowrap" key={index}>
-                  <Link
+                 <div className="flex items-center gap-2">
+                   <Link
                     href={navigate?.href}
                     className={`${navClass} ${isActive ? 'text-primary border-b-2 border-primary pb-1' : ''} flex items-center gap-1`}
                   >
                     {navigate.label}
-                    {hasDropdown && (
+                  </Link>
+                       {hasDropdown && (
                       <svg
                         className="w-4 h-4 transition-transform group-hover:rotate-180"
                         fill="none"
@@ -152,7 +154,7 @@ export default function Header({ isTransparent }) {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     )}
-                  </Link>
+                 </div>
 
                   {/* Dropdown Menu */}
                   {hasDropdown && (
@@ -175,10 +177,9 @@ export default function Header({ isTransparent }) {
             })}
           </ul>
 
-          {/* Button */}
           {/* HiLITE Group Badge */}
           <div className={`anim-btn hidden md:flex flex-col items-end text-sm z-30 ${isScrolled ? "text-dark" : "text-bage"}`}>
-            <span className={`${montserrat.className}`}>From <span className="font-extrabold tracking-tight ">HiLITE </span>Group</span>
+            <BrandText/>
           </div>
 
           {/* Mobile Menu Button */}

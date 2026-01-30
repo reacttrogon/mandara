@@ -10,7 +10,7 @@ export default function AboutSection() {
             {/* Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden mb-16 md:mb-24">
                 <Image
-                    src="/assets/gallery/about.jpeg"
+                    src="/assets/images/about.webp"
                     alt="About Mandara"
                     fill
                     className="object-cover"

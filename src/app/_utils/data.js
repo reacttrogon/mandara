@@ -137,7 +137,7 @@ export const packages = [
 ];
 
 export const galleries = [
-  "/assets/gallery/about.jpeg",
+  "/assets/gallery/about.webp",
   "/assets/gallery/banner-2.jpeg",
   "/assets/gallery/banner-3.jpeg",
   "/assets/gallery/abouttt.png",

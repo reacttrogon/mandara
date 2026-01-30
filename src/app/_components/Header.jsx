@@ -79,10 +79,10 @@ export default function Header({ isTransparent }) {
 
   // ================= STYLES =================
 
-  const navClass = `transition-colors ${
+  const navClass = `transition-colors font-medium whitespace-nowrap ${
     isScrolled
-      ? "text-dark hover:text-primary font-medium whitespace-nowrap"
-      : "text-bage hover:text-primary font-medium whitespace-nowrap"
+      ? "text-dark hover:text-primary"
+      : "text-bage hover:text-primary"
   }`;
 
   // ============================================================
@@ -94,17 +94,13 @@ export default function Header({ isTransparent }) {
         isScrolled ? "bg-bage shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 relative">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
 
-        {/* TOP GRADIENT OVERLAY */}
-        {!isScrolled && !isMenuOpen && (
-          <div className="absolute inset-x-0 top-0 h-28 xl:h-36 bg-gradient-to-b from-black/40 via-black/15 to-transparent z-10 hidden xl:block" />
-        )}
 
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-3 md:py-4">
 
-          {/* LOGO DESKTOP */}
-          <Link href="/" className="hidden xl:block anim-logo z-30">
+          {/* LOGO */}
+          <Link href="/" className="anim-logo z-30">
             <Image
               src={
                 isScrolled
@@ -115,30 +111,12 @@ export default function Header({ isTransparent }) {
               width={150}
               height={54}
               priority
-              className="h-12 xl:h-14 w-auto transition-all duration-300"
+              className="h-8 md:h-10 xl:h-14 w-auto transition-all duration-300"
             />
           </Link>
 
-          {/* LOGO MOBILE */}
-          {!isMenuOpen && (
-            <Link href="/" className="xl:hidden z-30">
-              <Image
-                src={
-                  isScrolled
-                    ? "/assets/images/BR200379_MANDARA_PNG.png"
-                    : "/assets/images/BR200379_MANDARA_PNG (1).png"
-                }
-                alt="Mandara Logo"
-                width={96}
-                height={58}
-                priority
-                className="h-8 md:h-10 w-auto transition-all duration-300"
-              />
-            </Link>
-          )}
-
           {/* DESKTOP MENU */}
-          <ul className="hidden xl:flex items-center gap-8 z-30">
+          <ul className="hidden lg:flex items-center gap-4 xl:gap-6 z-30">
 
             {navigation.map((navigate, index) => {
 
@@ -146,7 +124,7 @@ export default function Header({ isTransparent }) {
               const hasDropdown = navigate.dropdown?.length;
 
               return (
-                <li key={index} className="anim-link relative group whitespace-nowrap">
+                <li key={index} className="anim-link relative group">
 
                   <div className="flex items-center gap-1">
 
@@ -171,12 +149,12 @@ export default function Header({ isTransparent }) {
 
                   {hasDropdown && (
                     <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="bg-bage shadow-xl rounded-lg overflow-hidden min-w-[240px] border border-gray-100">
+                      <div className="bg-bage shadow-xl rounded-lg overflow-hidden min-w-[220px] border border-gray-100">
                         {navigate.dropdown.map((item, idx) => (
                           <Link
                             key={idx}
                             href={item.href}
-                            className="block px-5 py-3 text-dark hover:bg-primary hover:text-bage transition-colors duration-200 text-sm font-medium"
+                            className="block px-4 py-3 text-dark hover:bg-primary hover:text-bage transition text-sm"
                           >
                             {item.label}
                           </Link>
@@ -191,36 +169,33 @@ export default function Header({ isTransparent }) {
           </ul>
 
           {/* BRAND DESKTOP */}
-          <div className={`anim-btn hidden xl:flex z-30 ${isScrolled ? "text-dark" : "text-bage"}`}>
+          <div className={`hidden lg:flex anim-btn z-30 ${
+            isScrolled ? "text-dark" : "text-bage"
+          }`}>
             <BrandText />
           </div>
 
-          {/* MOBILE RIGHT SIDE */}
-          {!isMenuOpen && (
-            <div className="xl:hidden flex items-center gap-3 z-30">
-
-              <div className={`${isScrolled ? "text-dark" : "text-bage"}`}>
-                <BrandText />
-              </div>
-
-              <button
-                className={`${isScrolled ? "text-dark" : "text-bage"}`}
-                onClick={() => setIsMenuOpen(true)}
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-
-            </div>
-          )}
+          {/* MOBILE BUTTON */}
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className={`lg:hidden z-30 ${
+              isScrolled ? "text-dark" : "text-bage"
+            }`}
+          >
+            <Menu className="w-6 h-6" />
+          </button>
 
         </div>
       </div>
 
       {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="xl:hidden bg-bage shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark z-30">
+        <div className="lg:hidden fixed inset-0 bg-bage z-40 px-6 py-6 flex flex-col gap-5">
 
-          <button className="self-end" onClick={() => setIsMenuOpen(false)}>
+          <button
+            className="self-end text-dark"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <X />
           </button>
 
@@ -232,8 +207,8 @@ export default function Header({ isTransparent }) {
                 key={index}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`font-medium hover:text-primary transition-colors ${
-                  isActive && "text-primary border-b-2 border-primary pb-1 inline-block"
+                className={`font-medium ${
+                  isActive ? "text-primary" : "text-dark"
                 }`}
               >
                 {item.label}
@@ -244,7 +219,7 @@ export default function Header({ isTransparent }) {
           <Link
             href="/bookings"
             onClick={() => setIsMenuOpen(false)}
-            className="rounded-full px-4 py-4 bg-primary text-bage hover:bg-bage hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
+            className="rounded-full px-4 py-4 bg-primary text-bage hover:bg-bage hover:text-primary border border-primary transition text-center font-medium"
           >
             Start Your Journey
           </Link>

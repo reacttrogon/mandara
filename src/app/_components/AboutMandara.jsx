@@ -75,35 +75,7 @@ export default function AboutMandara() {
           });
         },
 
-        /* ===== Mobile ===== */
-        "(max-width: 767px)": () => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top top",
-              end: "+=170%",
-              scrub: 1,
-              pin: true,
-              anticipatePin: 1,
-            },
-          });
 
-          imageRefs.current.forEach((img, index) => {
-            tl.fromTo(
-              img,
-              {
-                yPercent: 30,                 // reduced movement
-                rotate: targetAngles[index] - 5,
-              },
-              {
-                yPercent: 0,
-                rotate: targetAngles[index] * 0.5, // softer rotation
-                ease: "power2.out",
-              },
-              index === 0 ? "0" : "-=0.2"
-            );
-          });
-        },
       });
     }, sectionRef);
 

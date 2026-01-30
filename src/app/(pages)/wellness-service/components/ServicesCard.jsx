@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import ReadMore from "../../../_components/ReadMore";
 
 const ServicesCard = ({ services }) => {
@@ -28,9 +30,20 @@ const ServicesCard = ({ services }) => {
                     >
                         {/* Content Section */}
                         <div className="flex-1 space-y-3 md:space-y-4 lg:space-y-6 text-center lg:text-left">
-                            <h3 className="text-2xl md:text-3xl lg:text-4xl  text-dark tracking-tight break-words">
-                                {service?.title}
-                            </h3>
+                            <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-3 w-full">
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl text-dark tracking-tight break-words">
+                                    {service?.title}
+                                </h3>
+                                <Link
+                                    href="/bookings"
+                                    className="group inline-flex items-center gap-3 transition-colors"
+                                >
+                                    <span className="text-xs font-bold tracking-[0.2em] uppercase text-primary/80 group-hover:text-primary transition-colors">Know More</span>
+                                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                        <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                                    </div>
+                                </Link>
+                            </div>
                             <p className="text-lg text-primary font-medium italic leading-relaxed break-words">
                                 {service?.headline}
                             </p>
@@ -57,6 +70,8 @@ const ServicesCard = ({ services }) => {
                             {/* Decorative offset border */}
                             <div className={`absolute -bottom-4 -right-4 w-full h-full border border-primary/30 -z-10 rounded-sm hidden lg:block ${!isEven ? "-left-4 right-auto" : ""
                                 }`} />
+
+
                         </motion.div>
                     </motion.div>
                 );

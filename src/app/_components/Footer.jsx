@@ -56,7 +56,7 @@ export default function Footer() {
                   {section.title}
                 </h4>
 
-                <ul className="space-y-4 text-sm tracking-wide text-bage/70">
+                <ul className="space-y-4 text-sm tracking-wide text-bage/70 mb-6">
 
                   {section.items.map((item, idx) => {
 
@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col justify-center items-center py-6 opacity-70 uppercase text-sm">
+        <div className="flex flex-col justify-center items-center py-6 opacity-70 uppercase text-sm text-center">
           <p>&copy; 2026 Mandara Women’s Wellness Center.</p>
           <p> All rights reserved.</p>
         </div>

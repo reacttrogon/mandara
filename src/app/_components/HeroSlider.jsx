@@ -64,7 +64,7 @@ export default function HeroSlider() {
 
           <Link
             href="/bookings"
-            className="inline-block px-10 py-4 bg-bage/10 backdrop-blur-sm rounded-full text-bage font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-6 py-3 text-xs md:px-8 md:py-4 md:text-base bg-bage/10 backdrop-blur-sm rounded-full text-bage font-medium tracking-widest uppercase hover:bg-primary transition-all duration-300 transform hover:scale-105"
           >
             Start Your Journey
           </Link>

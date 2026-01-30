@@ -23,7 +23,7 @@ export default function Header({ isTransparent }) {
     if (href === "/#home") {
       return pathname === "/";
     }
-    // For hash links on home page - don't highlight them as active
+    // // For hash links on home page - don't highlight them as active
     if (href.startsWith("/#")) {
       return false;
     }
@@ -136,7 +136,7 @@ export default function Header({ isTransparent }) {
               const hasDropdown = navigate.dropdown && navigate.dropdown.length > 0;
 
               return (
-                <li className="anim-link relative group" key={index}>
+                <li className="anim-link relative group whitespace-nowrap" key={index}>
                   <Link
                     href={navigate?.href}
                     className={`${navClass} ${isActive ? 'text-primary border-b-2 border-primary pb-1' : ''} flex items-center gap-1`}

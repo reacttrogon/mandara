@@ -54,8 +54,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:wellness@mandara.com" className="hover:text-gold transition-colors block">
-                    wellness@mandara.com
+                  <a href="mailto:info@mandarawellness.in" className="hover:text-gold transition-colors block">
+                    info@mandarawellness.in
                   </a>
                 </li>
                 <li className="pt-4 leading-relaxed ">
@@ -92,8 +92,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex justify-center py-6 opacity-70 uppercase text-sm ">
-          <p>&copy; 2026 Mandara Wellness Center. All rights reserved.</p>
+        <div className="flex flex-col justify-center items-center py-6 opacity-70 uppercase text-sm ">
+          <p>&copy; 2026 Mandara Women’s Wellness Center.</p>
+          <p> All rights reserved.</p>
         </div>
       </div>
     </footer>

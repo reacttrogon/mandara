@@ -9,7 +9,7 @@ export default function ContactUs() {
           {/* Image Side - Fully Immersive */}
           <div className="lg:w-5/12 relative min-h-[500px] lg:min-h-full">
             <Image
-              src="/assets/gallery/booking.png"
+              src="/assets/gallery/contact.webp"
               alt="Luxury Room"
               loading="lazy"
               width={500}

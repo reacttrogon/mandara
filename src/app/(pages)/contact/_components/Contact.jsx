@@ -62,8 +62,8 @@ const Contact = () => {
                     <Mail className="w-5 h-5 mt-1 text-secondary" />
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-bage/50 mb-1">Email</p>
-                      <a href="mailto:wellness@mandara.com" className="text-lg hover:text-secondary transition">
-                        wellness@mandara.com
+                      <a href="mailto:info@mandarawellness.in" className="text-lg hover:text-secondary transition">
+                        info@mandarawellness.in
                       </a>
                     </div>
                   </div>

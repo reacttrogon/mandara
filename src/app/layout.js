@@ -11,18 +11,18 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   title: {
-    default: "Mandara Wellness Clinic",
-    template: "%s | Mandara Wellness Clinic",
+    default: "Mandara Women’s Wellness Center",
+    template: "%s | Mandara Women’s Wellness Center",
   },
   description:
-    "Mandara Wellness Clinic is a premier postnatal care facility where medical excellence meets luxury hospitality. Holistic recovery for new mothers and babies.",
+    "Mandara Women’s Wellness Center is a premier postnatal care facility where medical excellence meets luxury hospitality. Holistic recovery for new mothers and babies.",
   keywords: ["Postnatal care", "Wellness clinic", "Luxury postnatal recovery", "New mother care"],
   metadataBase: new URL("https://mandarawellness.in"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Mandara Wellness Clinic",
+    title: "Mandara Women’s Wellness Center",
     description: "Experience luxury postnatal recovery and holistic care for mothers and babies.",
     url: "https://mandarawellness.in/",
     siteName: "Mandara Wellness",
@@ -31,7 +31,7 @@ export const metadata = {
         url: "/assets/images/image1.webp",
         width: 1200,
         height: 630,
-        alt: "Mandara Wellness Clinic - Luxury Postnatal Care",
+        alt: "Mandara Women’s Wellness Center - Luxury Postnatal Care",
       },
     ],
     locale: "en_US",

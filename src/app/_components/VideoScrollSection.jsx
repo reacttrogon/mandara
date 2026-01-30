@@ -60,7 +60,7 @@ export default function VideoScrollSection() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=550%",
+            end: "+=100%",
             pin: true,
             scrub: 1,
             anticipatePin: 1,

@@ -349,7 +349,7 @@ export const amenities = [
 export const navigation = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/about" },
-  { label: "Philosophy", href: "/#philosophy" },
+  { label: "Philosophy", href: "/philosophy" },
   {
     label: "Wellness Service",
     href: "/wellness-service",
@@ -545,7 +545,7 @@ Athanikkal, Kerala 673314`,
     items: [
       { label: "Home", href: "/#home" },
       { label: "About", href: "/about" },
-      { label: "Philosophy", href: "/#philosophy" },
+      { label: "Philosophy", href: "/philosophy" },
       { label: "Wellness Service", href: "/services" },
       { label: "Mandara Life", href: "/life" },
       { label: "Gallery", href: "/gallery" },

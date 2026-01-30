@@ -137,11 +137,11 @@ export const packages = [
 ];
 
 export const galleries = [
-  "/assets/gallery/about.webp",
-  "/assets/gallery/banner-2.jpeg",
-  "/assets/gallery/banner-3.jpeg",
-  "/assets/gallery/abouttt.png",
-  "/assets/gallery/modern.png",
+  "/assets/gallery/5.jpg.jpeg",
+  "/assets/gallery/1.jpg.jpeg",
+  "/assets/gallery/4.jpg.jpeg",
+  "/assets/gallery/2.jpg.jpeg",
+  "/assets/gallery/3.jpg.jpeg",
   "/assets/gallery/bedroom.png",
 ];
 
@@ -243,7 +243,7 @@ export const slides = [
     subtitle: "India's First Holistic Retreat For Women",
     title: "Rest. Reconnect. Recover.",
     // image: "/assets/images/image1.webp",
-     image: "/assets/hero/scene1.webp",
+    image: "/assets/hero/scene1.webp",
   },
   {
     subtitle: "A Sanctuary Designed For Motherhood",
@@ -355,11 +355,23 @@ export const navigation = [
     href: "/wellness-service",
     dropdown: [
       { label: "Women's Wellness", href: "/wellness-service#womens-wellness" },
-      { label: "Prenatal Wellness", href: "/wellness-service#prenatal-wellness" },
-      { label: "Postnatal Wellness", href: "/wellness-service#postnatal-wellness" },
-      { label: "Menopausal Wellness", href: "/wellness-service#menopausal-wellness" },
-      { label: "Geriatric Wellness", href: "/wellness-service#geriatric-wellness" },
-    ]
+      {
+        label: "Prenatal Wellness",
+        href: "/wellness-service#prenatal-wellness",
+      },
+      {
+        label: "Postnatal Wellness",
+        href: "/wellness-service#postnatal-wellness",
+      },
+      {
+        label: "Menopausal Wellness",
+        href: "/wellness-service#menopausal-wellness",
+      },
+      {
+        label: "Geriatric Wellness",
+        href: "/wellness-service#geriatric-wellness",
+      },
+    ],
   },
   {
     label: "Mandara Life",
@@ -367,13 +379,22 @@ export const navigation = [
     dropdown: [
       { label: "Wellness Amenities", href: "/mandara-life#wellness-amenities" },
       { label: "Mother's Lounge", href: "/mandara-life#mothers-lounge" },
-      { label: "Baby Nursery and Baby Spa", href: "/mandara-life#baby-nursery" },
-      { label: "Smart Wellness Cottages", href: "/mandara-life#smart-cottages" },
+      {
+        label: "Baby Nursery and Baby Spa",
+        href: "/mandara-life#baby-nursery",
+      },
+      {
+        label: "Smart Wellness Cottages",
+        href: "/mandara-life#smart-cottages",
+      },
       { label: "Mothers of Mandara", href: "/mandara-life#mothers-of-mandara" },
       { label: "Movement & Balance", href: "/mandara-life#movement-balance" },
       { label: "Wellness Cuisine", href: "/mandara-life#wellness-cuisine" },
-      { label: "Mandara Merchandise", href: "/mandara-life#mandara-merchandise" },
-    ]
+      {
+        label: "Mandara Merchandise",
+        href: "/mandara-life#mandara-merchandise",
+      },
+    ],
   },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },

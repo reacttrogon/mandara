@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import gsap from "gsap";
 import { navigation } from "../_utils/data";
@@ -10,93 +10,101 @@ import { usePathname } from "next/navigation";
 import BrandText from "./BrandText";
 
 export default function Header({ isTransparent }) {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState(null);
 
-  /* GSAP scope */
+  const pathname = usePathname();
   const headerRef = useRef(null);
 
-  // Helper function to check if a link is active
+  // ================= ACTIVE SECTION =================
+
+  useEffect(() => {
+    const sections = ["home", "philosophy"];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // ================= ACTIVE LINK =================
+
   const isActiveLink = (href) => {
-    // For home link - only highlight when on home page
-    if (href === "/#home") {
-      return pathname === "/";
-    }
-    // // For hash links on home page - don't highlight them as active
-    if (href.startsWith("/#")) {
-      return false;
-    }
-    // For other pages
-    return pathname === href || pathname.startsWith(href + "/");
+    if (href === "/#home") return pathname === "/" && activeSection === "home";
+    if (href === "/#philosophy") return pathname === "/" && activeSection === "philosophy";
+    if (!href.includes("#")) return pathname === href || pathname.startsWith(href + "/");
+    return false;
   };
+
+  // ================= SCROLL =================
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isTransparent) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(window.scrollY > 50);
-      }
+      if (isTransparent) setIsScrolled(true);
+      else setIsScrolled(window.scrollY > 50);
     };
 
-    // Initial check
     handleScroll();
-
     window.addEventListener("scroll", handleScroll);
 
-    /* GSAP animation (DESKTOP ONLY) */
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        defaults: { ease: "expo.out", duration: 0.7 },
-      });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isTransparent]);
 
-      tl.fromTo(".nav-container", { y: -80 }, { y: 0 })
-        .fromTo(
-          ".anim-logo",
-          { opacity: 0, x: -20 },
-          { opacity: 1, x: 0 },
-          "-=0.5",
-        )
-        .fromTo(
-          ".anim-link",
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, stagger: 0.08 },
-          "-=0.5",
-        )
-        .fromTo(
-          ".anim-btn",
-          { opacity: 0, scale: 0.9 },
-          { opacity: 1, scale: 1, ease: "back.out(1.8)" },
-          "-=0.4",
-        );
+  // ================= GSAP =================
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.timeline({ defaults: { ease: "expo.out", duration: 0.7 } })
+        .fromTo(".nav-container", { y: -80 }, { y: 0 })
+        .fromTo(".anim-logo", { opacity: 0, x: -20 }, { opacity: 1, x: 0 }, "-=0.5")
+        .fromTo(".anim-link", { opacity: 0, y: 10 }, { opacity: 1, y: 0, stagger: 0.08 }, "-=0.5")
+        .fromTo(".anim-btn", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1 }, "-=0.4");
     }, headerRef);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      ctx.revert();
-    };
+    return () => ctx.revert();
   }, []);
 
-  const navClass = `transition-colors ${isScrolled
-    ? "text-dark hover:text-primary font-medium bagespace-nowrap"
-    : "text-bage hover:text-primary font-medium bagespace-nowrap"
-    }`;
+  // ================= STYLES =================
+
+  const navClass = `transition-colors ${
+    isScrolled
+      ? "text-dark hover:text-primary font-medium whitespace-nowrap"
+      : "text-bage hover:text-primary font-medium whitespace-nowrap"
+  }`;
+
+  // ============================================================
 
   return (
     <nav
       ref={headerRef}
-      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-bage shadow-md" : "bg-transparent"
-        }`}
+      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-bage shadow-md" : "bg-transparent"
+      }`}
     >
-      <div className="container mx-auto px-4">
-       {!isScrolled && !isMenuOpen && <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/25 to-transparent z-10" />}
-        <div
-          className={`flex items-center justify-between ${!isMenuOpen ? "py-4" : "py-0"
-            }`}
-        >
-          {/* Desktop Logo */}
-          <Link href="/" className="hidden md:block anim-logo z-30">
+      <div className="container mx-auto px-4 relative">
+
+        {/* TOP GRADIENT OVERLAY */}
+        {!isScrolled && !isMenuOpen && (
+          <div className="absolute inset-x-0 top-0 h-28 xl:h-36 bg-gradient-to-b from-black/40 via-black/15 to-transparent z-10 hidden xl:block" />
+        )}
+
+        <div className="flex items-center justify-between py-4">
+
+          {/* LOGO DESKTOP */}
+          <Link href="/" className="hidden xl:block anim-logo z-30">
             <Image
               src={
                 isScrolled
@@ -107,13 +115,13 @@ export default function Header({ isTransparent }) {
               width={150}
               height={54}
               priority
-              className="h-10 md:h-14 lg:h-14 transition-all duration-300"
+              className="h-12 xl:h-14 w-auto transition-all duration-300"
             />
-          </Link> 
+          </Link>
 
-          {/* Mobile Logo (unchanged, no GSAP) */}
+          {/* LOGO MOBILE */}
           {!isMenuOpen && (
-            <Link href="/" className="md:hidden z-30">
+            <Link href="/" className="xl:hidden z-30">
               <Image
                 src={
                   isScrolled
@@ -124,39 +132,43 @@ export default function Header({ isTransparent }) {
                 width={96}
                 height={58}
                 priority
-                className="h-8 md:h-12 pl-4 transition-all duration-300 z-34"
+                className="h-8 md:h-10 w-auto transition-all duration-300"
               />
             </Link>
           )}
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 z-30">
+          {/* DESKTOP MENU */}
+          <ul className="hidden xl:flex items-center gap-8 z-30">
+
             {navigation.map((navigate, index) => {
-              const isActive = isActiveLink(navigate?.href);
-              const hasDropdown = navigate.dropdown && navigate.dropdown.length > 0;
+
+              const isActive = isActiveLink(navigate.href);
+              const hasDropdown = navigate.dropdown?.length;
 
               return (
-                <li className="anim-link relative group whitespace-nowrap" key={index}>
-                 <div className="flex items-center gap-2">
-                   <Link
-                    href={navigate?.href}
-                    className={`${navClass} ${isActive ? 'text-primary border-b-2 border-primary pb-1' : ''} flex items-center gap-1`}
-                  >
-                    {navigate.label}
-                  </Link>
-                       {hasDropdown && (
-                      <svg
-                        className="w-4 h-4 transition-transform group-hover:rotate-180"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    )}
-                 </div>
+                <li key={index} className="anim-link relative group whitespace-nowrap">
 
-                  {/* Dropdown Menu */}
+                  <div className="flex items-center gap-1">
+
+                    <Link
+                      href={navigate.href}
+                      className={`${navClass} ${
+                        isActive && "text-primary border-b-2 border-primary pb-1"
+                      }`}
+                    >
+                      {navigate.label}
+                    </Link>
+
+                    {hasDropdown && (
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform group-hover:rotate-180 ${
+                          isScrolled ? "text-dark" : "text-bage"
+                        }`}
+                      />
+                    )}
+
+                  </div>
+
                   {hasDropdown && (
                     <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <div className="bg-bage shadow-xl rounded-lg overflow-hidden min-w-[240px] border border-gray-100">
@@ -172,47 +184,57 @@ export default function Header({ isTransparent }) {
                       </div>
                     </div>
                   )}
+
                 </li>
               );
             })}
           </ul>
 
-          {/* HiLITE Group Badge */}
-          <div className={`anim-btn hidden md:flex flex-col items-end text-sm z-30 ${isScrolled ? "text-dark" : "text-bage"}`}>
-            <BrandText/>
+          {/* BRAND DESKTOP */}
+          <div className={`anim-btn hidden xl:flex z-30 ${isScrolled ? "text-dark" : "text-bage"}`}>
+            <BrandText />
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* MOBILE RIGHT SIDE */}
           {!isMenuOpen && (
-            <button
-              className={`md:hidden p-2 z-30 rounded ${isScrolled ? "text-dark" : "text-bage"
-                }`}
-              onClick={() => setIsMenuOpen(true)}
-            >
-              <Menu className={isScrolled ? "text-black" : "text-bage"} />
-            </button>
+            <div className="xl:hidden flex items-center gap-3 z-30">
+
+              <div className={`${isScrolled ? "text-dark" : "text-bage"}`}>
+                <BrandText />
+              </div>
+
+              <button
+                className={`${isScrolled ? "text-dark" : "text-bage"}`}
+                onClick={() => setIsMenuOpen(true)}
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+
+            </div>
           )}
+
         </div>
       </div>
 
-      {/* Mobile Menu (NO GSAP, untouched) */}
+      {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="md:hidden bg-bage shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark z-30">
-          <button
-            className="self-end p-2 rounded bg-bage"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <X className="text-black" />
+        <div className="xl:hidden bg-bage shadow-lg w-full px-6 py-6 flex flex-col gap-5 text-dark z-30">
+
+          <button className="self-end" onClick={() => setIsMenuOpen(false)}>
+            <X />
           </button>
 
           {navigation.map((item, index) => {
             const isActive = isActiveLink(item.href);
+
             return (
               <Link
                 key={index}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`font-medium hover:text-primary transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1 inline-block' : ''}`}
+                className={`font-medium hover:text-primary transition-colors ${
+                  isActive && "text-primary border-b-2 border-primary pb-1 inline-block"
+                }`}
               >
                 {item.label}
               </Link>
@@ -221,13 +243,15 @@ export default function Header({ isTransparent }) {
 
           <Link
             href="/bookings"
-            className="rounded-full px-4 py-4 bg-primary text-bage bagespace-nowrap hover:bg-bage hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
             onClick={() => setIsMenuOpen(false)}
+            className="rounded-full px-4 py-4 bg-primary text-bage hover:bg-bage hover:text-primary transition-all duration-200 hover:border hover:border-primary font-medium text-center"
           >
             Start Your Journey
           </Link>
+
         </div>
       )}
+
     </nav>
   );
 }

@@ -522,8 +522,13 @@ export const footerSections = [
     title: "Contact",
     items: [
       {
-        label: "+91 765 438 9716",
-        href: "tel:+917654389716",
+        label: "+91 9961400055",
+        href: "tel:+919961400055",
+        type: "a",
+      },
+      {
+        label: "+91 9961200055",
+        href: "tel:+919961200055",
         type: "a",
       },
       {
@@ -547,13 +552,6 @@ Athanikkal, Kerala 673314`,
       { label: "Wellness Service", href: "/services" },
       { label: "Mandara Life", href: "/life" },
       { label: "Gallery", href: "/gallery" },
-    ],
-  },
-  {
-    title: "Legal",
-    items: [
-      { label: "Privacy Policy", href: "/terms-and-condition" },
-      { label: "Terms and Conditions", href: "/terms-and-condition" },
     ],
   },
 ];

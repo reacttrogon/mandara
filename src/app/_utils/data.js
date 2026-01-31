@@ -307,7 +307,7 @@ export const termsAndConditions = {
 
 export const aboutMandara = {
   heading: "A Sanctuary for Women",
-  image: "/assets/images/couple-abt.webp",
+  image: "/assets/gallery/modern.png",
   descriptions: [
     "Mandara is a wellness sanctuary created exclusively for women who seek rest, recovery, and balance in a safe and supportive environment. It is a place designed to slow life down, where care is thoughtful, privacy is respected, and every detail exists to ease both body and mind.",
     "At Mandara, wellness is shaped around comfort, calm, and individual rhythm. Support is always present, never overwhelming, with gentle baby care and restorative therapies forming a natural part of the experience. Whether a woman arrives for postnatal recovery, emotional renewal, or a quiet pause from daily demands, her time here is guided by her needs, comfort, and pace.",

@@ -3,11 +3,9 @@ export const services = [
   {
     number: "01",
     title: "Diet Plans",
-    number: "01",
     icon: "/assets/icons/nutrition-plan.png",
-    title: "Diet Plans",
     description:
-      "Personalized pregnancy diet plans designed to support maternal health, fetal growth, and overall well-being throughout every trimester.",
+      "Personalised pregnancy diet plans designed to support maternal health, fetal growth, and overall well-being throughout every trimester.",
   },
   {
     number: "02",
@@ -28,14 +26,14 @@ export const services = [
 //marque section
 export const items = [
   { icon: "/assets/marque/mother.png", text: "Womens wellness" },
-  { icon: "/assets/marque/love.png", text: "Personalized Postnatal Recovery" },
+  { icon: "/assets/marque/love.png", text: "Personalised Postnatal Recovery" },
   { icon: "/assets/marque/care.png", text: "Spa & Wellness" },
   { icon: "/assets/marque/maternity.png", text: "Resort-Style Stay" },
 ];
 
 export const offerings = [
   {
-    title: "Personalized Care",
+    title: "Personalised Care",
     description: "Tailored care plans for your unique postnatal needs.",
     icon: "/assets/offerings/handshakee.png",
     image: "/assets/amenities/personalisedCare.png",
@@ -101,7 +99,7 @@ export const reasons = [
   },
   {
     image: "/assets/whychooseUs/wellness.png",
-    title: "Personalized recovery plans with daily guidance",
+    title: "Personalised recovery plans with daily guidance",
   },
   {
     image: "/assets/whychooseUs/Screenshot 2025-12-23 at 5.01.06 PM.png",
@@ -125,14 +123,14 @@ export const packages = [
     duration: "14 Days",
     title: "Harmony",
     description:
-      "Ideal for Extended recovery with wellness and nutrition focus",
+      "Ideal for extended recovery with wellness and nutrition focus",
   },
   {
     image: "/assets/packages/pack-5.png",
     duration: "21 Days",
     title: "Nirvana",
     description:
-      "Ideal for Full postnatal transformation, rest, therapy & reconnection",
+      "Ideal for full postnatal transformation, rest, therapy & reconnection",
   },
 ];
 
@@ -252,7 +250,7 @@ export const slides = [
     image: "/assets/hero/scene2.webp",
   },
   {
-    subtitle: "A New Standared of Personalised Wellness",
+    subtitle: "A New Standard of Personalised Wellness",
     title: "Reimagining Wellbeing",
     // image: "/assets/images/image3.webp",
     image: "/assets/hero/scene3.webp",

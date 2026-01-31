@@ -34,7 +34,7 @@ export const wellnessFlow = [
                     {
                         title: "Nirvana",
                         duration: "21 Days",
-                        description: "A comprehensive wellness journey that supports long term balance and sustainable wellbeing. Ideal for those navigating significant life transitions, age related changes, or seeking complete restoration in a supported environment.",
+                        description: "A comprehensive wellness journey that supports long-term balance and sustainable wellbeing. Ideal for those navigating significant life transitions, age-related changes, or seeking complete restoration in a supported environment.",
                         image: "/assets/gallery/banner-3.jpeg"
                     }
                 ]
@@ -66,7 +66,7 @@ export const wellnessFlow = [
                     {
                         title: "Nirvana",
                         duration: "21 Days",
-                        description: "A comprehensive wellness journey that supports long term balance and sustainable wellbeing. Ideal for those navigating significant life transitions, age related changes, or seeking complete restoration in a supported environment.",
+                        description: "A comprehensive wellness journey that supports long-term balance and sustainable wellbeing. Ideal for those navigating significant life transitions, age-related changes, or seeking complete restoration in a supported environment.",
                         image: "/assets/gallery/banner-3.jpeg"
                     }
                 ]
@@ -98,7 +98,7 @@ export const wellnessFlow = [
                     {
                         title: "Nirvana",
                         duration: "21 Days",
-                        description: "A comprehensive wellness journey that supports long term balance and sustainable wellbeing. Ideal for those navigating significant life transitions, age related changes, or seeking complete restoration in a supported environment.",
+                        description: "A comprehensive wellness journey that supports long-term balance and sustainable wellbeing. Ideal for those navigating significant life transitions, age-related changes, or seeking complete restoration in a supported environment.",
                         image: "/assets/gallery/banner-3.jpeg"
                     }
                 ]
@@ -139,7 +139,7 @@ export const wellnessFlow = [
                     {
                         title: "Nirvana",
                         duration: "21 Days",
-                        description: "A deeply supportive prenatal stay designed for mothers who wish to spend extended time in a protected, wellness focused environment.",
+                        description: "A deeply supportive prenatal stay designed for mothers who wish to spend extended time in a protected, wellness-focused environment.",
                         image: "/assets/gallery/banner-3.jpeg"
                     }
                 ]

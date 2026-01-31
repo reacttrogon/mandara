@@ -9,7 +9,8 @@ import WhoShouldJoinSection from "./_components/WhoShouldJoinSection.jsx";
 import ContactUs from "./_components/ContactUs.jsx";
 import Footer from "./_components/Footer.jsx";
 import Philosophy from "./_components/Philosophy.jsx";
-import VideoScrollSection from "./_components/VideoScrollSection.jsx";
+import GateImageSection from "./_components/GateImageSection.jsx";
+// import VideoScrollSection from "./_components/VideoScrollSection.jsx";
 
 
 export default function Home() {
@@ -19,7 +20,8 @@ export default function Home() {
       <HeroSlider />
       <AboutMandara />
       <Philosophy />
-      <VideoScrollSection />
+      {/* <VideoScrollSection /> */}
+      <GateImageSection />
       <GallerySection />
       <FAQSection />
       <WhoShouldJoinSection />

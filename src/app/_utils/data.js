@@ -398,6 +398,9 @@ export const navigation = [
   { label: "Contact Us", href: "/contact" },
 ];
 
+
+
+
 export const mandaraLife = {
   title: "Mandara Life",
   image:"/assets/images/mandaraLifeHeader.webp",

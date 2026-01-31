@@ -91,7 +91,7 @@ export default function Header({ isTransparent }) {
     <nav
       ref={headerRef}
       className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-bage shadow-md" : "bg-transparent"
+        isScrolled ? "bg-bage shadow-md" : "bg-gradient-to-b from-black/60 to-transparent "
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">

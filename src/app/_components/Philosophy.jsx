@@ -68,7 +68,8 @@ const Philosophy = () => {
   return (
     <section
       ref={containerRef}
-      className="relative bg-bage text-dark py-10 px-6" id="philosophy"
+      className="relative bg-bage text-dark py-10 px-6"
+      id="philosophy"
     >
       <div className="mx-auto max-w-2xl text-center">
         <h2 data-animate className="mb-10 text-2xl leading-snug md:text-4xl">
@@ -77,23 +78,27 @@ const Philosophy = () => {
 
         <div className="space-y-8 text-base leading-relaxed md:text-lg">
           <p data-animate>
-            Healing unfolds gently, in quiet layers where nourishment returns,
-            steadiness is rebuilt, and inner strength grows again. Like the
-            Mandara flower, renewal in a woman’s life begins softly, guided by
-            time, care, and balance.
+            In quiet layers where nourishment returns, steadiness is rebuilt,
+            and inner strength grows again. Like the Mandara flower, renewal in
+            a woman’s life begins softly, guided by time, care, and balance.
           </p>
 
-          <p
-            data-animate
-            className="my-10 text-2xl tracking-wide text-secondary md:text-3xl"
-          >
-            सा विश्वायुः सा विश्वकर्मा सा विश्वधायाः
-          </p>
+          <div className="space-y-0">
+            <p
+              data-animate
+              className=" text-2xl tracking-wide text-secondary md:text-3xl"
+            >
+              सा विश्वायुः सा विश्वकर्मा सा विश्वधायाः
+            </p>
 
-          <p data-animate>
-            She is the bearer of life, the force of creation, the one who
-            sustains continuity.
-          </p>
+            <p
+              data-animate
+              className="tracking-wide text-secondary text-md italic"
+            >
+              " She is the bearer of life, the force of creation, the one who
+              sustains continuity "
+            </p>
+          </div>
 
           <p data-animate>This belief lies at the heart of Mandara.</p>
 

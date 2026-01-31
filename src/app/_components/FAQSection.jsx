@@ -105,25 +105,14 @@ export default function FAQSection() {
                 </div>
               ))}
               {/* View More Button */}
-              <div className="pt-8 flex justify-center lg:justify-start mb-4">
+              <div className="pt-8 flex justify-center lg:justify-end mb-4">
                 <Link
                   href="/faq"
-                  className="inline-block px-8 py-3 border border-dark/20 rounded-full text-dark hover:bg-primary hover:text-bage hover:border-transparent transition-all duration-300 uppercase tracking-widest text-sm font-medium"
+                  className="px-6 py-2 border border-dark/20 rounded-full text-dark hover:bg-primary hover:text-bage hover:border-transparent transition-all duration-300  text-md font-medium"
                 >
-                  View All FAQs
+                  View more
                 </Link>
               </div>
-              {/* Decorative Bottom Image */}
-              {/* <div className="relative mt-12 h-56 rounded-xl overflow-hidden shadow-md">
-                <Image
-                  src={galleries?.[3]}
-                  alt="Mandara peaceful atmosphere"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover"
-                />
-              </div> */}
-
             </div>
           </div>
         </div>

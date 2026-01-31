@@ -62,7 +62,7 @@ const ServicesCard = ({ services }) => {
                                     src={service?.image}
                                     alt={service?.title}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="object-fit transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-dark/10 group-hover:bg-transparent transition-colors duration-500" />
                             </div>

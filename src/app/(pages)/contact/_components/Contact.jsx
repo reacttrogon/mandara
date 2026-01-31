@@ -50,11 +50,16 @@ const Contact = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Phone className="w-5 h-5 mt-1 text-secondary" />
-                    <div>
+                    <div className="">
                       <p className="text-xs font-bold uppercase tracking-widest text-bage/50 mb-1">Phone</p>
-                      <a href="tel:+917654389716" className="text-lg hover:text-secondary transition">
-                        +91 765 438 9716
+                    <div className="flex flex-col">
+                        <a href="tel:+919961400055" className="text-lg hover:text-secondary transition">
+                        +91 9961400055
                       </a>
+                        <a href="tel:+919961200055" className="text-lg hover:text-secondary transition">
+                        +91 9961200055
+                      </a>
+                    </div>
                     </div>
                   </div>
 

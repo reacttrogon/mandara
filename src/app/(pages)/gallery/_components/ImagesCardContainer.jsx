@@ -1,33 +1,40 @@
 import ImageCard from "./ImagesCard";
 import { galleries } from "../../../_utils/data";
+import Image from "next/image";
 
-// Define which images should be wide (span 2 columns)
-// Pattern creates alternating wide images: right, then left, then right, etc.
 const getColumnSpan = (index) => {
-  // Alternating pattern for visual balance
-  // Row 1: [img][img][WIDE] (indexes 0,1,2-3)
-  // Row 2: [WIDE][img][img] (indexes 4-5,6,7)
-  // Row 3: [img][img][WIDE] (indexes 8,9,10-11)
-  // Row 4: [WIDE][img][img] (indexes 12-13,14,15)
-
   const wideIndexes = [2, 4, 10, 12]; // Alternating positions
   return wideIndexes.includes(index) ? 2 : 1;
 };
 
 const ImagesCardContainer = () => {
   return (
-    <section className="bg-bage pt-36 pb-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-bage ">
+       <div className="relative h-[60vh] w-full flex items-center justify-center">
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/60 z-10" />
+      
+              {/* Background Image */}
+              <Image
+                src="/assets/images/galleryTopImage.webp"
+                alt="Mandara Wellness"
+                fill
+                className="object-cover"
+                priority
+              />
+      
+              {/* Hero Content */}
+              <div className="relative z-20 text-center text-bage px-6 max-w-2xl translate-y-[-20px]">
+                <h1 className="text-4xl md:text-6xl font-medium mb-4 ">
+                  Gallery
+                </h1>
+                <p className="text-bage/80 text-lg">
+                  A glimpse into tranquility — Discover calming spaces designed for rest, renewal, and silence.
+                </p>
+              </div>
+            </div>
 
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl  text-dark mb-4">
-            Gallery
-          </h1>
-          <p className="text-base text-dark/70 max-w-2xl mx-auto">
-            A glimpse into tranquility — Discover calming spaces designed for rest, renewal, and silence.
-          </p>
-        </div>
-
+      <div className="max-w-7xl mx-auto px-6 py-10 ">
         {/* Grid with alternating wide images - no bagespace */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" style={{ gridAutoFlow: 'dense' }}>
 

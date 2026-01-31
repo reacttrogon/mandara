@@ -4,7 +4,7 @@ export default function BookingHero() {
     return (
         <div className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
             <Image
-                src="/assets/gallery/banner-2.jpeg"
+                src="/assets/images/about.webp"
                 alt="Wellness Journey"
                 fill
                 className="object-cover"

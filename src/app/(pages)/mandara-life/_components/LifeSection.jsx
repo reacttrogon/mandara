@@ -16,13 +16,13 @@ export default function LifeSection() {
             {/* Hero Section with Background Image */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden mb-16 md:mb-24">
                 <Image
-                    src="/assets/gallery/banner-3.jpeg"
+                    src={mandaraLife.image}
                     alt="Mandara Life Hero"
                     fill
-                    className="object-cover"
+                    className="object-fit"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-black/30" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pt-20">
                     <div className="max-w-4xl relative z-10">
@@ -64,7 +64,7 @@ export default function LifeSection() {
                                 className="flex flex-col h-full scroll-mt-24"
                             >
                                 {/* Image - Clean & Simple */}
-                                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl mb-8 bg-black/5">
+                                <div className="relative aspect-[16/10] w-full overflow-hidden  mb-8 bg-black/5">
                                     <Image
                                         src={item.image}
                                         alt={item.title}

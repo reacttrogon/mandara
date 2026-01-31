@@ -19,10 +19,10 @@ export default function Home() {
       <Header />
       <HeroSlider />
       <AboutMandara />
-      <Philosophy />
+      {/* <Philosophy /> */}
       {/* <VideoScrollSection /> */}
       <GateImageSection />
-      <GallerySection />
+      {/* <GallerySection /> */}
       <FAQSection />
       <WhoShouldJoinSection />
       <ContactUs />

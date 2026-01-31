@@ -307,7 +307,7 @@ export const termsAndConditions = {
 
 export const aboutMandara = {
   heading: "A Sanctuary for Women",
-  image: "/assets/gallery/modern.png",
+  image: "/assets/gallery/women.webp",
   descriptions: [
     "Mandara is a wellness sanctuary created exclusively for women who seek rest, recovery, and balance in a safe and supportive environment. It is a place designed to slow life down, where care is thoughtful, privacy is respected, and every detail exists to ease both body and mind.",
     "At Mandara, wellness is shaped around comfort, calm, and individual rhythm. Support is always present, never overwhelming, with gentle baby care and restorative therapies forming a natural part of the experience. Whether a woman arrives for postnatal recovery, emotional renewal, or a quiet pause from daily demands, her time here is guided by her needs, comfort, and pace.",
@@ -349,7 +349,7 @@ export const navigation = [
   { label: "About", href: "/about" },
   { label: "Philosophy", href: "/philosophy" },
   {
-    label: "Wellness Service",
+    label: "Wellness Services",
     href: "/wellness-service",
     dropdown: [
       { label: "Women's Wellness", href: "/wellness-service#womens-wellness" },
@@ -400,6 +400,7 @@ export const navigation = [
 
 export const mandaraLife = {
   title: "Mandara Life",
+  image:"/assets/images/mandaraLifeHeader.webp",
   description:
     "Mandara Life reflects the everyday experience of staying at Mandara. It brings together spaces, amenities, and services designed to support rest, recovery, connection, and wellbeing, allowing women to live gently, supported, and unhurried throughout their stay.",
   sections: [
@@ -504,7 +505,7 @@ export const wellnessServices = {
       headline: "Guided support through physical and emotional transitions.",
       description:
         "Menopause is approached at Mandara as a phase of recalibration rather than decline. Wellness care supports balance, comfort, and clarity through changing physical and emotional needs. Women are offered steady support to navigate this transition with dignity, confidence, and calm.",
-      image: "/assets/images/image2.webp",
+      image: "/assets/images/menopause.jpeg",
     },
     {
       title: "Geriatric Wellness",
@@ -512,7 +513,7 @@ export const wellnessServices = {
         "Respectful, adaptive care focused on comfort and quality of life.",
       description:
         "Wellness in later years is centred on preserving ease, independence, and emotional reassurance. Mandara’s geriatric wellness adapts thoughtfully to changing needs. The environment remains calm and supportive, ensuring women feel safe, respected, and well cared for.",
-      image: "/assets/gallery/about.jpeg",
+      image: "/assets/images/geriatic.jpeg",
     },
   ],
 };
@@ -549,7 +550,7 @@ Athanikkal, Kerala 673314`,
       { label: "Home", href: "/#home" },
       { label: "About", href: "/about" },
       { label: "Philosophy", href: "/philosophy" },
-      { label: "Wellness Service", href: "/services" },
+      { label: "Wellness Services", href: "/services" },
       { label: "Mandara Life", href: "/life" },
       { label: "Gallery", href: "/gallery" },
     ],

@@ -131,7 +131,7 @@ export default function Header({ isTransparent }) {
                     <Link
                       href={navigate.href}
                       className={`${navClass} ${
-                        isActive && "text-primary border-b-2 border-primary pb-1"
+                        isActive && `text-bage border-b-2  pb-1 ${isScrolled ? "border-primary":"border-bage"}`
                       }`}
                     >
                       {navigate.label}

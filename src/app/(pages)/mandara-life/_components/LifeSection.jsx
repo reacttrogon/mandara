@@ -22,7 +22,7 @@ export default function LifeSection() {
                     className="object-fit"
                     priority
                 />
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/45" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 pt-20">
                     <div className="max-w-4xl relative z-10">

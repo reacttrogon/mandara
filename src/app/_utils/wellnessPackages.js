@@ -43,7 +43,7 @@ export const wellnessFlow = [
                 id: "menopausal-wellness",
                 title: "Menopausal Wellness",
                 description: "Supportive care for hormonal transitions and comfort.",
-                image: "/assets/gallery/about.jpeg",
+                image: "/assets/gallery/about.webp",
                 packages: [
                     {
                         title: "Rejuvenation",
@@ -148,7 +148,7 @@ export const wellnessFlow = [
                 id: "advanced-postnatal-wellness",
                 title: "Advanced Postnatal Wellness",
                 description: "For mothers planning their recovery in advance, these stays offer structured, medically guided postnatal support in a serene setting.",
-                image: "/assets/gallery/about.jpeg",
+                image: "/assets/gallery/about.webp",
                 packages: [
                     {
                         title: "Rejuvenation",
@@ -182,7 +182,7 @@ export const wellnessFlow = [
         id: "delivered",
         title: "Delivered",
         description: "The period after childbirth is one of profound transition. Mandara’s postnatal wellness stays are created to support recovery, rest, and adjustment, while ensuring both mother and baby feel cared for at every step.",
-        image: "/assets/gallery/about.jpeg",
+        image: "/assets/gallery/about.webp",
         subCategories: null, // Direct packages
         packages: [
             {

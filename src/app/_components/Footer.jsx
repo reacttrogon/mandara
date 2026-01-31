@@ -29,8 +29,7 @@ export default function Footer() {
             <BrandText />
 
             <p className="text-md text-bage/60 leading-relaxed mt-6 mb-10">
-              A sanctuary for new beginnings, where luxury meets holistic postnatal care.
-              Reconnect with yourself in our serene haven.
+         A sanctuary for restoration, designed around women and their rhythms.
             </p>
 
             {/* Socials */}
@@ -108,7 +107,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center uppercase mt-2 md:mt-8 text-bage/50 ">
 
-          <p>© 2026 Mandara Women’s Wellness Center</p>
+          <p>© 2026 Mandara Women’s Wellness</p>
           <p>All rights reserved</p>
 
         </div>

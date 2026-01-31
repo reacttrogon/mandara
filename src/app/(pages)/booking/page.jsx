@@ -14,7 +14,7 @@ export default function BookingPage() {
       <section className="relative h-[60vh] md:h-[70vh] w-full">
         <Image
           src="/assets/images/Gemini_Generated_Image_65l03u65l03u65l0.png"
-          alt="Mandara Women’s Wellness Center"
+          alt="Mandara Women’s Wellness"
           fill
           className="object-cover"
           priority

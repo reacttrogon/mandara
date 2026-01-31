@@ -318,7 +318,7 @@ export const aboutMandara = {
 
 export const amenities = [
   {
-    image: "/assets/gallery/about.jpeg",
+    image: "/assets/gallery/about.webp",
     title: "Concierge Team",
     description: "24/7 dedicated support",
   },
@@ -417,7 +417,7 @@ export const mandaraLife = {
       headline: "A shared space for rest, reflection, and emotional ease.",
       description:
         "The Mother’s Lounge is designed as a calm, unstructured space where mothers can step away from care routines. It supports mental wellbeing through quiet rest, gentle interaction, or moments of solitude in a warm and unhurried environment.",
-      image: "/assets/gallery/about.jpeg",
+      image: "/assets/gallery/about.webp",
     },
     {
       title: "Baby Nursery and Baby Spa",
@@ -449,7 +449,7 @@ export const mandaraLife = {
         "Mindful practices that support strength, flexibility, and body awareness.",
       description:
         "The Movement & Balance space supports holistic physical wellbeing through yoga for prenatal, postnatal, and general wellness, along with Pilates and guided strength training. Sessions also include pranayama, breathwork, meditation, and mobility-focused practices, encouraging stability, flexibility, balance, and calm body awareness in a safe and structured environment.",
-      image: "/assets/gallery/banner-3.jpeg",
+      image: "/assets/gallery/movementAndBalence.png",
     },
     {
       title: "Wellness Cuisine",

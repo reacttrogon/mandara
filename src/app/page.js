@@ -23,8 +23,8 @@ export default function Home() {
       {/* <VideoScrollSection /> */}
       <GateImageSection />
       {/* <GallerySection /> */}
-      <FAQSection />
       <WhoShouldJoinSection />
+      <FAQSection />
       <ContactUs />
       <Footer />
 

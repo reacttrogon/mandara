@@ -15,7 +15,7 @@ export default function PhilosophyPage() {
 
                 {/* Background Image */}
                 <Image
-                    src="/assets/gallery/modern.png"
+                    src="/assets/philosophy/backgroundImage.webp"
                     alt="Mandara Philosophy"
                     fill
                     className="object-cover"

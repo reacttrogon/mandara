@@ -239,7 +239,7 @@ export const audience = [
 export const slides = [
   {
     subtitle: "India's First Holistic Retreat For Women",
-    title: "Rest. Reconnect. Recover.",
+    title: "Rest. Recover. Reconnect.",
     // image: "/assets/images/image1.webp",
     image: "/assets/hero/scene1.webp",
   },
@@ -338,7 +338,7 @@ export const amenities = [
     description: "On-site Leadership",
   },
   {
-    image: "/assets/gallery/modern.png",
+    image: "/assets/gallery/modern.webp",
     title: "Medical Experts",
     description: "Doctors & Pediatricians",
   },
@@ -536,8 +536,8 @@ export const footerSections = [
         type: "a",
       },
       {
-        label: "info@mandarawellness.in",
-        href: "mailto:info@mandarawellness.in",
+        label: "contact@mandarawellness.in",
+        href: "mailto:contact@mandarawellness.in",
         type: "a",
       },
       {

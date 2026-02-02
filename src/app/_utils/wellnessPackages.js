@@ -11,13 +11,13 @@ export const wellnessFlow = [
                 id: "womens-wellness",
                 title: "Women’s Wellness",
                 description: "Holistic care for balance, vitality, and renewal.",
-                image: "/assets/gallery/modern.png",
+                image: "/assets/gallery/modern.webp",
                 packages: [
                     {
                         title: "Rejuvenation",
                         duration: "3 Days",
                         description: "A short, nurturing pause to unwind, recalibrate, and experience Mandara’s approach to integrated women’s wellness. Ideal for those seeking rest, light therapies, and mental clarity within a limited timeframe.",
-                        image: "/assets/gallery/modern.png"
+                        image: "/assets/gallery/modern.webp"
                     },
                     {
                         title: "Blossom",
@@ -49,7 +49,7 @@ export const wellnessFlow = [
                         title: "Rejuvenation",
                         duration: "3 Days",
                         description: "A short, nurturing pause to unwind, recalibrate, and experience Mandara’s approach to integrated women’s wellness. Ideal for those seeking rest, light therapies, and mental clarity within a limited timeframe.",
-                        image: "/assets/gallery/modern.png"
+                        image: "/assets/gallery/modern.webp"
                     },
                     {
                         title: "Blossom",
@@ -81,7 +81,7 @@ export const wellnessFlow = [
                         title: "Rejuvenation",
                         duration: "3 Days",
                         description: "A short, nurturing pause to unwind, recalibrate, and experience Mandara’s approach to integrated women’s wellness. Ideal for those seeking rest, light therapies, and mental clarity within a limited timeframe.",
-                        image: "/assets/gallery/modern.png"
+                        image: "/assets/gallery/modern.webp"
                     },
                     {
                         title: "Blossom",
@@ -116,13 +116,13 @@ export const wellnessFlow = [
                 id: "prenatal-wellness",
                 title: "Prenatal Wellness",
                 description: "These stays are designed to support the expecting mother physically and emotionally during pregnancy, with safe, gentle practices focused on comfort, relaxation, and preparation for motherhood.",
-                image: "/assets/gallery/modern.png",
+                image: "/assets/gallery/modern.webp",
                 packages: [
                     {
                         title: "Rejuvenation",
                         duration: "3 Days",
                         description: "A short wellness escape offering rest, reassurance, and gentle support during pregnancy.",
-                        image: "/assets/gallery/modern.png"
+                        image: "/assets/gallery/modern.webp"
                     },
                     {
                         title: "Blossom",
@@ -154,7 +154,7 @@ export const wellnessFlow = [
                         title: "Rejuvenation",
                         duration: "3 Days",
                         description: "A gentle introduction to postnatal recovery with rest and essential support.",
-                        image: "/assets/gallery/modern.png"
+                        image: "/assets/gallery/modern.webp"
                     },
                     {
                         title: "Blossom",
@@ -189,7 +189,7 @@ export const wellnessFlow = [
                 title: "Rejuvenation",
                 duration: "3 Days",
                 description: "Ideal for mothers seeking immediate rest and essential support in the early days after delivery.",
-                image: "/assets/gallery/modern.png"
+                image: "/assets/gallery/modern.webp"
             },
             {
                 title: "Blossom",

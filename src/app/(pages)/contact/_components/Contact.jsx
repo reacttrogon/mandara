@@ -35,7 +35,7 @@ const Contact = () => {
           <div className="bg-bage rounded-3xl shadow-xl overflow-hidden grid md:grid-cols-5">
 
             {/* Left Side - Contact Info (High Contrast) */}
-            <div className="md:col-span-2 bg-primary text-bage p-10 flex flex-col justify-center gap-10 relative overflow-hidden">
+            <div className="md:col-span-2 bg-primary text-bage p-6 md:p-10 flex flex-col justify-center gap-10 relative overflow-hidden">
               {/* Decorative Circle */}
               <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-bage/10 rounded-full blur-3xl" />
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-bage/10 rounded-full blur-2xl" />
@@ -67,7 +67,7 @@ const Contact = () => {
                     <Mail className="w-5 h-5 mt-1 text-secondary" />
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-bage/50 mb-1">Email</p>
-                      <a href="mailto:contact@mandarawellness.in" className="text-lg hover:text-secondary transition">
+                      <a href="mailto:contact@mandarawellness.in" className="text-lg hover:text-secondary transition break-all">
                         contact@mandarawellness.in
                       </a>
                     </div>

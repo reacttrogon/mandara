@@ -79,20 +79,18 @@ export default function Header({ isTransparent }) {
 
   // ================= STYLES =================
 
-  const navClass = `transition-colors font-medium whitespace-nowrap ${
-    isScrolled
+  const navClass = `transition-colors font-medium whitespace-nowrap ${isScrolled
       ? "text-dark hover:text-primary"
       : "text-bage hover:text-primary"
-  }`;
+    }`;
 
   // ============================================================
 
   return (
     <nav
       ref={headerRef}
-      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-bage shadow-md" : "bg-gradient-to-b from-black/60 to-transparent "
-      }`}
+      className={`nav-container fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-bage shadow-md" : "bg-gradient-to-b from-black/60 to-transparent "
+        }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
 
@@ -130,18 +128,16 @@ export default function Header({ isTransparent }) {
 
                     <Link
                       href={navigate.href}
-                      className={`${navClass} ${
-                        isActive && `text-bage border-b-2  pb-1 ${isScrolled ? "border-primary":"border-bage"}`
-                      }`}
+                      className={`${navClass} ${isActive && `text-bage border-b-2  pb-1 ${isScrolled ? "border-primary" : "border-bage"}`
+                        }`}
                     >
                       {navigate.label}
                     </Link>
 
                     {hasDropdown && (
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform group-hover:rotate-180 ${
-                          isScrolled ? "text-dark" : "text-bage"
-                        }`}
+                        className={`w-4 h-4 transition-transform group-hover:rotate-180 ${isScrolled ? "text-dark" : "text-bage"
+                          }`}
                       />
                     )}
 
@@ -169,19 +165,18 @@ export default function Header({ isTransparent }) {
           </ul>
 
           {/* BRAND DESKTOP */}
-          <div className={`hidden lg:flex anim-btn z-30 ${
-            isScrolled ? "text-dark" : "text-bage"
-          }`}>
+          <div className={`hidden lg:flex anim-btn z-30 ${isScrolled ? "text-dark" : "text-bage"
+            }`}>
             <BrandText />
           </div>
 
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(true)}
-            className={`lg:hidden z-30 ${
-              isScrolled ? "text-dark" : "text-bage"
-            }`}
+            className={`lg:hidden z-30 flex items-center gap-3 ${isScrolled ? "text-dark" : "text-bage"
+              }`}
           >
+            <BrandText />
             <Menu className="w-6 h-6" />
           </button>
 
@@ -207,9 +202,8 @@ export default function Header({ isTransparent }) {
                 key={index}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`font-medium ${
-                  isActive ? "text-primary" : "text-dark"
-                }`}
+                className={`font-medium ${isActive ? "text-primary" : "text-dark"
+                  }`}
               >
                 {item.label}
               </Link>

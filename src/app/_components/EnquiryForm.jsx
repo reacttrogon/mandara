@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 export default function EnquiryForm() {
   const [form, setForm] = useState({
@@ -17,7 +18,13 @@ export default function EnquiryForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
+    // console.log(form);
+    setTimeout(() => {
+      toast.success("Request Submitted", {
+        duration: 2000,
+        className: "bg-black text-beige border-none rounded-lg shadow-lg",
+      });
+    }, 500);
   };
 
   return (
@@ -31,7 +38,6 @@ export default function EnquiryForm() {
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-
         {/* Full Name */}
         <div className="space-y-3">
           <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block">
@@ -51,7 +57,6 @@ export default function EnquiryForm() {
 
         {/* Phone + Enquiry */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
           <div className="space-y-3">
             <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block">
               Phone Number
@@ -122,7 +127,6 @@ export default function EnquiryForm() {
             Confirm Request
           </motion.button>
         </div>
-
       </form>
     </div>
   );

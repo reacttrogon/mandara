@@ -1,6 +1,7 @@
 import "./globals.css";
 import WhatsAppButton from "./_components/WhatsAppButton.jsx";
 import { Playfair_Display } from "next/font/google";
+import { Toaster } from "sonner";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
       <body className=" bg-[#051512] text-bage">
         {children}
         <WhatsAppButton />
+        <Toaster position="bottom-right" richColors/>
       </body>
     </html>
   );

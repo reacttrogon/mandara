@@ -137,10 +137,10 @@ export const packages = [
 export const galleries = [
   "/assets/gallery/5.jpg.jpeg",
   "/assets/gallery/1.jpg.jpeg",
-  "/assets/gallery/4.jpg.jpeg",
+  "/assets/gallery/bedroom.png",
   "/assets/gallery/2.jpg.jpeg",
   "/assets/gallery/3.jpg.jpeg",
-  "/assets/gallery/bedroom.png",
+   "/assets/gallery/4.jpg.jpeg",
 ];
 
 export const faqs = [

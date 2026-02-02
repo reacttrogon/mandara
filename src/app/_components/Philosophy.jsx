@@ -73,12 +73,12 @@ const Philosophy = () => {
     >
       <div className="mx-auto max-w-2xl text-center">
         <h2 data-animate className="mb-10 text-2xl leading-snug md:text-4xl">
-          Healing unfolds gently.
+          Healing unfolds gently,
         </h2>
 
         <div className="space-y-8 text-base leading-relaxed md:text-lg">
           <p data-animate>
-            In quiet layers where nourishment returns, steadiness is rebuilt,
+            in quiet layers where nourishment returns, steadiness is rebuilt,
             and inner strength grows again. Like the Mandara flower, renewal in
             a woman’s life begins softly, guided by time, care, and balance.
           </p>

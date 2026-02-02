@@ -403,7 +403,7 @@ export const navigation = [
 
 export const mandaraLife = {
   title: "Mandara Life",
-  image:"/assets/images/mandaraLifeHeader.webp",
+  image: "/assets/images/mandaraLifeHeader.webp",
   description:
     "Mandara Life reflects the everyday experience of staying at Mandara. It brings together spaces, amenities, and services designed to support rest, recovery, connection, and wellbeing, allowing women to live gently, supported, and unhurried throughout their stay.",
   sections: [
@@ -468,7 +468,7 @@ export const mandaraLife = {
         "Thoughtfully designed products to continue the Mandara experience.",
       description:
         "Mandara Merchandise offers a curated collection of signature products for women, mothers, and babies. These products allow guests to carry elements of their Mandara experience into everyday life, supporting comfort, care, and mindful living beyond their stay.",
-       image: "/assets/mandaraLife/image2.png",
+      image: "/assets/mandaraLife/image2.png",
     },
   ],
 };
@@ -493,7 +493,7 @@ export const wellnessServices = {
         "Supportive care through pregnancy, focused on comfort, calm, and confidence.",
       description:
         "Pregnancy is a period of profound change, requiring care that is both protective and nurturing. Mandara’s prenatal wellness supports expectant mothers with reassurance, comfort-focused care, and mindful attention to both mother and baby. The approach prioritises safety and emotional grounding, helping women prepare calmly for childbirth and the journey ahead.",
-       image: "/assets/mandaraService/image2.png",
+      image: "/assets/mandaraService/image2.png",
     },
     {
       title: "Postnatal Wellness",
@@ -501,7 +501,7 @@ export const wellnessServices = {
         "Gentle recovery for mothers, with integrated baby care support.",
       description:
         "The phase following childbirth calls for patience, restoration, and compassionate care. Mandara’s postnatal wellness recognises that recovery is a personal process, not a fixed timeline. Care includes physical recovery, emotional support, rest, and dedicated baby care assistance, allowing mothers time to heal, bond, and regain strength without pressure.",
-       image: "/assets/mandaraService/image3.png",
+      image: "/assets/mandaraService/image3.png",
     },
     {
       title: "Menopausal Wellness",
@@ -553,9 +553,10 @@ Athanikkal, Kerala 673314`,
       { label: "Home", href: "/#home" },
       { label: "About", href: "/about" },
       { label: "Philosophy", href: "/philosophy" },
-      { label: "Wellness Services", href: "/services" },
-      { label: "Mandara Life", href: "/life" },
+      { label: "Wellness Services", href: "/wellness-service" },
+      { label: "Mandara Life", href: "/mandara-life" },
       { label: "Gallery", href: "/gallery" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];

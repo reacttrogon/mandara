@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col items-center uppercase mt-2 md:mt-8 text-bage/50 ">
+        <div className="flex flex-col items-center uppercase mt-2 md:mt-8 text-bage/50 text-sm">
 
           <p>© 2026 Mandara Women’s Wellness</p>
           <p>All rights reserved</p>

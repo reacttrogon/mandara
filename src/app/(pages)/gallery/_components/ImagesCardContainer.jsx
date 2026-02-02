@@ -10,7 +10,7 @@ const getColumnSpan = (index) => {
 const ImagesCardContainer = () => {
   return (
     <section className="bg-bage ">
-       <div className="relative h-[60vh] w-full flex items-center justify-center">
+       <div className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center">
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/60 z-10" />
       

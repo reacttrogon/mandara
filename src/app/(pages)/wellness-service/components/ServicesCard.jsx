@@ -57,12 +57,12 @@ const ServicesCard = ({ services }) => {
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <div className="relative aspect-[3/2] md:aspect-[4/3] w-full overflow-hidden rounded-sm shadow-xl">
+                            <div className="relative aspect-[4/3] md:aspect-[4/3] w-full overflow-hidden rounded-sm shadow-xl">
                                 <Image
                                     src={service?.image}
                                     alt={service?.title}
                                     fill
-                                    className="object-fit transition-transform duration-700 group-hover:scale-110"
+                                    className="object-center transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-dark/10 group-hover:bg-transparent transition-colors duration-500" />
                             </div>

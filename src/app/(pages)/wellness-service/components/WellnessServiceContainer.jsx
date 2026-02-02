@@ -8,7 +8,7 @@ const WellnessServiceContainer = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative h-[60vh] md:h-[75vh] w-full flex items-center justify-center">
+      <div className="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center">
         <Image
           src={image}
           alt={title}

@@ -444,7 +444,7 @@ export const mandaraLife = {
         "A community space for connection, shared learning, and continued wellbeing.",
       description:
         "Mothers of Mandara is a community initiative that brings women together across different life stages. Through guided interactions, conversations, and thoughtfully curated engagements, it fosters reassurance, shared understanding, and a sense of belonging beyond individual wellness programmes.",
-      image: "/assets/images/couple-abt.webp",
+      image: "/assets/mandaraLife/image1.png",
     },
     {
       title: "Movement & Balance",
@@ -468,7 +468,7 @@ export const mandaraLife = {
         "Thoughtfully designed products to continue the Mandara experience.",
       description:
         "Mandara Merchandise offers a curated collection of signature products for women, mothers, and babies. These products allow guests to carry elements of their Mandara experience into everyday life, supporting comfort, care, and mindful living beyond their stay.",
-      image: "/assets/images/image3.webp",
+       image: "/assets/mandaraLife/image2.png",
     },
   ],
 };
@@ -485,7 +485,7 @@ export const wellnessServices = {
         "Holistic care to restore balance, clarity, and everyday wellbeing.",
       description:
         "Women’s wellness at Mandara is designed for women who wish to care for themselves with intention and awareness, rather than urgency. It supports long-term wellbeing through preventive, restorative, and deeply personalised care. Each wellness journey begins with a personal consultation and unfolds at a natural pace, supporting physical rhythms, emotional steadiness, and mental clarity. Mandara values rest as much as action, offering a sanctuary where wellbeing is nurtured with care and consistency.",
-      image: "/assets/mandara/women.webp",
+      image: "/assets/mandaraService/image1.png",
     },
     {
       title: "Prenatal Wellness",
@@ -493,7 +493,7 @@ export const wellnessServices = {
         "Supportive care through pregnancy, focused on comfort, calm, and confidence.",
       description:
         "Pregnancy is a period of profound change, requiring care that is both protective and nurturing. Mandara’s prenatal wellness supports expectant mothers with reassurance, comfort-focused care, and mindful attention to both mother and baby. The approach prioritises safety and emotional grounding, helping women prepare calmly for childbirth and the journey ahead.",
-      image: "/assets/mandara/pregnant.webp",
+       image: "/assets/mandaraService/image2.png",
     },
     {
       title: "Postnatal Wellness",
@@ -501,7 +501,7 @@ export const wellnessServices = {
         "Gentle recovery for mothers, with integrated baby care support.",
       description:
         "The phase following childbirth calls for patience, restoration, and compassionate care. Mandara’s postnatal wellness recognises that recovery is a personal process, not a fixed timeline. Care includes physical recovery, emotional support, rest, and dedicated baby care assistance, allowing mothers time to heal, bond, and regain strength without pressure.",
-      image: "/assets/mandara/mother.webp",
+       image: "/assets/mandaraService/image3.png",
     },
     {
       title: "Menopausal Wellness",

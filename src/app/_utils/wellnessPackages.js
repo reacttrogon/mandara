@@ -4,7 +4,7 @@ export const wellnessFlow = [
         id: "seeking-wellness",
         title: "Seeking Wellness",
         description: "Mandara offers restorative wellness stays for women, thoughtfully designed to support the body, mind, and the changing rhythms of life. Whether you are seeking renewed balance, gentle strengthening, or mindful care, your stay is shaped around where you are in this moment.",
-        image: "/assets/images/selectwellness.jpeg",
+        image: "/assets/packages/seekingwellness.webp",
         question: "What kind of wellness support are you seeking?",
         subCategories: [
             {
@@ -182,8 +182,8 @@ export const wellnessFlow = [
         id: "delivered",
         title: "Delivered",
         description: "The period after childbirth is one of profound transition. Mandara’s postnatal wellness stays are created to support recovery, rest, and adjustment, while ensuring both mother and baby feel cared for at every step.",
-        image: "/assets/gallery/about.webp",
-        subCategories: null, // Direct packages
+        image: "/assets/packages/delivered.webp",
+        subCategories: null,
         packages: [
             {
                 title: "Rejuvenation",

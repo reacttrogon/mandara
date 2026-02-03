@@ -37,7 +37,7 @@ export default function EnquiryForm() {
         Fill in your details and our team will curate your experience.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
         {/* Full Name */}
         <div className="space-y-3">
           <label className="text-xs font-bold uppercase tracking-widest text-dark/60 block">
@@ -49,6 +49,7 @@ export default function EnquiryForm() {
             placeholder="Enter your full name"
             value={form.name}
             onChange={handleChange}
+            autoComplete="off"
             className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none 
                        focus:border-primary transition-all text-dark placeholder:text-dark/40 text-base"
             required
@@ -67,6 +68,7 @@ export default function EnquiryForm() {
               placeholder="+91 00000 00000"
               value={form.phone}
               onChange={handleChange}
+              autoComplete="off"
               className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none 
                          focus:border-primary transition-all text-dark placeholder:text-dark/40 text-base"
               required
@@ -108,6 +110,7 @@ export default function EnquiryForm() {
             placeholder="Tell us about your needs or any special requests"
             value={form.address}
             onChange={handleChange}
+            autoComplete="off"
             className="w-full bg-transparent border-b-2 border-dark/20 px-0 py-3 outline-none 
                        focus:border-primary transition-all resize-none text-dark placeholder:text-dark/40 
                        text-base leading-relaxed"

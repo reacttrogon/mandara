@@ -19,7 +19,7 @@ export default function LifeSection() {
                     src={mandaraLife.image}
                     alt="Mandara Life Hero"
                     fill
-                    className="object-cover"
+                    className="object-fit"
                     priority
                 />
                 <div className="absolute inset-0 bg-black/45" />

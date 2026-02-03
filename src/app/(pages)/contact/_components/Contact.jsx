@@ -42,7 +42,7 @@ const Contact = () => {
 
               <div className="relative z-10">
                 <h3 className="text-2xl font-serif mb-6">Contact Information</h3>
-                <p className="text-bage/80 leading-relaxed mb-10 text-sm">
+                <p className="text-bage/80 leading-relaxed mb-10 text-md">
                   A sanctuary for new beginnings, where luxury meets holistic
                   postnatal care. Reconnect with yourself in our serene haven.
                 </p>

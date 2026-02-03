@@ -40,7 +40,7 @@ export default function FAQPage() {
 
 
                                 {/* Contact CTA */}
-                                <div className="pt-8">
+                                <div className="pt-8 hidden md:block">
                                     <p className="text-dark/60 mb-4 text-sm font-medium uppercase tracking-wider">Still have questions?</p>
                                     <a
                                         href="/contact"
@@ -56,7 +56,7 @@ export default function FAQPage() {
                         <div className="w-full lg:w-7/12">
                             <div className="space-y-2">
                                 {remainingFaqs.map((faq, index) => (
-                                    <div key={index} className="border-b border-dark/5 last:border-0">
+                                    <div key={index}>
                                         <button
                                             className="w-full flex justify-between items-start py-6 text-left group"
                                             onClick={() => toggleAccordion(index)}
@@ -96,6 +96,16 @@ export default function FAQPage() {
                                         </AnimatePresence>
                                     </div>
                                 ))}
+                                      {/* Contact CTA */}
+                                <div className="pt-8 md:hidden">
+                                    <p className="text-dark/60 mb-4 text-sm font-medium uppercase tracking-wider">Still have questions?</p>
+                                    <a
+                                        href="/contact"
+                                        className="inline-block px-8 py-3 bg-primary text-bage rounded-full hover:bg-primary/90 transition-all uppercase tracking-widest text-sm font-bold shadow-lg"
+                                    >
+                                        Contact Us
+                                    </a>
+                                </div>
                             </div>
                         </div>
 

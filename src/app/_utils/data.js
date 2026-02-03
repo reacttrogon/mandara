@@ -452,7 +452,7 @@ export const mandaraLife = {
         "Mindful practices that support strength, flexibility, and body awareness.",
       description:
         "The Movement & Balance space supports holistic physical wellbeing through yoga for prenatal, postnatal, and general wellness, along with Pilates and guided strength training. Sessions also include pranayama, breathwork, meditation, and mobility-focused practices, encouraging stability, flexibility, balance, and calm body awareness in a safe and structured environment.",
-      image: "/assets/gallery/movementAndBalence.png",
+      image: "/assets/gallery/movementAndBalence.webp",
     },
     {
       title: "Wellness Cuisine",

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PackageItem({ pkg, index }) {
     return (
@@ -36,9 +37,12 @@ export default function PackageItem({ pkg, index }) {
                 </p>
 
                 {/* Green Button */}
-                <button className="w-full mt-auto py-3.5 bg-primary text-bage text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
-                    VIEW PACKAGE <span className="text-base">→</span>
-                </button>
+                <Link
+                    href="payment"
+                    className="w-full mt-auto py-3.5 bg-primary text-bage text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                >
+                    BOOK NOW <span className="text-base">→</span>
+                </Link>
             </div>
         </motion.div>
     );

@@ -111,28 +111,7 @@ export const reasons = [
   },
 ];
 
-export const packages = [
-  {
-    image: "/assets/packages/pack-1.png",
-    duration: "7 Days",
-    title: "Blossom",
-    description: "Ideal for mothers needing short recovery & rest",
-  },
-  {
-    image: "/assets/packages/pack-2.png",
-    duration: "14 Days",
-    title: "Harmony",
-    description:
-      "Ideal for extended recovery with wellness and nutrition focus",
-  },
-  {
-    image: "/assets/packages/pack-5.png",
-    duration: "21 Days",
-    title: "Nirvana",
-    description:
-      "Ideal for full postnatal transformation, rest, therapy & reconnection",
-  },
-];
+
 
 export const galleries = [
   "/assets/gallery/5.jpg.jpeg",
@@ -140,7 +119,7 @@ export const galleries = [
   "/assets/gallery/bedroom.png",
   "/assets/gallery/2.jpg.jpeg",
   "/assets/gallery/3.jpg.jpeg",
-   "/assets/gallery/4.jpg.jpeg",
+  "/assets/gallery/4.jpg.jpeg",
 ];
 
 export const faqs = [

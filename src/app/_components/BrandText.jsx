@@ -6,7 +6,7 @@ const BrandText = () => {
         From
       </span>
 
-      <span className="font-light  whitespace-nowrap text-xs md:text-sm lg:text-base">
+      <span className="font-medium  whitespace-nowrap text-xs md:text-sm lg:text-base">
         HiLITE
       </span>
 

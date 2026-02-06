@@ -17,8 +17,8 @@ module.exports = {
         dark: "#051512", // Deep rich green-black for luxury feel
       },
       fontFamily: {
-        sans: ["var(--font-montserrat)", "Helvetica Neue", "Arial", "sans-serif"],
-        serif: ["var(--font-playfair)", "Georgia", "Times New Roman", "serif"],
+        sans: ["Montserrat", "Helvetica Neue", "Arial", "sans-serif"],
+        serif: ["Times New Roman", "Times", "serif"],
       },
     },
   },

@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  font-size: 17px; 
+  font-size: 17px;
 }
+
 /* Global defaults */
 @layer base {
   body {
-    @apply bg-bage text-dark font-serif antialiased;
+    @apply bg-bage text-dark antialiased;
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.6;
   }
-
-
 
   h1 {
     font-size: clamp(2.5rem, 5vw + 1rem, 6rem);
@@ -37,6 +37,11 @@
   h6 {
     font-size: clamp(1rem, 1.5vw + 1rem, 1.25rem);
   }
+}
+
+/* Montserrat font class for brand text */
+.font-montserrat {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Smooth scrolling */
@@ -106,7 +111,9 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
   box-shadow: 0 0 0 1000px transparent inset !important;
-  -webkit-text-fill-color: #000 !important; /* your text color */
-  caret-color: #000; /* cursor color */
+  -webkit-text-fill-color: #000 !important;
+  /* your text color */
+  caret-color: #000;
+  /* cursor color */
   transition: background-color 9999s ease-out;
 }

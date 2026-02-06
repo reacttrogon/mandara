@@ -1,15 +1,6 @@
 import "./globals.css";
 import WhatsAppButton from "./_components/WhatsAppButton.jsx";
-import { Playfair_Display } from "next/font/google";
 import { Toaster } from "sonner";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  fallback: ["Times New Roman", "serif"],
-});
 
 export const metadata = {
   title: {
@@ -43,7 +34,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={playfair.variable}>
+    <html lang="en">
+      <head>
+        {/* Preconnect for faster font loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Google Fonts - Playfair Display & Montserrat */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="bg-[#051512] text-bage">
         {children}
         <WhatsAppButton />

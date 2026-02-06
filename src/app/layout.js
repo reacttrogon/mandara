@@ -2,14 +2,13 @@ import "./globals.css";
 import WhatsAppButton from "./_components/WhatsAppButton.jsx";
 import { Playfair_Display } from "next/font/google";
 import { Toaster } from "sonner";
-import { montserrat } from "./_utils/font";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  fallback: ["Georgia", "Times New Roman", "serif"],
+  fallback: ["Times New Roman", "serif"],
 });
 
 export const metadata = {
@@ -44,7 +43,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable}`}>
+    <html lang="en" className={playfair.variable}>
       <body className="bg-[#051512] text-bage">
         {children}
         <WhatsAppButton />
